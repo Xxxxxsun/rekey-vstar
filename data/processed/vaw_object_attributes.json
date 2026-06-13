@@ -1,0 +1,803 @@
+{
+  "apron": {
+    "color": [
+      "black",
+      "blue",
+      "gray",
+      "green",
+      "red",
+      "white",
+      "yellow"
+    ]
+  },
+  "backpack": {
+    "color": [
+      "black",
+      "blue",
+      "red"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "bag": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "green",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "plastic"
+    ]
+  },
+  "basket": {
+    "color": [
+      "black",
+      "brown",
+      "white"
+    ],
+    "material": [
+      "straw",
+      "wood"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "beard": {
+    "color": [
+      "black",
+      "gray"
+    ]
+  },
+  "belt": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "red",
+      "white"
+    ],
+    "material": [
+      "leather"
+    ]
+  },
+  "bicycle": {
+    "color": [
+      "black",
+      "blue",
+      "gray",
+      "orange",
+      "red",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "metal"
+    ]
+  },
+  "bird": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "gray",
+      "orange",
+      "white",
+      "yellow"
+    ]
+  },
+  "boat": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "red",
+      "white"
+    ],
+    "material": [
+      "metal",
+      "wood"
+    ]
+  },
+  "bottle": {
+    "color": [
+      "black",
+      "brown",
+      "green",
+      "white"
+    ],
+    "material": [
+      "glass",
+      "plastic"
+    ]
+  },
+  "box": {
+    "color": [
+      "black",
+      "blue",
+      "gray",
+      "red",
+      "white"
+    ],
+    "material": [
+      "paper",
+      "wood"
+    ]
+  },
+  "bracelet": {
+    "color": [
+      "black"
+    ]
+  },
+  "bucket": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "green",
+      "pink",
+      "purple",
+      "red",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "plastic"
+    ]
+  },
+  "bun": {
+    "color": [
+      "blue",
+      "brown",
+      "green",
+      "white"
+    ]
+  },
+  "buoy": {
+    "material": [
+      "rubber"
+    ]
+  },
+  "button": {
+    "color": [
+      "black",
+      "white"
+    ]
+  },
+  "camera": {
+    "color": [
+      "black"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "candy": {
+    "color": [
+      "blue",
+      "orange",
+      "pink"
+    ]
+  },
+  "cap": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "green",
+      "orange",
+      "pink",
+      "red",
+      "white"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "cart": {
+    "color": [
+      "green",
+      "red",
+      "yellow"
+    ]
+  },
+  "cat": {
+    "color": [
+      "black",
+      "brown",
+      "gray",
+      "orange",
+      "white"
+    ],
+    "material": [
+      "fur",
+      "wool"
+    ],
+    "pattern": [
+      "patterned",
+      "striped"
+    ]
+  },
+  "clock": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "wood"
+    ]
+  },
+  "coat": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "gray",
+      "orange",
+      "purple",
+      "red",
+      "white"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "collar": {
+    "color": [
+      "black",
+      "blue",
+      "pink",
+      "red",
+      "white"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "cup": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "green",
+      "red",
+      "white"
+    ],
+    "material": [
+      "paper"
+    ]
+  },
+  "dog": {
+    "color": [
+      "black",
+      "brown",
+      "white"
+    ],
+    "material": [
+      "fur",
+      "wool"
+    ]
+  },
+  "dot": {
+    "color": [
+      "black"
+    ]
+  },
+  "dress": {
+    "color": [
+      "black",
+      "blue",
+      "pink",
+      "red",
+      "white"
+    ]
+  },
+  "flower": {
+    "color": [
+      "orange",
+      "pink",
+      "white",
+      "yellow"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "fruit": {
+    "color": [
+      "green",
+      "orange",
+      "red",
+      "yellow"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "glasses": {
+    "color": [
+      "black",
+      "brown",
+      "red"
+    ],
+    "material": [
+      "glass"
+    ]
+  },
+  "glove": {
+    "color": [
+      "black",
+      "brown",
+      "red",
+      "white"
+    ],
+    "material": [
+      "leather"
+    ]
+  },
+  "graffiti": {
+    "color": [
+      "black",
+      "blue",
+      "green",
+      "orange",
+      "red",
+      "white",
+      "yellow"
+    ]
+  },
+  "hair": {
+    "color": [
+      "black",
+      "brown",
+      "gray",
+      "white"
+    ],
+    "material": [
+      "fur"
+    ]
+  },
+  "hat": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "gray",
+      "green",
+      "orange",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "fabric"
+    ]
+  },
+  "helmet": {
+    "color": [
+      "black",
+      "blue",
+      "gray",
+      "pink",
+      "red",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "plastic"
+    ]
+  },
+  "jacket": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "gray",
+      "orange",
+      "red",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "leather"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "jar": {
+    "color": [
+      "blue"
+    ],
+    "material": [
+      "glass",
+      "plastic"
+    ]
+  },
+  "jeans": {
+    "color": [
+      "black",
+      "blue"
+    ],
+    "material": [
+      "denim"
+    ]
+  },
+  "key": {
+    "color": [
+      "black",
+      "white"
+    ]
+  },
+  "label": {
+    "color": [
+      "black",
+      "blue",
+      "green",
+      "orange",
+      "pink",
+      "red",
+      "white",
+      "yellow"
+    ]
+  },
+  "leaf": {
+    "color": [
+      "blue",
+      "brown",
+      "green",
+      "orange",
+      "yellow"
+    ]
+  },
+  "leash": {
+    "color": [
+      "black",
+      "blue",
+      "brown"
+    ]
+  },
+  "mark": {
+    "color": [
+      "black"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "necklace": {
+    "color": [
+      "black"
+    ],
+    "material": [
+      "metal"
+    ]
+  },
+  "orange": {
+    "color": [
+      "orange"
+    ]
+  },
+  "pants": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "gray",
+      "white"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "patch": {
+    "color": [
+      "brown",
+      "green",
+      "orange",
+      "white"
+    ]
+  },
+  "paw": {
+    "color": [
+      "black",
+      "white"
+    ],
+    "material": [
+      "fur"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "phone": {
+    "color": [
+      "black",
+      "blue",
+      "gray",
+      "orange",
+      "pink",
+      "white"
+    ],
+    "material": [
+      "plastic"
+    ]
+  },
+  "plant": {
+    "color": [
+      "green"
+    ]
+  },
+  "poster": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "purple",
+      "red",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "paper"
+    ]
+  },
+  "pot": {
+    "color": [
+      "black",
+      "brown",
+      "gray",
+      "orange",
+      "white"
+    ]
+  },
+  "ring": {
+    "color": [
+      "blue"
+    ]
+  },
+  "scarf": {
+    "color": [
+      "black",
+      "red",
+      "white"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "scooter": {
+    "color": [
+      "black"
+    ]
+  },
+  "shirt": {
+    "color": [
+      "black",
+      "blue",
+      "orange",
+      "pink",
+      "white"
+    ],
+    "material": [
+      "fabric"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "shoe": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "gray",
+      "green",
+      "orange",
+      "pink",
+      "purple",
+      "red",
+      "white",
+      "yellow"
+    ]
+  },
+  "shorts": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "gray",
+      "red",
+      "white"
+    ]
+  },
+  "sign": {
+    "color": [
+      "black",
+      "blue",
+      "green",
+      "orange",
+      "red",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "metal",
+      "wood"
+    ]
+  },
+  "skirt": {
+    "color": [
+      "black",
+      "blue",
+      "gray",
+      "pink",
+      "red",
+      "white"
+    ]
+  },
+  "sticker": {
+    "color": [
+      "black",
+      "blue",
+      "green",
+      "red",
+      "white",
+      "yellow"
+    ]
+  },
+  "stripe": {
+    "color": [
+      "black",
+      "blue",
+      "orange",
+      "red",
+      "white",
+      "yellow"
+    ]
+  },
+  "stroller": {
+    "color": [
+      "black",
+      "blue",
+      "gray"
+    ]
+  },
+  "sweater": {
+    "color": [
+      "black",
+      "gray",
+      "yellow"
+    ]
+  },
+  "tag": {
+    "color": [
+      "white"
+    ]
+  },
+  "tail": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "red",
+      "white"
+    ],
+    "material": [
+      "wool"
+    ],
+    "pattern": [
+      "patterned"
+    ]
+  },
+  "tape": {
+    "color": [
+      "green",
+      "yellow"
+    ]
+  },
+  "tie": {
+    "color": [
+      "black",
+      "blue",
+      "green",
+      "orange",
+      "pink",
+      "purple",
+      "red",
+      "white"
+    ],
+    "material": [
+      "fabric"
+    ],
+    "pattern": [
+      "patterned",
+      "striped"
+    ]
+  },
+  "tin": {
+    "color": [
+      "black",
+      "gray",
+      "green",
+      "orange",
+      "red",
+      "white"
+    ]
+  },
+  "umbrella": {
+    "color": [
+      "black",
+      "blue",
+      "orange",
+      "pink",
+      "red",
+      "white"
+    ]
+  },
+  "utensil": {
+    "color": [
+      "black",
+      "gray"
+    ],
+    "material": [
+      "metal"
+    ]
+  },
+  "vase": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "green",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "glass"
+    ]
+  },
+  "vest": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "gray",
+      "green",
+      "orange",
+      "red",
+      "white",
+      "yellow"
+    ],
+    "pattern": [
+      "striped"
+    ]
+  },
+  "watch": {
+    "color": [
+      "black",
+      "blue"
+    ]
+  },
+  "wing": {
+    "color": [
+      "black",
+      "blue",
+      "brown",
+      "gray",
+      "green",
+      "red",
+      "white",
+      "yellow"
+    ],
+    "material": [
+      "metal"
+    ]
+  }
+}

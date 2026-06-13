@@ -1,0 +1,86 @@
+{
+  "source": "agentic-experiment branch, docs/react_vstar_post_change_merged_3seed_20260525.md",
+  "parser": "structured JSON (react_vstar/parser.py), correct = final_answer == correct_label",
+  "models": {
+    "Seed-2.0-Lite": {
+      "original": 94.9,
+      "relabel": 81.7,
+      "rekey_bench1": 80.8,
+      "rekey_bench2": 75.4,
+      "rekey_bench3": 81.7,
+      "rekey_mean": 79.3
+    },
+    "Gemini 3.1 Pro": {
+      "original": 93.5,
+      "relabel": 82.0,
+      "rekey_bench1": 79.2,
+      "rekey_bench2": 76.4,
+      "rekey_bench3": 80.3,
+      "rekey_mean": 78.6
+    },
+    "Qwen3.6-Plus": {
+      "original": 92.0,
+      "relabel": 81.5,
+      "rekey_bench1": 79.9,
+      "rekey_bench2": 73.1,
+      "rekey_bench3": 80.1,
+      "rekey_mean": 77.7
+    },
+    "GPT-5.5": {
+      "original": 87.1,
+      "relabel": 76.1,
+      "rekey_bench1": 74.9,
+      "rekey_bench2": 71.0,
+      "rekey_bench3": 73.5,
+      "rekey_mean": 73.1
+    },
+    "Claude Opus 4.7": {
+      "original": 88.0,
+      "relabel": 70.5,
+      "rekey_bench1": 71.4,
+      "rekey_bench2": 66.5,
+      "rekey_bench3": 70.2,
+      "rekey_mean": 69.4
+    },
+    "Kimi K2.6": {
+      "original": 74.9,
+      "relabel": 62.1,
+      "rekey_bench1": 65.8,
+      "rekey_bench2": 62.1,
+      "rekey_bench3": 65.1,
+      "rekey_mean": 64.3
+    }
+  },
+  "standard_comparison": {
+    "Seed-2.0-Lite": {
+      "original": 91.6,
+      "relabel": 74.3,
+      "rekey_mean": 79.9
+    },
+    "Gemini 3.1 Pro": {
+      "original": 88.0,
+      "relabel": 69.6,
+      "rekey_mean": 75.0
+    },
+    "Qwen3.6-Plus": {
+      "original": 90.6,
+      "relabel": 74.3,
+      "rekey_mean": 75.7
+    },
+    "GPT-5.5": {
+      "original": 86.9,
+      "relabel": 75.9,
+      "rekey_mean": 77.1
+    },
+    "Claude Opus 4.7": {
+      "original": 78.5,
+      "relabel": 59.7,
+      "rekey_mean": 67.2
+    },
+    "Kimi K2.6": {
+      "original": 81.7,
+      "relabel": 63.4,
+      "rekey_mean": 72.6
+    }
+  }
+}

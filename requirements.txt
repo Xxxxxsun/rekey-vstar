@@ -1,0 +1,9 @@
+huggingface_hub
+numpy
+openai
+openrouter
+pandas
+Pillow
+pyarrow
+requests
+scipy

@@ -1,0 +1,43 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+outputs/
+hf_dataset_export/
+data/rekey_benchmark/
+
+# Label Studio container persistent data
+ls-data/
+data/annotations/labelstudio_export*.json
+data/annotations/*partial*.json
+data/annotations/*partial*.jsonl
+data/annotations/review_issues*.json
+data/annotations/vstar_relabel.jsonl
+data/annotations/vstar_relabel_latest.jsonl
+
+# External datasets (VAW, Visual Genome, etc.)
+data/external/
+data/raw/
+
+# Independent Overleaf clone / paper workspace
+/paper/
+
+# Released benchmark artifacts live on Hugging Face, not in the code repo.
+results/benchmark/
+results/dynamic_vstar_annotations/
+results/vlm_annotator/
+
+# Benchmark intermediate artifacts (keep only composite, overview, plan, sample, eval_dataset)
+results/benchmark/*/vstar_*/artifacts/guide_canvas_*.png
+results/benchmark/*/vstar_*/artifacts/clean_canvas_*.png
+results/benchmark/*/vstar_*/artifacts/guide_context_*.png
+results/benchmark/*/vstar_*/artifacts/context_*.png
+results/benchmark/*/vstar_*/artifacts/restored_context_*.png
+results/benchmark/*/vstar_*/artifacts/generated_canvas_*.png
+results/benchmark/*/vstar_*/artifacts/source.png
+results/benchmark/*/vstar_*/artifacts/source_boxed.png

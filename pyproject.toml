@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rekey-vstar"
+version = "0.1.0"
+description = "Metadata-grounded visual-key regeneration for contamination-resistant VQA evaluation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+  {name = "REKEY authors"}
+]
+dependencies = [
+  "huggingface_hub",
+  "numpy",
+  "openai",
+  "openrouter",
+  "pandas",
+  "Pillow",
+  "pyarrow",
+  "requests",
+  "scipy",
+]
+
+[project.urls]
+Repository = "https://github.com/Xxxxxsun/rekey-vstar"
+Benchmark = "https://huggingface.co/datasets/Xfgll/rekey-vstar-benchmark"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["dynamic_vstar"]

@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+title: "REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resistant VQA Evaluation"
+message: "If you use this code or benchmark, please cite the REKEY paper."
+type: software
+authors:
+  - name: "Anonymous ACL submission"
+repository-code: "https://github.com/Xxxxxsun/rekey-vstar"
+license: MIT
+date-released: 2026-06-14

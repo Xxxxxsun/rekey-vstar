@@ -1,0 +1,31 @@
+model,condition,display_condition,seed_count,sources,accuracies,mean_accuracy,std_accuracy,cell,correct,target,missing,failed
+qwen3.6-plus,original,Original,3,"old_main,old_seed_2026052201,old_seed_2026052202","0.92146597,0.91099476,0.92670157",0.91972077,0.00799751,91.97% ± 0.80,527,573,0,0
+qwen3.6-plus,fixed_relabel,Relabeled,3,"old_main,old_seed_2026052201,old_seed_2026052202","0.82722513,0.82198953,0.79581152",0.81500873,0.01683011,81.50% ± 1.68,467,573,0,0
+qwen3.6-plus,bench1,Bench 1,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.79581152,0.79581152,0.80628272",0.79930192,0.00604555,79.93% ± 0.60,458,573,0,0
+qwen3.6-plus,bench2,Bench 2,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.75916230,0.72251309,0.71204188",0.73123909,0.02474249,73.12% ± 2.47,419,573,0,0
+qwen3.6-plus,bench3,Bench 3,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.79057592,0.82198953,0.79057592",0.80104712,0.01813666,80.10% ± 1.81,459,573,0,0
+doubao-seed-2.0-lite,original,Original,3,"old_main,old_seed_2026052201,old_seed_2026052202","0.95287958,0.95811518,0.93717277",0.94938918,0.01089877,94.94% ± 1.09,544,573,0,0
+doubao-seed-2.0-lite,fixed_relabel,Relabeled,3,"old_main,old_seed_2026052201,old_seed_2026052202","0.80628272,0.80628272,0.83769634",0.81675393,0.01813666,81.68% ± 1.81,468,573,0,0
+doubao-seed-2.0-lite,bench1,Bench 1,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.81151832,0.81151832,0.80104712",0.80802792,0.00604555,80.80% ± 0.60,463,573,0,0
+doubao-seed-2.0-lite,bench2,Bench 2,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.73821990,0.74869110,0.77486911",0.75392670,0.01887723,75.39% ± 1.89,432,573,0,0
+doubao-seed-2.0-lite,bench3,Bench 3,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.82722513,0.84293194,0.78010471",0.81675393,0.03269632,81.68% ± 3.27,468,573,0,0
+gemini-3.1-pro-preview,original,Original,3,"old_main,old_seed_2026052201,old_seed_2026052202","0.94764398,0.92670157,0.93193717",0.93542757,0.01089877,93.54% ± 1.09,536,573,0,1
+gemini-3.1-pro-preview,fixed_relabel,Relabeled,3,"old_main,old_seed_2026052201,old_seed_2026052202","0.82722513,0.80628272,0.82722513",0.82024433,0.01209111,82.02% ± 1.21,470,573,0,2
+gemini-3.1-pro-preview,bench1,Bench 1,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.79581152,0.78010471,0.80104712",0.79232112,0.01089877,79.23% ± 1.09,454,573,0,2
+gemini-3.1-pro-preview,bench2,Bench 2,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.72774869,0.78534031,0.78010471",0.76439791,0.03184692,76.44% ± 3.18,438,573,0,0
+gemini-3.1-pro-preview,bench3,Bench 3,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.77486911,0.82198953,0.81151832",0.80279232,0.02474249,80.28% ± 2.47,460,573,0,1
+gpt-5.5-0424-global,original,Original,3,"old_main,old_seed_2026052201,old_seed_2026052202","0.86910995,0.89005236,0.85340314",0.87085515,0.01838683,87.09% ± 1.84,499,573,0,0
+gpt-5.5-0424-global,fixed_relabel,Relabeled,3,"old_main,old_seed_2026052201,old_seed_2026052202","0.77486911,0.74345550,0.76439791",0.76090750,0.01599503,76.09% ± 1.60,436,573,0,0
+gpt-5.5-0424-global,bench1,Bench 1,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.74345550,0.75916230,0.74345550",0.74869110,0.00906833,74.87% ± 0.91,429,573,0,0
+gpt-5.5-0424-global,bench2,Bench 2,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.68586387,0.72774869,0.71727749",0.71029668,0.02179755,71.03% ± 2.18,407,573,0,0
+gpt-5.5-0424-global,bench3,Bench 3,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.71204188,0.74345550,0.74869110",0.73472949,0.01982167,73.47% ± 1.98,421,573,0,0
+claude-opus-4-7,original,Original,3,"old_main_adaptive_effort_low,old_main_adaptive_only,old_seed_2026052201_adaptive","0.88481675,0.87958115,0.87434555",0.87958115,0.00523560,87.96% ± 0.52,504,573,0,0
+claude-opus-4-7,fixed_relabel,Relabeled,3,"old_main_adaptive_effort_low,old_main_adaptive_only,old_seed_2026052201_adaptive","0.73298429,0.69109948,0.69109948",0.70506108,0.02418221,70.51% ± 2.42,404,573,0,0
+claude-opus-4-7,bench1,Bench 1,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.73298429,0.70680628,0.70157068",0.71378709,0.01683011,71.38% ± 1.68,409,573,0,0
+claude-opus-4-7,bench2,Bench 2,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.65968586,0.68586387,0.64921466",0.66492147,0.01887723,66.49% ± 1.89,381,573,0,0
+claude-opus-4-7,bench3,Bench 3,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.70680628,0.69633508,0.70157068",0.70157068,0.00523560,70.16% ± 0.52,402,573,0,0
+kimi-k2.6,original,Original,3,"old_main,old_seed_2026052201,old_seed_2026052202","0.79581152,0.73821990,0.71204188",0.74869110,0.04285525,74.87% ± 4.29,429,573,0,0
+kimi-k2.6,fixed_relabel,Relabeled,3,"old_main,old_seed_2026052201,old_seed_2026052202","0.64921466,0.63350785,0.58115183",0.62129145,0.03563801,62.13% ± 3.56,356,573,0,0
+kimi-k2.6,bench1,Bench 1,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.63874346,0.65968586,0.67539267",0.65794066,0.01838683,65.79% ± 1.84,377,573,0,0
+kimi-k2.6,bench2,Bench 2,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.60209424,0.60209424,0.65968586",0.62129145,0.03325054,62.13% ± 3.33,356,573,0,0
+kimi-k2.6,bench3,Bench 3,3,"merged_seed_1,merged_seed_2,merged_seed_3","0.68062827,0.61256545,0.65968586",0.65095986,0.03486036,65.10% ± 3.49,373,573,0,0

@@ -1,0 +1,7 @@
+model,correct,target,accuracy,present_accuracy,present,ok,failed,missing,conditions,complete
+doubao-seed-2.0-lite,1363,1719,0.79290285,0.79290285,1719,1719,0,0,3,True
+gemini-3.1-pro-preview,1352,1719,0.78650378,0.78650378,1719,1716,3,0,3,False
+qwen3.6-plus,1336,1719,0.77719604,0.77719604,1719,1719,0,0,3,True
+gpt-5.5-0424-global,1257,1719,0.73123909,0.73123909,1719,1719,0,0,3,True
+claude-opus-4-7,1192,1719,0.69342641,0.69342641,1719,1719,0,0,3,True
+kimi-k2.6,1106,1719,0.64339732,0.64339732,1719,1719,0,0,3,True

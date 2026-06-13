@@ -1,0 +1,5317 @@
+[
+  {
+    "question_id": "0",
+    "stem": "what is the material of the glove",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "rubber",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "rubber"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "1",
+    "stem": "what is the color of the dustpan",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "blue",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "blue"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 9,
+      "D": 11
+    },
+    "top_choice": "D",
+    "top_rate": 0.55,
+    "target_rate": 0.45,
+    "seen_label_rate": 0.45,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "2",
+    "stem": "what kind of animal is in the poster",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "dove",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "dove"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 18,
+      "A": 2
+    },
+    "top_choice": "C",
+    "top_rate": 0.9,
+    "target_rate": 0.1,
+    "seen_label_rate": 0.1,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "3",
+    "stem": "what is the color of the woman's scarf",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "red",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "4",
+    "stem": "what is the pose of the woman with yellow backpack",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "squatting",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "squatting"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 10,
+      "A": 10
+    },
+    "top_choice": "D",
+    "top_rate": 0.5,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "5",
+    "stem": "what is the color of the cart",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "A",
+      "D"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "6",
+    "stem": "what is the color of the candles",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "yellow",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "7",
+    "stem": "what is the color of the apple logo",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "polychromatic",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "polychromatic"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "8",
+    "stem": "what is the color of the plastic stool",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "blue",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "B",
+      "C"
+    ],
+    "stem_group_answers": [
+      "blue",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "9",
+    "stem": "what is the color of the tissue box",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "blue",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "blue"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "10",
+    "stem": "what is the color of the man's helmet",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "yellow",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "11",
+    "stem": "what is the color of the woman's shirt",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "purple",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "purple"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "12",
+    "stem": "what is the color of the slippers",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "blue",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "blue"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 16,
+      "A": 4
+    },
+    "top_choice": "D",
+    "top_rate": 0.8,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "13",
+    "stem": "what is the color of the cart",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "A",
+      "D"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 3,
+      "B": 17
+    },
+    "top_choice": "B",
+    "top_rate": 0.85,
+    "target_rate": 0.15,
+    "seen_label_rate": 0.15,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "14",
+    "stem": "what is the cartoon character on the clock",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "Mickey Mouse",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "Mickey Mouse"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "15",
+    "stem": "what is the color of the suitcase",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "brown",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "brown"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "16",
+    "stem": "what is the color of the little girl's shirt",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "pink",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "pink"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "17",
+    "stem": "what is the color of the bicycle",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "red",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "C",
+      "D"
+    ],
+    "stem_group_answers": [
+      "red",
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "18",
+    "stem": "what is the material of the stool",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "plastic",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "plastic"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "19",
+    "stem": "what is the color of the bucket",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "20",
+    "stem": "what is the color of the shovel",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "blue",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "blue"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "21",
+    "stem": "what kind of animal is on the blue sail",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "spider",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "spider"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "22",
+    "stem": "what is the color of the suv car",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "silver",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "silver"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "23",
+    "stem": "what is the color of the pink-haired woman's handbag",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 2,
+      "D": 18
+    },
+    "top_choice": "D",
+    "top_rate": 0.9,
+    "target_rate": 0.1,
+    "seen_label_rate": 0.1,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "24",
+    "stem": "what is the color of the car",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "black",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "black",
+      "silver",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "25",
+    "stem": "what is the color of the bicycle",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "yellow",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "C",
+      "D"
+    ],
+    "stem_group_answers": [
+      "red",
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "26",
+    "stem": "what is the color of the parachute",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "yellow",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "27",
+    "stem": "what is the color of the motorcycle",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "orange",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "black",
+      "orange"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 19,
+      "A": 1
+    },
+    "top_choice": "D",
+    "top_rate": 0.95,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.95,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "28",
+    "stem": "what is the color of the woman's jacket",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "blue",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "blue"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 7,
+      "A": 13
+    },
+    "top_choice": "A",
+    "top_rate": 0.65,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "29",
+    "stem": "what is the color of the man's cap",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "red",
+    "is_conflict_group": true,
+    "stem_group_size": 4,
+    "stem_group_labels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "stem_group_answers": [
+      "black",
+      "gray",
+      "red",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "30",
+    "stem": "what is the color of the pet collar",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "purple",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "purple"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "31",
+    "stem": "what is the color of the telephone",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "orange",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "orange"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "32",
+    "stem": "what is the color of the water bottle",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "red",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "33",
+    "stem": "what is the color of the man's cap",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "gray",
+    "is_conflict_group": true,
+    "stem_group_size": 4,
+    "stem_group_labels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "stem_group_answers": [
+      "black",
+      "gray",
+      "red",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "34",
+    "stem": "what is the color of the helmet",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "green",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "green",
+      "red",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "35",
+    "stem": "what is the color of the woman's bikini",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "black",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "black"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 18,
+      "B": 2
+    },
+    "top_choice": "C",
+    "top_rate": 0.9,
+    "target_rate": 0.9,
+    "seen_label_rate": 0.9,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "36",
+    "stem": "what is the color of the flower",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "37",
+    "stem": "what is the color of the clock",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "38",
+    "stem": "is the color of the motorcycle orange or green",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "orange",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "orange"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "39",
+    "stem": "what is the color of the bag",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "purple",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "purple"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "40",
+    "stem": "is the color of the motorcycle red or blue",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "blue",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "blue"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "41",
+    "stem": "what is the color of the man's cap",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "black",
+    "is_conflict_group": true,
+    "stem_group_size": 4,
+    "stem_group_labels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "stem_group_answers": [
+      "black",
+      "gray",
+      "red",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "42",
+    "stem": "what is the color of the van",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "red",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "43",
+    "stem": "what is the color of the car",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "white",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "black",
+      "silver",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "44",
+    "stem": "what is the color of the toothbrush",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "red",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 2,
+      "A": 18
+    },
+    "top_choice": "A",
+    "top_rate": 0.9,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "45",
+    "stem": "what is the color of the handbag",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "white",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "white",
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "46",
+    "stem": "what is the color of the man's cap",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "white",
+    "is_conflict_group": true,
+    "stem_group_size": 4,
+    "stem_group_labels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "stem_group_answers": [
+      "black",
+      "gray",
+      "red",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "47",
+    "stem": "what is the color of the fire hydrant",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "yellow",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "48",
+    "stem": "what is the color of the seesaw",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "red",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 9,
+      "D": 11
+    },
+    "top_choice": "D",
+    "top_rate": 0.55,
+    "target_rate": 0.45,
+    "seen_label_rate": 0.45,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "49",
+    "stem": "what is the color of the plastic stool",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "white",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "B",
+      "C"
+    ],
+    "stem_group_answers": [
+      "blue",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "50",
+    "stem": "what is the color of the motorcycle helmet",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 19,
+      "D": 1
+    },
+    "top_choice": "A",
+    "top_rate": 0.95,
+    "target_rate": 0.95,
+    "seen_label_rate": 0.95,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "51",
+    "stem": "what is the color of the helmet",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "red",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "green",
+      "red",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "52",
+    "stem": "what is the color of the luggage",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "red",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "53",
+    "stem": "what is the color of the trash can",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "green",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "A",
+      "C"
+    ],
+    "stem_group_answers": [
+      "black",
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "54",
+    "stem": "what is the color of the scooter",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "orange",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "orange"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 7,
+      "A": 13
+    },
+    "top_choice": "A",
+    "top_rate": 0.65,
+    "target_rate": 0.65,
+    "seen_label_rate": 0.65,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "55",
+    "stem": "what is the color of the dress",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "red",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "56",
+    "stem": "what is the color of the cyclist's box",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 19,
+      "C": 1
+    },
+    "top_choice": "D",
+    "top_rate": 0.95,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "57",
+    "stem": "what is the color of the bicycle",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "red",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "C",
+      "D"
+    ],
+    "stem_group_answers": [
+      "red",
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "58",
+    "stem": "what is the color of the flag",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "blue and yellow",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "A",
+      "B"
+    ],
+    "stem_group_answers": [
+      "blue and yellow",
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "59",
+    "stem": "what is the color of the cyclist's bag",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "orange and black",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "orange and black"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "60",
+    "stem": "what is the breed of the dog",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "golden retriever",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "golden retriever"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 18,
+      "A": 2
+    },
+    "top_choice": "D",
+    "top_rate": 0.9,
+    "target_rate": 0.9,
+    "seen_label_rate": 0.9,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "61",
+    "stem": "what is the color of the dog",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "white",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "A",
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "black",
+      "black and white",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "62",
+    "stem": "what is the color of the motorcycle",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "black",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "black",
+      "orange"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 19,
+      "A": 1
+    },
+    "top_choice": "D",
+    "top_rate": 0.95,
+    "target_rate": 0.95,
+    "seen_label_rate": 0.95,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "63",
+    "stem": "what is the color of the car",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "silver",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "black",
+      "silver",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 13,
+      "C": 7
+    },
+    "top_choice": "A",
+    "top_rate": 0.65,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "64",
+    "stem": "does the kid have curly hair or straight hair",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "curly hair",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "curly hair"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "65",
+    "stem": "what is the color of the broom",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "black",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "black"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 8,
+      "C": 1,
+      "A": 11
+    },
+    "top_choice": "A",
+    "top_rate": 0.55,
+    "target_rate": 0.55,
+    "seen_label_rate": 0.55,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "66",
+    "stem": "what is the color of the body of the bucket",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "67",
+    "stem": "what is the color of the scarf",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "68",
+    "stem": "is the flag red or white",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 15,
+      "A": 5
+    },
+    "top_choice": "B",
+    "top_rate": 0.75,
+    "target_rate": 0.25,
+    "seen_label_rate": 0.25,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "69",
+    "stem": "how many people are in the oil painting",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "2 people",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "2 people"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "70",
+    "stem": "what is the color of the dog",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "black",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "A",
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "black",
+      "black and white",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 3,
+      "D": 10,
+      "B": 7
+    },
+    "top_choice": "D",
+    "top_rate": 0.5,
+    "target_rate": 0.35,
+    "seen_label_rate": 0.85,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "71",
+    "stem": "what is the color of the paraglider",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "blue",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "blue"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "72",
+    "stem": "what is the color of the woman's dress",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "black",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "black"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "73",
+    "stem": "what is the color of the cleaning cloth",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "red",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "74",
+    "stem": "what is the color of the umbrella",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "purple",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "A",
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "blue",
+      "purple"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "75",
+    "stem": "what is the color of the backpack",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "gray",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "gray",
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "76",
+    "stem": "what is the color of the umbrella",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "purple",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "A",
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "blue",
+      "purple"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "77",
+    "stem": "what is the color of the baby carriage",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "black",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "black"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 12,
+      "B": 8
+    },
+    "top_choice": "A",
+    "top_rate": 0.6,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "78",
+    "stem": "what is the color of the watch",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "79",
+    "stem": "is the color of the bus red or yellow",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "red",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "80",
+    "stem": "what is the color of the flute",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "black",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "black"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "81",
+    "stem": "what is the color of the flag",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "red",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "A",
+      "B"
+    ],
+    "stem_group_answers": [
+      "blue and yellow",
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "82",
+    "stem": "what is the color of the soda can",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 6,
+      "B": 14
+    },
+    "top_choice": "B",
+    "top_rate": 0.7,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "83",
+    "stem": "what is the color of the handbag",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "yellow",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "white",
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "84",
+    "stem": "what is the color of the straw",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "black",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "black"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "85",
+    "stem": "what is the color of the bus",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "86",
+    "stem": "what is the color of the trash can",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "black",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "A",
+      "C"
+    ],
+    "stem_group_answers": [
+      "black",
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 17,
+      "A": 3
+    },
+    "top_choice": "D",
+    "top_rate": 0.85,
+    "target_rate": 0.15,
+    "seen_label_rate": 0.15,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "87",
+    "stem": "what is the color of the guard's glove",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "88",
+    "stem": "what is the color of the comb",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "purple",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "purple"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "89",
+    "stem": "what is the color of the electric rickshaw",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "yellow",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 9,
+      "D": 11
+    },
+    "top_choice": "D",
+    "top_rate": 0.55,
+    "target_rate": 0.55,
+    "seen_label_rate": 0.55,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "90",
+    "stem": "what is the color of the truck",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "yellow",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "91",
+    "stem": "what is the color of the chair",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "yellow",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 19,
+      "A": 1
+    },
+    "top_choice": "C",
+    "top_rate": 0.95,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "92",
+    "stem": "what is the color of the messenger bag",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "black",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "black"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "93",
+    "stem": "what is the color of the helmet",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "white",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "green",
+      "red",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "94",
+    "stem": "what is the color of the backpack",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "red",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "gray",
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "95",
+    "stem": "what is the color of the watchband",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "purple",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "purple"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "96",
+    "stem": "what is the color of the bottle cap",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "red",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "C",
+      "D"
+    ],
+    "stem_group_answers": [
+      "blue",
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "97",
+    "stem": "what is the color of the umbrella",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "blue",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "A",
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "blue",
+      "purple"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "98",
+    "stem": "does the flag have two or three colors",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "three colors",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "three colors"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "99",
+    "stem": "what is the color of the dog",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "black and white",
+    "is_conflict_group": true,
+    "stem_group_size": 3,
+    "stem_group_labels": [
+      "A",
+      "B",
+      "D"
+    ],
+    "stem_group_answers": [
+      "black",
+      "black and white",
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "D": 20
+    },
+    "top_choice": "D",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "100",
+    "stem": "what is the color of the woman's handbag",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "brown",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "brown"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 2,
+      "D": 18
+    },
+    "top_choice": "D",
+    "top_rate": 0.9,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "101",
+    "stem": "what is the color of the life buoy",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "red and white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "red and white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "102",
+    "stem": "what is the color of the mailbox",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "black",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "black"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "103",
+    "stem": "what is the color of the lock",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "silver",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "silver"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 7,
+      "C": 13
+    },
+    "top_choice": "C",
+    "top_rate": 0.65,
+    "target_rate": 0.35,
+    "seen_label_rate": 0.35,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "104",
+    "stem": "what is the color of the tent",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "105",
+    "stem": "what is the color of the bottle cap",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "blue",
+    "is_conflict_group": true,
+    "stem_group_size": 2,
+    "stem_group_labels": [
+      "C",
+      "D"
+    ],
+    "stem_group_answers": [
+      "blue",
+      "red"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 18,
+      "A": 2
+    },
+    "top_choice": "C",
+    "top_rate": 0.9,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.9,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "106",
+    "stem": "what is the color of the earring",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "blue",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "blue"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "107",
+    "stem": "what is the color of the apples",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "108",
+    "stem": "what is the color of the swim ring",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "orange",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "orange"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "109",
+    "stem": "what is the color of the tablecloth",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "C": 20
+    },
+    "top_choice": "C",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "110",
+    "stem": "what is the color of the hat",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "white",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "white"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "111",
+    "stem": "is the flag blue and yellow or red and yellow",
+    "category": "direct_attributes",
+    "target_label": "B",
+    "target_answer": "blue and yellow",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "blue and yellow"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "112",
+    "stem": "what is the color of the bench",
+    "category": "direct_attributes",
+    "target_label": "D",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "D"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "113",
+    "stem": "is the color of the plastic bucket black or green",
+    "category": "direct_attributes",
+    "target_label": "A",
+    "target_answer": "green",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "green"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "114",
+    "stem": "what is the color of the plastic basin",
+    "category": "direct_attributes",
+    "target_label": "C",
+    "target_answer": "pink",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "C"
+    ],
+    "stem_group_answers": [
+      "pink"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "115",
+    "stem": "is the telephone on the left or right side of the hand lamp",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "116",
+    "stem": "is the red car on the left or right side of the police car",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "117",
+    "stem": "is the drum on the left or right side of the yellow balloon",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "118",
+    "stem": "is the motorcycle on the left or right side of the dog",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 14,
+      "B": 6
+    },
+    "top_choice": "A",
+    "top_rate": 0.7,
+    "target_rate": 0.7,
+    "seen_label_rate": 0.7,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "119",
+    "stem": "is the cyclist on the left or right side of the sculpture",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 17,
+      "A": 3
+    },
+    "top_choice": "B",
+    "top_rate": 0.85,
+    "target_rate": 0.15,
+    "seen_label_rate": 0.15,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "120",
+    "stem": "is the baby stroller on the left or right side of the person in orange",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "121",
+    "stem": "is the red backpack on the left or right side of the clock",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 18,
+      "A": 2
+    },
+    "top_choice": "B",
+    "top_rate": 0.9,
+    "target_rate": 0.1,
+    "seen_label_rate": 0.1,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "122",
+    "stem": "is the bell above or below the clock",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "below",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "below"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "123",
+    "stem": "is the orange luggage on the left or right side of the purple umbrella",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "124",
+    "stem": "is the dog on the left or right side of the golden tower",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "125",
+    "stem": "is the shark doll above or below the banana doll",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "above",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "above"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 16,
+      "B": 4
+    },
+    "top_choice": "A",
+    "top_rate": 0.8,
+    "target_rate": 0.2,
+    "seen_label_rate": 0.2,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "126",
+    "stem": "is the trash can on the left or right side of the baby carriage",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 18,
+      "B": 2
+    },
+    "top_choice": "A",
+    "top_rate": 0.9,
+    "target_rate": 0.9,
+    "seen_label_rate": 0.9,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "127",
+    "stem": "is the seesaw on the left or right side of the red vehicle",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 14,
+      "B": 6
+    },
+    "top_choice": "A",
+    "top_rate": 0.7,
+    "target_rate": 0.7,
+    "seen_label_rate": 0.7,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "128",
+    "stem": "is the umbrella on the left or right side of the traffic light",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "129",
+    "stem": "is the cyclist on the left or right side of the woman's handbag",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 19,
+      "A": 1
+    },
+    "top_choice": "B",
+    "top_rate": 0.95,
+    "target_rate": 0.95,
+    "seen_label_rate": 0.95,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "130",
+    "stem": "is the wristband on the left or right side of the dog",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 14,
+      "B": 6
+    },
+    "top_choice": "A",
+    "top_rate": 0.7,
+    "target_rate": 0.3,
+    "seen_label_rate": 0.3,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "131",
+    "stem": "is the dog on the left or right side of the train",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "132",
+    "stem": "is the soccer ball on the left or right side of the water dispenser",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "133",
+    "stem": "is the dog on the left or right side of the scooter",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 18,
+      "A": 2
+    },
+    "top_choice": "B",
+    "top_rate": 0.9,
+    "target_rate": 0.9,
+    "seen_label_rate": 0.9,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "134",
+    "stem": "is the trash can on the left or right side of the black chair",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 19,
+      "B": 1
+    },
+    "top_choice": "A",
+    "top_rate": 0.95,
+    "target_rate": 0.05,
+    "seen_label_rate": 0.05,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "135",
+    "stem": "is the person with white trousers on the left or right side of the person in blue",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "136",
+    "stem": "is the dog on the left or right side of the river",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "137",
+    "stem": "is the blue bench on the left or right side of the green door",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "138",
+    "stem": "is the dog on the left or right side of the bicycle",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 16,
+      "A": 4
+    },
+    "top_choice": "B",
+    "top_rate": 0.8,
+    "target_rate": 0.2,
+    "seen_label_rate": 0.2,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "139",
+    "stem": "is the blue truck on the left or right side of the white vehicle",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "140",
+    "stem": "is the bucket on the left or right side of the plunger",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 16,
+      "A": 4
+    },
+    "top_choice": "B",
+    "top_rate": 0.8,
+    "target_rate": 0.2,
+    "seen_label_rate": 0.2,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "141",
+    "stem": "is the green statue on the left or right side of the white statue",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "142",
+    "stem": "is the man with green shorts on the left or right side of the blue boat",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "143",
+    "stem": "is the man with yellow cap on the left or right side of the lamp post",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "144",
+    "stem": "is the green handbag on the left or right side of the blue umbrella",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 16,
+      "B": 4
+    },
+    "top_choice": "A",
+    "top_rate": 0.8,
+    "target_rate": 0.2,
+    "seen_label_rate": 0.2,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "145",
+    "stem": "is the shopping cart on the left or right side of the dog",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 13,
+      "B": 7
+    },
+    "top_choice": "A",
+    "top_rate": 0.65,
+    "target_rate": 0.65,
+    "seen_label_rate": 0.65,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "146",
+    "stem": "is the switch on the left or right side of the towel",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "147",
+    "stem": "is the silver vehicle on the left or right side of the red vehicle",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 16,
+      "A": 4
+    },
+    "top_choice": "B",
+    "top_rate": 0.8,
+    "target_rate": 0.8,
+    "seen_label_rate": 0.8,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "148",
+    "stem": "is the shovel on the left or right side of the house",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "149",
+    "stem": "is the yellow trash can on the left or right side of the motorcycle",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 3,
+      "A": 17
+    },
+    "top_choice": "A",
+    "top_rate": 0.85,
+    "target_rate": 0.15,
+    "seen_label_rate": 0.15,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "150",
+    "stem": "is the suitcase on the left or right side of the river",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "151",
+    "stem": "is the red chair on the left or right side of the road",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "152",
+    "stem": "is the bowl on the left or right side of the faucet",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 14,
+      "A": 6
+    },
+    "top_choice": "B",
+    "top_rate": 0.7,
+    "target_rate": 0.3,
+    "seen_label_rate": 0.3,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "153",
+    "stem": "is the white truck on the left or right side of the red truck",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "154",
+    "stem": "is the pillar box on the left or right side of the telephone booth",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right.",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right."
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "155",
+    "stem": "is the motorcyclist on the left or right side of the truck",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "156",
+    "stem": "is the baby carriage on the left or right side of the cone",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 17,
+    "counts": {
+      "B": 16,
+      "unparsed": 3,
+      "A": 1
+    },
+    "top_choice": "B",
+    "top_rate": 0.9411764705882353,
+    "target_rate": 0.058823529411764705,
+    "seen_label_rate": 0.058823529411764705,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "157",
+    "stem": "is the sky wheel on the left or right side of the person on the horse",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 19,
+      "B": 1
+    },
+    "top_choice": "A",
+    "top_rate": 0.95,
+    "target_rate": 0.05,
+    "seen_label_rate": 0.05,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "158",
+    "stem": "is the pillar box on the left or right side of the man with the cane",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 19,
+      "B": 1
+    },
+    "top_choice": "A",
+    "top_rate": 0.95,
+    "target_rate": 0.05,
+    "seen_label_rate": 0.05,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "159",
+    "stem": "is the motorcycle on the left or right side of the street",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 18,
+      "B": 2
+    },
+    "top_choice": "A",
+    "top_rate": 0.9,
+    "target_rate": 0.9,
+    "seen_label_rate": 0.9,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "160",
+    "stem": "is the blue luggage on the left or right side of the bus",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 18,
+      "A": 2
+    },
+    "top_choice": "B",
+    "top_rate": 0.9,
+    "target_rate": 0.1,
+    "seen_label_rate": 0.1,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "161",
+    "stem": "is the small red car on the left or right side of the baby carriage",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "162",
+    "stem": "is the woman with a backpack on the left or right side of the person with a beanie",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 9,
+      "A": 11
+    },
+    "top_choice": "A",
+    "top_rate": 0.55,
+    "target_rate": 0.45,
+    "seen_label_rate": 0.45,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "163",
+    "stem": "is the kid with black shirt on the left or right side of the kid with blue shirt",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 17,
+      "A": 3
+    },
+    "top_choice": "B",
+    "top_rate": 0.85,
+    "target_rate": 0.85,
+    "seen_label_rate": 0.85,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "164",
+    "stem": "is the yellow car on the left or right side of the pool",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "165",
+    "stem": "is the green bucket on the left or right side of the red tent",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "166",
+    "stem": "is the blue bottle on the left or right side of the carton",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 11,
+      "B": 9
+    },
+    "top_choice": "A",
+    "top_rate": 0.55,
+    "target_rate": 0.45,
+    "seen_label_rate": 0.45,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "167",
+    "stem": "is the wheelchair on the left or right side of the lamp post",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 13,
+      "B": 7
+    },
+    "top_choice": "A",
+    "top_rate": 0.65,
+    "target_rate": 0.35,
+    "seen_label_rate": 0.35,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "168",
+    "stem": "is the dog on the left or right side of the blue bicycle",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "169",
+    "stem": "is the keyboard on the left or right side of the guitar",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "170",
+    "stem": "is the dog on the left or right side of the crosswalk",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 19,
+      "A": 1
+    },
+    "top_choice": "B",
+    "top_rate": 0.95,
+    "target_rate": 0.05,
+    "seen_label_rate": 0.05,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "171",
+    "stem": "is the vehicle on the left or right side of the blue umbrella",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 19,
+      "B": 1
+    },
+    "top_choice": "A",
+    "top_rate": 0.95,
+    "target_rate": 0.05,
+    "seen_label_rate": 0.05,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "172",
+    "stem": "is the steel ladder on the left or right side of the wagon",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "173",
+    "stem": "is the red vehicle on the left or right side of the sculpture",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "174",
+    "stem": "is the slide on the left or right side of the life buoy",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 14,
+      "B": 6
+    },
+    "top_choice": "A",
+    "top_rate": 0.7,
+    "target_rate": 0.3,
+    "seen_label_rate": 0.3,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "175",
+    "stem": "is the green surfboard on the left or right side of the purple umbrella",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 15,
+      "B": 5
+    },
+    "top_choice": "A",
+    "top_rate": 0.75,
+    "target_rate": 0.25,
+    "seen_label_rate": 0.25,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "176",
+    "stem": "is the broom on the left or right side of the folded chair",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 18,
+      "A": 2
+    },
+    "top_choice": "B",
+    "top_rate": 0.9,
+    "target_rate": 0.9,
+    "seen_label_rate": 0.9,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "177",
+    "stem": "is the soccer ball on the left or right side of the long bench",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 15,
+      "B": 5
+    },
+    "top_choice": "A",
+    "top_rate": 0.75,
+    "target_rate": 0.25,
+    "seen_label_rate": 0.25,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "178",
+    "stem": "is the baby carriage on the left or right side of the cyclist",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "179",
+    "stem": "is the bucket on the left or right side of the cyclist",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 16,
+      "A": 4
+    },
+    "top_choice": "B",
+    "top_rate": 0.8,
+    "target_rate": 0.2,
+    "seen_label_rate": 0.2,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "180",
+    "stem": "is the telephone booth on the left or right side of the yellow van",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 17,
+      "A": 3
+    },
+    "top_choice": "B",
+    "top_rate": 0.85,
+    "target_rate": 0.15,
+    "seen_label_rate": 0.15,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "181",
+    "stem": "is the red balloon above or below the white balloon",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "below",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "below"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "182",
+    "stem": "which one is closer to the camera, the black vehicle or the silver vehicle",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "black vehicle",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "black vehicle"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 19,
+      "B": 1
+    },
+    "top_choice": "A",
+    "top_rate": 0.95,
+    "target_rate": 0.95,
+    "seen_label_rate": 0.95,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "183",
+    "stem": "which one is closer to the camera, the water bottle or the vehicle",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "water bottle",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "water bottle"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "184",
+    "stem": "is the scooter on the left or right side of the cyclist",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 17,
+      "B": 3
+    },
+    "top_choice": "A",
+    "top_rate": 0.85,
+    "target_rate": 0.85,
+    "seen_label_rate": 0.85,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "185",
+    "stem": "is the volleyball on the left or right side of the man with white cap",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 16,
+      "A": 4
+    },
+    "top_choice": "B",
+    "top_rate": 0.8,
+    "target_rate": 0.2,
+    "seen_label_rate": 0.2,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "186",
+    "stem": "is the blue mask on the left or right side of the black mask",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "B": 20
+    },
+    "top_choice": "B",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "187",
+    "stem": "is the street lamp on the left or right side of the blue van",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 10,
+      "B": 10
+    },
+    "top_choice": "A",
+    "top_rate": 0.5,
+    "target_rate": 0.5,
+    "seen_label_rate": 0.5,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "188",
+    "stem": "is the yellow umbrella on the left or right side of the pink umbrella",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 1.0,
+    "seen_label_rate": 1.0,
+    "strong_top_bias": true,
+    "strong_target_bias": true,
+    "strong_seen_label_bias": true
+  },
+  {
+    "question_id": "189",
+    "stem": "is the red suitcase on the left or right side of the red stool",
+    "category": "relative_position",
+    "target_label": "B",
+    "target_answer": "left",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "B"
+    ],
+    "stem_group_answers": [
+      "left"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 20
+    },
+    "top_choice": "A",
+    "top_rate": 1.0,
+    "target_rate": 0.0,
+    "seen_label_rate": 0.0,
+    "strong_top_bias": true,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  },
+  {
+    "question_id": "190",
+    "stem": "is the white chair on the left or right side of the street",
+    "category": "relative_position",
+    "target_label": "A",
+    "target_answer": "right",
+    "is_conflict_group": false,
+    "stem_group_size": 1,
+    "stem_group_labels": [
+      "A"
+    ],
+    "stem_group_answers": [
+      "right"
+    ],
+    "n": 20,
+    "parsed_n": 20,
+    "counts": {
+      "A": 11,
+      "B": 9
+    },
+    "top_choice": "A",
+    "top_rate": 0.55,
+    "target_rate": 0.55,
+    "seen_label_rate": 0.55,
+    "strong_top_bias": false,
+    "strong_target_bias": false,
+    "strong_seen_label_bias": false
+  }
+]

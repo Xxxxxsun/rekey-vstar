@@ -1,0 +1,7 @@
+data/raw/*.parquet filter=lfs diff=lfs merge=lfs -text
+outputs/dynamic_vstar/full_run_v2/*/artifacts/composite.png filter=lfs diff=lfs merge=lfs -text
+results/benchmark/*/vstar_*/artifacts/*.png filter=lfs diff=lfs merge=lfs -text
+results/benchmark/*/vstar_*/*.png filter=lfs diff=lfs merge=lfs -text
+results/benchmark/*/vstar_*/artifacts/composite.jpg filter=lfs diff=lfs merge=lfs -text
+results/vlm_annotator/bench_vlm_add/*/artifacts/composite.jpg filter=lfs diff=lfs merge=lfs -text
+results/vlm_annotator/bench_vlm_add/*/*.png filter=lfs diff=lfs merge=lfs -text

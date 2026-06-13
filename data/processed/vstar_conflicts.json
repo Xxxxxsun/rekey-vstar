@@ -1,0 +1,650 @@
+[
+  {
+    "canonical_stem": "what is the color of the backpack",
+    "size": 2,
+    "answers": [
+      "gray",
+      "red"
+    ],
+    "labels": [
+      "A"
+    ],
+    "question_ids": [
+      "75",
+      "94"
+    ],
+    "items": [
+      {
+        "question_id": "75",
+        "label": "A",
+        "answer": "gray",
+        "options": {
+          "A": "gray",
+          "B": "white",
+          "C": "yellow",
+          "D": "red"
+        }
+      },
+      {
+        "question_id": "94",
+        "label": "A",
+        "answer": "red",
+        "options": {
+          "A": "red",
+          "B": "black",
+          "C": "white",
+          "D": "yellow"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the bicycle",
+    "size": 3,
+    "answers": [
+      "red",
+      "yellow"
+    ],
+    "labels": [
+      "C",
+      "D"
+    ],
+    "question_ids": [
+      "17",
+      "25",
+      "57"
+    ],
+    "items": [
+      {
+        "question_id": "17",
+        "label": "D",
+        "answer": "red",
+        "options": {
+          "A": "blue",
+          "B": "white",
+          "C": "silver",
+          "D": "red"
+        }
+      },
+      {
+        "question_id": "25",
+        "label": "D",
+        "answer": "yellow",
+        "options": {
+          "A": "black",
+          "B": "red",
+          "C": "white",
+          "D": "yellow"
+        }
+      },
+      {
+        "question_id": "57",
+        "label": "C",
+        "answer": "red",
+        "options": {
+          "A": "yellow",
+          "B": "white",
+          "C": "red",
+          "D": "black"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the bottle cap",
+    "size": 2,
+    "answers": [
+      "blue",
+      "red"
+    ],
+    "labels": [
+      "C",
+      "D"
+    ],
+    "question_ids": [
+      "96",
+      "105"
+    ],
+    "items": [
+      {
+        "question_id": "96",
+        "label": "C",
+        "answer": "red",
+        "options": {
+          "A": "blue",
+          "B": "white",
+          "C": "red",
+          "D": "orange"
+        }
+      },
+      {
+        "question_id": "105",
+        "label": "D",
+        "answer": "blue",
+        "options": {
+          "A": "white",
+          "B": "black",
+          "C": "red",
+          "D": "blue"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the car",
+    "size": 3,
+    "answers": [
+      "black",
+      "silver",
+      "white"
+    ],
+    "labels": [
+      "B",
+      "D"
+    ],
+    "question_ids": [
+      "24",
+      "43",
+      "63"
+    ],
+    "items": [
+      {
+        "question_id": "24",
+        "label": "B",
+        "answer": "black",
+        "options": {
+          "A": "white",
+          "B": "black",
+          "C": "silver",
+          "D": "red"
+        }
+      },
+      {
+        "question_id": "43",
+        "label": "B",
+        "answer": "white",
+        "options": {
+          "A": "red",
+          "B": "white",
+          "C": "silver",
+          "D": "black"
+        }
+      },
+      {
+        "question_id": "63",
+        "label": "D",
+        "answer": "silver",
+        "options": {
+          "A": "blue",
+          "B": "black",
+          "C": "red",
+          "D": "silver"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the cart",
+    "size": 2,
+    "answers": [
+      "green"
+    ],
+    "labels": [
+      "A",
+      "D"
+    ],
+    "question_ids": [
+      "5",
+      "13"
+    ],
+    "items": [
+      {
+        "question_id": "5",
+        "label": "D",
+        "answer": "green",
+        "options": {
+          "A": "red",
+          "B": "white",
+          "C": "black",
+          "D": "green"
+        }
+      },
+      {
+        "question_id": "13",
+        "label": "A",
+        "answer": "green",
+        "options": {
+          "A": "green",
+          "B": "white",
+          "C": "black",
+          "D": "silver"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the dog",
+    "size": 3,
+    "answers": [
+      "black",
+      "black and white",
+      "white"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "D"
+    ],
+    "question_ids": [
+      "61",
+      "70",
+      "99"
+    ],
+    "items": [
+      {
+        "question_id": "61",
+        "label": "A",
+        "answer": "white",
+        "options": {
+          "A": "white",
+          "B": "brown",
+          "C": "golden",
+          "D": "black"
+        }
+      },
+      {
+        "question_id": "70",
+        "label": "B",
+        "answer": "black",
+        "options": {
+          "A": "gray",
+          "B": "black",
+          "C": "brown",
+          "D": "white"
+        }
+      },
+      {
+        "question_id": "99",
+        "label": "D",
+        "answer": "black and white",
+        "options": {
+          "A": "gray",
+          "B": "yellow",
+          "C": "brown",
+          "D": "black and white"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the flag",
+    "size": 2,
+    "answers": [
+      "blue and yellow",
+      "red"
+    ],
+    "labels": [
+      "A",
+      "B"
+    ],
+    "question_ids": [
+      "58",
+      "81"
+    ],
+    "items": [
+      {
+        "question_id": "58",
+        "label": "B",
+        "answer": "blue and yellow",
+        "options": {
+          "A": "red and yellow",
+          "B": "blue and yellow",
+          "C": "blue and red",
+          "D": "green and white"
+        }
+      },
+      {
+        "question_id": "81",
+        "label": "A",
+        "answer": "red",
+        "options": {
+          "A": "red",
+          "B": "yellow",
+          "C": "white",
+          "D": "blue"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the handbag",
+    "size": 2,
+    "answers": [
+      "white",
+      "yellow"
+    ],
+    "labels": [
+      "D"
+    ],
+    "question_ids": [
+      "45",
+      "83"
+    ],
+    "items": [
+      {
+        "question_id": "45",
+        "label": "D",
+        "answer": "white",
+        "options": {
+          "A": "brown",
+          "B": "black",
+          "C": "red",
+          "D": "white"
+        }
+      },
+      {
+        "question_id": "83",
+        "label": "D",
+        "answer": "yellow",
+        "options": {
+          "A": "white",
+          "B": "red",
+          "C": "black",
+          "D": "yellow"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the helmet",
+    "size": 3,
+    "answers": [
+      "green",
+      "red",
+      "white"
+    ],
+    "labels": [
+      "A"
+    ],
+    "question_ids": [
+      "34",
+      "51",
+      "93"
+    ],
+    "items": [
+      {
+        "question_id": "34",
+        "label": "A",
+        "answer": "green",
+        "options": {
+          "A": "green",
+          "B": "blue",
+          "C": "red",
+          "D": "white"
+        }
+      },
+      {
+        "question_id": "51",
+        "label": "A",
+        "answer": "red",
+        "options": {
+          "A": "red",
+          "B": "yellow",
+          "C": "white",
+          "D": "blue"
+        }
+      },
+      {
+        "question_id": "93",
+        "label": "A",
+        "answer": "white",
+        "options": {
+          "A": "white",
+          "B": "yellow",
+          "C": "black",
+          "D": "red"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the man's cap",
+    "size": 4,
+    "answers": [
+      "black",
+      "gray",
+      "red",
+      "white"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "question_ids": [
+      "29",
+      "33",
+      "41",
+      "46"
+    ],
+    "items": [
+      {
+        "question_id": "29",
+        "label": "B",
+        "answer": "red",
+        "options": {
+          "A": "white",
+          "B": "red",
+          "C": "gray",
+          "D": "blue"
+        }
+      },
+      {
+        "question_id": "33",
+        "label": "C",
+        "answer": "gray",
+        "options": {
+          "A": "yellow",
+          "B": "red",
+          "C": "gray",
+          "D": "green"
+        }
+      },
+      {
+        "question_id": "41",
+        "label": "C",
+        "answer": "black",
+        "options": {
+          "A": "white",
+          "B": "green",
+          "C": "black",
+          "D": "red"
+        }
+      },
+      {
+        "question_id": "46",
+        "label": "A",
+        "answer": "white",
+        "options": {
+          "A": "white",
+          "B": "blue",
+          "C": "red",
+          "D": "black"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the motorcycle",
+    "size": 2,
+    "answers": [
+      "black",
+      "orange"
+    ],
+    "labels": [
+      "B",
+      "D"
+    ],
+    "question_ids": [
+      "27",
+      "62"
+    ],
+    "items": [
+      {
+        "question_id": "27",
+        "label": "B",
+        "answer": "orange",
+        "options": {
+          "A": "blue",
+          "B": "orange",
+          "C": "white",
+          "D": "black"
+        }
+      },
+      {
+        "question_id": "62",
+        "label": "D",
+        "answer": "black",
+        "options": {
+          "A": "orange",
+          "B": "red",
+          "C": "white",
+          "D": "black"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the plastic stool",
+    "size": 2,
+    "answers": [
+      "blue",
+      "white"
+    ],
+    "labels": [
+      "B",
+      "C"
+    ],
+    "question_ids": [
+      "8",
+      "49"
+    ],
+    "items": [
+      {
+        "question_id": "8",
+        "label": "B",
+        "answer": "blue",
+        "options": {
+          "A": "black",
+          "B": "blue",
+          "C": "white",
+          "D": "red"
+        }
+      },
+      {
+        "question_id": "49",
+        "label": "C",
+        "answer": "white",
+        "options": {
+          "A": "black",
+          "B": "blue",
+          "C": "white",
+          "D": "red"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the trash can",
+    "size": 2,
+    "answers": [
+      "black",
+      "green"
+    ],
+    "labels": [
+      "A",
+      "C"
+    ],
+    "question_ids": [
+      "53",
+      "86"
+    ],
+    "items": [
+      {
+        "question_id": "53",
+        "label": "C",
+        "answer": "green",
+        "options": {
+          "A": "black",
+          "B": "yellow",
+          "C": "green",
+          "D": "red"
+        }
+      },
+      {
+        "question_id": "86",
+        "label": "A",
+        "answer": "black",
+        "options": {
+          "A": "black",
+          "B": "silver",
+          "C": "yellow",
+          "D": "green"
+        }
+      }
+    ]
+  },
+  {
+    "canonical_stem": "what is the color of the umbrella",
+    "size": 3,
+    "answers": [
+      "blue",
+      "purple"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "D"
+    ],
+    "question_ids": [
+      "74",
+      "76",
+      "97"
+    ],
+    "items": [
+      {
+        "question_id": "74",
+        "label": "A",
+        "answer": "purple",
+        "options": {
+          "A": "purple",
+          "B": "black",
+          "C": "blue",
+          "D": "red"
+        }
+      },
+      {
+        "question_id": "76",
+        "label": "D",
+        "answer": "purple",
+        "options": {
+          "A": "red",
+          "B": "blue",
+          "C": "black",
+          "D": "purple"
+        }
+      },
+      {
+        "question_id": "97",
+        "label": "B",
+        "answer": "blue",
+        "options": {
+          "A": "red",
+          "B": "blue",
+          "C": "black",
+          "D": "white"
+        }
+      }
+    ]
+  }
+]

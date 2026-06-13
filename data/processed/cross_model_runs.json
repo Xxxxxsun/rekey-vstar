@@ -1,0 +1,38 @@
+[
+  {
+    "model": "qwen/qwen3.6-plus",
+    "label": "Qwen3.6-Plus",
+    "original": "results/qwen36plus_vstar_image_rawprompt_originalimage_t0.jsonl",
+    "relabel": "results/qwen36plus_vstar_relabel_current_rawprompt_originalimage_t0.jsonl"
+  },
+  {
+    "model": "google/gemini-3.1-pro-preview",
+    "label": "Gemini 3.1 Pro",
+    "original": "results/gemini31pro_original.jsonl",
+    "relabel": "results/gemini31pro_relabel.jsonl"
+  },
+  {
+    "model": "~moonshotai/kimi-latest",
+    "label": "Kimi-latest",
+    "original": "results/kimi_original.jsonl",
+    "relabel": "results/kimi_relabel.jsonl"
+  },
+  {
+    "model": "bytedance-seed/seed-2.0-lite",
+    "label": "Seed-2.0-Lite",
+    "original": "results/seed20lite_original.jsonl",
+    "relabel": "results/seed20lite_relabel.jsonl"
+  },
+  {
+    "model": "xiaomi/mimo-v2.5",
+    "label": "MiMo v2.5",
+    "original": "results/mimo25_original.jsonl",
+    "relabel": "results/mimo25_relabel.jsonl"
+  },
+  {
+    "model": "meta-llama/llama-4-maverick",
+    "label": "Llama 4 Maverick",
+    "original": "results/llama4mav_original.jsonl",
+    "relabel": "results/llama4mav_relabel.jsonl"
+  }
+]

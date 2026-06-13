@@ -1,0 +1,183 @@
+<!--
+  Dynamic V* 标注配置
+
+  标注规则:
+    * 蓝框 (context_region): 裁剪区域，字母编号 (A, B, C)，描述可选。
+    * 橙框 (edit_region): 编辑区域，编号 = 字母+数字 (A1, A2, B1)。
+    * 替换模式: target_ref 写 "{颜色} {物体}" 或 "{颜色} {部件} on the {所属}"。
+    * 新增模式: 勾选原图中不存在的物体。
+    * 目前只支持改颜色。
+
+  详见 docs/dynamic_vstar/annotation_guide.md
+-->
+<View style="font-size:12px; line-height:1.3; padding:4px;">
+  <Header value="Dynamic V*: $image_id (qid=$question_id, cat=$category)" size="5" />
+  <View style="border:1px solid #d0d0d8; border-radius:6px; padding:6px 10px; margin-bottom:6px; background:#fcfcfd;">
+    <Header value="V* 原始问题：$original_question" size="6" />
+    <Header value="V* 改写问题：$relabel_question" size="6" />
+  </View>
+
+  <Image name="image" value="$image" zoom="true" zoomControl="true" rotateControl="false" />
+
+  <RectangleLabels name="slot_box" toName="image" strokeWidth="2">
+    <Label value="context_region" background="#1F77B4" />
+    <Label value="edit_region" background="#FF7F0E" />
+  </RectangleLabels>
+
+  <View visibleWhen="region-selected" style="padding:6px 8px; background:#f7f7f7; border-radius:4px;">
+    <Header value="当前框属性" size="6" />
+
+    <!-- ========================= CONTEXT REGION ========================= -->
+    <View visibleWhen="region-selected" whenTagName="slot_box" whenLabelValue="context_region">
+      <View style="border:1px solid #d0d0d8; border-radius:6px; padding:8px; margin-bottom:8px; background:#fafafb;">
+        <Header value="上下文编号（例如 A、B、C）" size="6" />
+        <TextArea name="context_slot_id" toName="image" perRegion="true"
+                  rows="1" maxSubmissions="1"
+                  placeholder="A" />
+      </View>
+      <View style="border:1px solid #d0d0d8; border-radius:6px; padding:8px; margin-bottom:8px; background:#fafafb;">
+        <Header value="上下文描述（可选）" size="6" />
+        <TextArea name="context_ref" toName="image" perRegion="true"
+                  rows="1" maxSubmissions="1"
+                  placeholder="可选" />
+      </View>
+    </View>
+
+    <!-- =========================== EDIT REGION ========================== -->
+    <View visibleWhen="region-selected" whenTagName="slot_box" whenLabelValue="edit_region">
+      <View style="border:1px solid #d0d0d8; border-radius:6px; padding:8px; margin-bottom:8px; background:#fafafb;">
+        <Header value="编辑编号（例如 A1、A2、B1）" size="6" />
+        <TextArea name="edit_slot_id" toName="image" perRegion="true"
+                  rows="1" maxSubmissions="1"
+                  placeholder="A1" />
+      </View>
+
+      <View style="border:1px solid #d0d0d8; border-radius:6px; padding:8px; margin-bottom:8px; background:#fafafb;">
+        <Header value="编辑方式" size="6" />
+        <Choices name="edit_mode" toName="image" perRegion="true"
+                 choice="single-radio" showInline="true">
+          <Choice value="add">新增物体</Choice>
+          <Choice value="replace">替换已有物体</Choice>
+        </Choices>
+      </View>
+
+      <!-- =================== ADD: 勾选候选物体 =================== -->
+      <View style="border:1px solid #d0d0d8; border-radius:6px; padding:8px; margin-bottom:8px; background:#f8fbff;">
+        <Header value="新增：勾选原图中【不存在】的物体" size="6" />
+
+        <Header value="— 地面/道路/地板 —" size="7" />
+        <Choices name="add_objects" toName="image" perRegion="true"
+                 choice="multiple" showInline="true">
+          <Choice value="bag">包/袋</Choice>
+          <Choice value="bucket">桶</Choice>
+          <Choice value="umbrella">雨伞</Choice>
+          <Choice value="bottle">瓶子</Choice>
+          <Choice value="box">箱子/盒子</Choice>
+          <Choice value="bicycle">自行车</Choice>
+          <Choice value="kick scooter">滑板车</Choice>
+          <Choice value="stroller">婴儿车</Choice>
+          <Choice value="dog">狗</Choice>
+          <Choice value="cat">猫</Choice>
+        </Choices>
+
+        <Header value="— 桌面/台面/架子 —" size="7" />
+        <Choices name="add_objects_table" toName="image" perRegion="true"
+                 choice="multiple" showInline="true">
+          <Choice value="cup">杯子</Choice>
+          <Choice value="bowl">碗</Choice>
+          <Choice value="phone">手机</Choice>
+          <Choice value="flower">花</Choice>
+        </Choices>
+
+        <Header value="— 墙面/门板 —" size="7" />
+        <Choices name="add_objects_wall" toName="image" perRegion="true"
+                 choice="multiple" showInline="true">
+          <Choice value="poster">海报</Choice>
+          <Choice value="sign">标牌</Choice>
+          <Choice value="clock">时钟</Choice>
+          <Choice value="wall_flag">旗子</Choice>
+        </Choices>
+
+        <Header value="— 水面 —" size="7" />
+        <Choices name="add_objects_water" toName="image" perRegion="true"
+                 choice="multiple" showInline="true">
+          <Choice value="boat">小船</Choice>
+          <Choice value="duck">鸭子</Choice>
+          <Choice value="kayak">皮划艇</Choice>
+          <Choice value="float">游泳圈</Choice>
+        </Choices>
+
+        <Header value="— 空中/上方 —" size="7" />
+        <Choices name="add_objects_air" toName="image" perRegion="true"
+                 choice="multiple" showInline="true">
+          <Choice value="air_bird">鸟</Choice>
+          <Choice value="balloon">气球</Choice>
+          <Choice value="kite">风筝</Choice>
+          <Choice value="air_flag">旗子</Choice>
+        </Choices>
+
+        <Header value="— 自定义（可选） —" size="7" />
+        <TextArea name="add_custom_object" toName="image" perRegion="true"
+                  rows="1" maxSubmissions="1"
+                  placeholder="例如：lantern, banner" />
+      </View>
+
+      <!-- =================== REPLACE: target_ref =================== -->
+      <View style="border:1px solid #d0d0d8; border-radius:6px; padding:8px; margin-bottom:8px; background:#fff8f2;">
+        <Header value="替换：目标描述" size="6" />
+        <View style="border:1px solid #f0c7a6; border-radius:6px; padding:8px; margin-bottom:8px; background:#fffdfb;">
+          <Header value="目标描述" size="7" />
+          <TextArea name="replace_target_1_ref" toName="image" perRegion="true"
+                    rows="1" maxSubmissions="1"
+                    placeholder="例如：红色自行车、蓝色塑料手套" />
+          <Choices name="replace_target_1_edit_types" toName="image" perRegion="true"
+                   choice="multiple" showInline="true">
+            <Choice value="color_change">改颜色</Choice>
+          </Choices>
+        </View>
+      </View>
+    </View>
+
+    <!-- hidden: legacy fields -->
+    <View style="display:none;">
+      <Choices name="replace_edit_types" toName="image" perRegion="true" choice="multiple">
+        <Choice value="color_change" /><Choice value="material_change" /><Choice value="pattern_change" />
+      </Choices>
+      <TextArea name="replace_target_ref" toName="image" perRegion="true" rows="1" maxSubmissions="1" />
+      <Choices name="replace_material_scope" toName="image" perRegion="true" choice="single">
+        <Choice value="wearable" /><Choice value="rigid" /><Choice value="paper" />
+      </Choices>
+      <Choices name="replace_target_1_attribute_scope" toName="image" perRegion="true" choice="single">
+        <Choice value="wearable" /><Choice value="rigid" /><Choice value="paper" />
+      </Choices>
+      <Choices name="replace_target_2_edit_types" toName="image" perRegion="true" choice="multiple">
+        <Choice value="color_change" />
+      </Choices>
+      <TextArea name="replace_target_2_ref" toName="image" perRegion="true" rows="1" maxSubmissions="1" />
+      <Choices name="replace_target_2_attribute_scope" toName="image" perRegion="true" choice="single">
+        <Choice value="wearable" /><Choice value="rigid" /><Choice value="paper" />
+      </Choices>
+      <Choices name="replace_target_3_edit_types" toName="image" perRegion="true" choice="multiple">
+        <Choice value="color_change" />
+      </Choices>
+      <TextArea name="replace_target_3_ref" toName="image" perRegion="true" rows="1" maxSubmissions="1" />
+      <Choices name="replace_target_3_attribute_scope" toName="image" perRegion="true" choice="single">
+        <Choice value="wearable" /><Choice value="rigid" /><Choice value="paper" />
+      </Choices>
+      <Choices name="replace_target_family" toName="image" perRegion="true" choice="single">
+        <Choice value="_legacy" />
+      </Choices>
+      <Choices name="add_entity_families" toName="image" perRegion="true" choice="multiple">
+        <Choice value="human" /><Choice value="animal" /><Choice value="vehicle" />
+        <Choice value="tiny_object" /><Choice value="sticker_or_tag" /><Choice value="small_container" />
+        <Choice value="food_item" /><Choice value="plant_or_flower" /><Choice value="tool_or_device" />
+        <Choice value="wearable_accessory" /><Choice value="surface_mark" />
+      </Choices>
+      <Choices name="add_placements" toName="image" perRegion="true" choice="multiple">
+        <Choice value="ground_surface" /><Choice value="countertop_or_table" />
+        <Choice value="vertical_surface" /><Choice value="water_surface" />
+        <Choice value="hanging_or_overhead_area" />
+      </Choices>
+    </View>
+  </View>
+</View>
