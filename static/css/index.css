@@ -447,14 +447,10 @@ body {
 
 .method-strip {
   display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(780px, 84%);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 1.5rem;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
   padding: 0.25rem 0 0.75rem;
-  scroll-snap-type: x mandatory;
   text-align: left;
 }
 
@@ -1017,7 +1013,7 @@ code {
   }
 
   .method-strip {
-    grid-auto-columns: minmax(280px, 88vw);
+    grid-template-columns: 1fr;
     gap: 0.75rem;
   }
 
