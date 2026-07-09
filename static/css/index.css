@@ -308,12 +308,60 @@ body {
   margin-right: auto;
 }
 
+.leakage-section .content > p:not(.leakage-intro) {
+  text-align: left;
+}
+
 .leakage-intro {
   color: var(--text-secondary);
   font-size: 1rem;
   max-width: 920px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.leakage-table {
+  max-width: 720px;
+  margin: 1.5rem auto 0.75rem;
+  font-size: 0.9rem;
+}
+
+.leakage-table th,
+.leakage-table td {
+  padding: 0.45em 0.9em;
+  vertical-align: middle;
+}
+
+.leakage-table td:not(:first-child),
+.leakage-table th:not(:first-child) {
+  text-align: right;
+}
+
+.leakage-table .drop-cell {
+  white-space: nowrap;
+}
+
+.leakage-table .drop-track {
+  display: inline-block;
+  width: 60px;
+  height: 7px;
+  border-radius: 4px;
+  background: rgba(214, 69, 69, 0.15);
+  margin-right: 8px;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.leakage-table .drop-fill {
+  display: block;
+  height: 100%;
+  background: #d64545;
+  border-radius: 4px;
+}
+
+.leakage-table .drop-val {
+  color: #d64545;
+  font-weight: 700;
 }
 
 .leakage-slide {
