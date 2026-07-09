@@ -199,7 +199,10 @@
                         <span class="prompt-label">Original</span>
                       </div>
                       <p class="prompt-question">What is the color of the bottle cap?</p>
-                      <div class="prompt-answer"><span class="swatch" style="--sw:#e03131"></span><span class="ans-val">red</span></div>
+                      <div class="prompt-facts">
+                        <div class="fact"><span class="fact-label">Ground truth</span><span class="fact-ans"><span class="swatch" style="--sw:#e03131"></span>red</span></div>
+                        <div class="fact"><span class="fact-label"><img class="model-logo" src="static/images/logos/qwen-color.png" alt="">Qwen3.6-Plus</span><span class="fact-ans"><span class="swatch" style="--sw:#e03131"></span>red<span class="verdict ok">&#10003;</span></span></div>
+                      </div>
                     </div>
                     <div class="prompt-card prompt-relabel">
                       <div class="prompt-head">
@@ -207,7 +210,10 @@
                         <span class="prompt-label">Relabel</span>
                       </div>
                       <p class="prompt-question">What color is the clip?</p>
-                      <div class="prompt-answer"><span class="swatch" style="--sw:#e03131"></span><span class="ans-val">red</span></div>
+                      <div class="prompt-facts">
+                        <div class="fact"><span class="fact-label">Ground truth</span><span class="fact-ans"><span class="swatch" style="--sw:#e03131"></span>red</span></div>
+                        <div class="fact"><span class="fact-label"><img class="model-logo" src="static/images/logos/qwen-color.png" alt="">Qwen3.6-Plus</span><span class="fact-ans"><span class="swatch" style="--sw:#ffffff"></span>white<span class="verdict no">&#10007;</span></span></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -226,7 +232,10 @@
                         <span class="prompt-label">Original</span>
                       </div>
                       <p class="prompt-question">What is the color of the broom?</p>
-                      <div class="prompt-answer"><span class="swatch" style="--sw:#1a1a1a"></span><span class="ans-val">black</span></div>
+                      <div class="prompt-facts">
+                        <div class="fact"><span class="fact-label">Ground truth</span><span class="fact-ans"><span class="swatch" style="--sw:#1a1a1a"></span>black</span></div>
+                        <div class="fact"><span class="fact-label"><img class="model-logo" src="static/images/logos/qwen-color.png" alt="">Qwen3.6-Plus</span><span class="fact-ans"><span class="swatch" style="--sw:#1a1a1a"></span>black<span class="verdict ok">&#10003;</span></span></div>
+                      </div>
                     </div>
                     <div class="prompt-card prompt-relabel">
                       <div class="prompt-head">
@@ -234,7 +243,10 @@
                         <span class="prompt-label">Relabel</span>
                       </div>
                       <p class="prompt-question">What color is the spring?</p>
-                      <div class="prompt-answer"><span class="swatch" style="--sw:#f4b400"></span><span class="ans-val">yellow</span></div>
+                      <div class="prompt-facts">
+                        <div class="fact"><span class="fact-label">Ground truth</span><span class="fact-ans"><span class="swatch" style="--sw:#f4b400"></span>yellow</span></div>
+                        <div class="fact"><span class="fact-label"><img class="model-logo" src="static/images/logos/qwen-color.png" alt="">Qwen3.6-Plus</span><span class="fact-ans"><span class="swatch" style="--sw:#c0c0c0"></span>silver<span class="verdict no">&#10007;</span></span></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -253,7 +265,10 @@
                         <span class="prompt-label">Original</span>
                       </div>
                       <p class="prompt-question">What is the color of the dog?</p>
-                      <div class="prompt-answer"><span class="swatch" style="--sw:#ffffff"></span><span class="ans-val">white</span></div>
+                      <div class="prompt-facts">
+                        <div class="fact"><span class="fact-label">Ground truth</span><span class="fact-ans"><span class="swatch" style="--sw:#ffffff"></span>white</span></div>
+                        <div class="fact"><span class="fact-label"><img class="model-logo" src="static/images/logos/qwen-color.png" alt="">Qwen3.6-Plus</span><span class="fact-ans"><span class="swatch" style="--sw:#ffffff"></span>white<span class="verdict ok">&#10003;</span></span></div>
+                      </div>
                     </div>
                     <div class="prompt-card prompt-relabel">
                       <div class="prompt-head">
@@ -261,7 +276,10 @@
                         <span class="prompt-label">Relabel</span>
                       </div>
                       <p class="prompt-question">What is the color of the bird on the ground?</p>
-                      <div class="prompt-answer"><span class="swatch" style="--sw:#8a5a2b"></span><span class="ans-val">brown</span></div>
+                      <div class="prompt-facts">
+                        <div class="fact"><span class="fact-label">Ground truth</span><span class="fact-ans"><span class="swatch" style="--sw:#8a5a2b"></span>brown</span></div>
+                        <div class="fact"><span class="fact-label"><img class="model-logo" src="static/images/logos/qwen-color.png" alt="">Qwen3.6-Plus</span><span class="fact-ans"><span class="swatch" style="--sw:#9aa0a6"></span>grey<span class="verdict no">&#10007;</span></span></div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -425,8 +443,8 @@
             </div>
           </div>
 
-          <div class="experiment-duo">
-            <article class="experiment-card">
+          <div class="analysis-band">
+            <div class="band-text">
               <div class="experiment-heading">
                 <span class="experiment-kicker">RQ2</span>
                 <h3>REKEY preserves the original difficulty</h3>
@@ -434,6 +452,8 @@
               <p>
                 On LLaVA-1.5-13B, <strong>position accuracy barely moves (&minus;0.4 pp)</strong> after regeneration &mdash; REKEY preserves the visual-search structure while renewing the answer-bearing evidence.
               </p>
+            </div>
+            <div class="band-figure">
               <table class="table is-fullwidth compact-result-table">
                 <thead>
                   <tr>
@@ -464,38 +484,40 @@
                   </tr>
                 </tbody>
               </table>
-            </article>
+            </div>
+          </div>
 
-            <article class="experiment-card">
+          <div class="analysis-band">
+            <div class="band-text">
               <div class="experiment-heading">
                 <span class="experiment-kicker">RQ3</span>
                 <h3>Human annotation is necessary</h3>
               </div>
+              <p>
+                GPT-5.5's self-annotations put the new object in add regions that are <strong>3.2&times; larger</strong> than human ones, making the benchmark <strong>+8.4 to +18.5 pp easier</strong> across models &mdash; human curation is what keeps the difficulty honest.
+              </p>
+            </div>
+            <div class="band-figure">
               <figure class="experiment-figure">
                 <img src="static/images/human-vlm-radar.jpg"
                      alt="Radar chart comparing human REKEY annotations with VLM self-annotations." loading="lazy">
               </figure>
-              <p>
-                GPT-5.5's self-annotations put the new object in add regions that are <strong>3.2&times; larger</strong> than human ones, making the benchmark <strong>+8.4 to +18.5 pp easier</strong> across models &mdash; human curation is what keeps the difficulty honest.
-              </p>
-            </article>
+            </div>
           </div>
 
-          <div class="stress-block">
-            <article class="experiment-card">
-              <div class="experiment-heading">
-                <span class="experiment-kicker">Robustness</span>
-                <h3>Capability boosts that disappear under REKEY</h3>
-              </div>
-              <figure class="experiment-figure">
-                <img src="static/images/capability-delta.jpg"
-                     alt="Bar chart comparing CoT and agentic effects on Original V*, Relabel V*, and REKEY." loading="lazy">
-              </figure>
-              <ul class="experiment-copy-list">
-                <li><strong>Chain-of-thought</strong> lifts Original / Relabel by up to +6.8 / +10.5 pp &mdash; but on REKEY the effect turns slightly negative (&minus;0.5 to &minus;3.1 pp).</li>
-                <li><strong>Agentic zoom</strong> adds up to +9.5 / +12.4 pp on the static sets, yet only &minus;4.0 to +3.6 pp on REKEY.</li>
-              </ul>
-            </article>
+          <div class="analysis-wide">
+            <div class="experiment-heading">
+              <span class="experiment-kicker">Robustness</span>
+              <h3>Capability boosts that disappear under REKEY</h3>
+            </div>
+            <ul class="experiment-copy-list">
+              <li><strong>Chain-of-thought</strong> lifts Original / Relabel by up to +6.8 / +10.5 pp &mdash; but on REKEY the effect turns slightly negative (&minus;0.5 to &minus;3.1 pp).</li>
+              <li><strong>Agentic zoom</strong> adds up to +9.5 / +12.4 pp on the static sets, yet only &minus;4.0 to +3.6 pp on REKEY.</li>
+            </ul>
+            <figure class="experiment-figure">
+              <img src="static/images/capability-delta.jpg"
+                   alt="Bar chart comparing CoT and agentic effects on Original V*, Relabel V*, and REKEY." loading="lazy">
+            </figure>
           </div>
         </div>
       </div>

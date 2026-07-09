@@ -1403,3 +1403,106 @@ a:focus {
   color: var(--text-primary);
   text-transform: capitalize;
 }
+
+/* Analysis layout: two-column bands (text + figure/table), hairline-separated */
+.analysis-band {
+  display: grid;
+  grid-template-columns: 0.82fr 1.18fr;
+  gap: 2.75rem;
+  align-items: center;
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: left;
+}
+.analysis-wide {
+  margin-top: 2.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--border-color);
+  text-align: left;
+}
+.band-text h3,
+.analysis-wide h3 {
+  font-size: 1.35rem;
+  line-height: 1.28;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0.2rem 0 0;
+}
+.band-text p {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  margin: 0.65rem 0 0;
+}
+.band-figure { min-width: 0; }
+.band-figure img { width: 100%; height: auto; display: block; }
+.band-figure .compact-result-table { margin: 0; font-size: 0.92rem; }
+.band-figure .compact-result-table th,
+.band-figure .compact-result-table td { padding: 0.5em 0.8em; }
+.analysis-wide .experiment-copy-list { margin: 0.7rem 0 0; }
+.analysis-wide .experiment-figure { max-width: 900px; margin: 1.5rem auto 0; }
+
+@media screen and (max-width: 768px) {
+  .analysis-band { grid-template-columns: 1fr; gap: 1.25rem; }
+}
+
+/* RQ1 flows as a clean full-width block (no card box), like the bands */
+.experiment-block {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* Q/A card facts: ground truth + model answer with a verdict */
+.prompt-facts {
+  display: grid;
+  gap: 0.55rem;
+  padding-top: 0;
+  border-top: none;
+}
+.fact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+.fact-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.fact-label .model-logo {
+  height: 15px !important;
+  width: 15px !important;
+  min-width: 15px;
+  margin: 0;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+.fact-ans {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}
+.fact-ans .swatch {
+  flex: 0 0 auto;
+  width: 0.95em;
+  height: 0.95em;
+  border-radius: 4px;
+  background: var(--sw, #999);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.verdict { margin-left: 0.15rem; font-weight: 800; }
+.verdict.ok { color: var(--good); }
+.verdict.no { color: var(--drop); }
