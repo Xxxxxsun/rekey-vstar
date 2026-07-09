@@ -1558,3 +1558,11 @@ a:focus {
   background: var(--sw, #999);
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
+/* Right-align the answer; check/cross sits to its left */
+.fact-ans { justify-self: end; }
+.fact-ans .verdict { order: -1; margin: 0 0.35rem 0 0; }
+
+/* Robustness band: same text-left/figure-right layout, but a wider figure
+   column since the CoT/agentic bar chart is denser than the radar/table */
+.robust-band { grid-template-columns: 0.68fr 1.32fr; }
+.robust-band .band-figure img { max-width: 640px; }
