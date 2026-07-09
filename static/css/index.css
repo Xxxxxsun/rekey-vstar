@@ -1506,3 +1506,55 @@ a:focus {
 .verdict { margin-left: 0.15rem; font-weight: 800; }
 .verdict.ok { color: var(--good); }
 .verdict.no { color: var(--drop); }
+
+/* --- refinements --- */
+/* Smaller, top-aligned RQ2/RQ3 figures */
+.analysis-band {
+  grid-template-columns: 1fr 0.85fr;
+  align-items: start;
+}
+.band-figure img { max-width: 380px; margin: 0 auto; }
+.band-figure .compact-result-table { max-width: 440px; margin-inline: auto; }
+
+/* Carousel question + answer text in black */
+.prompt-question { color: #111; }
+
+/* Fact rows: a shared two-column grid (label | answer) so the swatch and
+   colour word line up between the Ground truth row and the model row; the
+   check/cross just trails the word. display:contents flattens each .fact
+   into the parent grid. */
+.prompt-facts {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.55rem 0.9rem;
+  padding-top: 0;
+  border-top: none;
+}
+.fact { display: contents; }
+.fact-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.fact-label .model-logo { width: 15px !important; height: 15px !important; }
+.fact-ans {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  color: #111;
+  text-transform: capitalize;
+  font-size: 0.92rem;
+}
+.fact-ans .swatch {
+  width: 15px;
+  height: 15px;
+  border-radius: 4px;
+  background: var(--sw, #999);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
