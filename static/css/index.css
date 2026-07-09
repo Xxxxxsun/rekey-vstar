@@ -606,6 +606,15 @@ body {
   text-align: right;
 }
 
+.compact-result-table {
+  font-size: 0.8rem;
+}
+
+.compact-result-table th,
+.compact-result-table td {
+  padding: 0.35em 0.4em;
+}
+
 .average-row {
   font-weight: 800;
 }
