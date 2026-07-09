@@ -1364,3 +1364,42 @@ a:focus {
   letter-spacing: 0.03em;
   margin-right: 0;
 }
+
+/* Left-align model columns (logos read better flush-left) */
+.model-cell { text-align: left !important; }
+.leakage-table thead th:first-child,
+.experiment-table thead th:first-child { text-align: left !important; }
+
+/* Q/A cards v2: Original/Relabel title over a divider, then question, then
+   the ground-truth answer as a colour swatch (no letters, no model row). */
+.prompt-head {
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+.prompt-original .prompt-label { color: #2563eb; }
+.prompt-relabel .prompt-label { color: #dc2626; }
+.prompt-question {
+  color: #334155;
+  font-weight: 600;
+  margin-bottom: 0.85rem !important;
+}
+.prompt-answer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.98rem;
+}
+.prompt-answer .swatch {
+  flex: 0 0 auto;
+  width: 1.05em;
+  height: 1.05em;
+  border-radius: 4px;
+  background: var(--sw, #999);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.prompt-answer .ans-val {
+  font-weight: 700;
+  color: var(--text-primary);
+  text-transform: capitalize;
+}

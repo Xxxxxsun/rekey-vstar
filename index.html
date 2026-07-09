@@ -112,7 +112,7 @@
     <div class="container is-max-widescreen">
       <div class="columns is-centered has-text-centered">
         <div class="column is-full leakage-column">
-          <h2 class="title is-3">Static VQA Benchmarks Show a Leakage Signal</h2>
+          <h2 class="title is-3">A contamination signal in static V*Bench</h2>
           <div class="content">
             <p>
               We first ask whether current VQA benchmarks are still measuring visual perception, or whether part of the score comes from memorized answer-bearing details. As a probe, we keep the original images fixed but replace the question with a fresh human-written question targeting a different visual key. If a model truly solves the image, performance should remain stable; instead, accuracy drops sharply across model families.
@@ -180,10 +180,10 @@
               </table>
             </div>
             <p>
-              This consistent drop indicates that the static benchmark score is partially inflated by leaked or memorized visual-key information. REKEY starts from this observation and makes the visual key renewable.
+              This consistent drop indicates that original V*Bench scores are partly inflated by memorized answer-bearing details. REKEY starts from this observation and makes the visual key renewable.
             </p>
             <p class="has-text-centered leakage-intro">
-              Each slide keeps the image fixed and swaps only the small visual key being queried.
+              The same image is paired with a fresh question that targets a different visual key.
             </p>
             <div id="leakage-carousel" class="carousel results-carousel leakage-carousel">
               <div class="item leakage-item">
@@ -196,26 +196,18 @@
                     <div class="prompt-card prompt-original">
                       <div class="prompt-head">
                         <span class="prompt-marker">1</span>
-                        <span class="prompt-label">Original V*</span>
-                        <span class="outcome outcome-correct">correct</span>
+                        <span class="prompt-label">Original</span>
                       </div>
                       <p class="prompt-question">What is the color of the bottle cap?</p>
-                      <div class="prompt-facts">
-                        <span><strong>GT</strong> C, red</span>
-                        <span><strong>Qwen3.6-Plus</strong> C</span>
-                      </div>
+                      <div class="prompt-answer"><span class="swatch" style="--sw:#e03131"></span><span class="ans-val">red</span></div>
                     </div>
                     <div class="prompt-card prompt-relabel">
                       <div class="prompt-head">
                         <span class="prompt-marker">2</span>
-                        <span class="prompt-label">Fresh Relabel V*</span>
-                        <span class="outcome outcome-missed">incorrect</span>
+                        <span class="prompt-label">Relabel</span>
                       </div>
                       <p class="prompt-question">What color is the clip?</p>
-                      <div class="prompt-facts">
-                        <span><strong>GT</strong> D, red</span>
-                        <span><strong>Qwen3.6-Plus</strong> B</span>
-                      </div>
+                      <div class="prompt-answer"><span class="swatch" style="--sw:#e03131"></span><span class="ans-val">red</span></div>
                     </div>
                   </div>
                 </div>
@@ -231,26 +223,18 @@
                     <div class="prompt-card prompt-original">
                       <div class="prompt-head">
                         <span class="prompt-marker">1</span>
-                        <span class="prompt-label">Original V*</span>
-                        <span class="outcome outcome-correct">correct</span>
+                        <span class="prompt-label">Original</span>
                       </div>
                       <p class="prompt-question">What is the color of the broom?</p>
-                      <div class="prompt-facts">
-                        <span><strong>GT</strong> A, black</span>
-                        <span><strong>Qwen3.6-Plus</strong> A</span>
-                      </div>
+                      <div class="prompt-answer"><span class="swatch" style="--sw:#1a1a1a"></span><span class="ans-val">black</span></div>
                     </div>
                     <div class="prompt-card prompt-relabel">
                       <div class="prompt-head">
                         <span class="prompt-marker">2</span>
-                        <span class="prompt-label">Fresh Relabel V*</span>
-                        <span class="outcome outcome-missed">incorrect</span>
+                        <span class="prompt-label">Relabel</span>
                       </div>
                       <p class="prompt-question">What color is the spring?</p>
-                      <div class="prompt-facts">
-                        <span><strong>GT</strong> D, yellow</span>
-                        <span><strong>Qwen3.6-Plus</strong> B</span>
-                      </div>
+                      <div class="prompt-answer"><span class="swatch" style="--sw:#f4b400"></span><span class="ans-val">yellow</span></div>
                     </div>
                   </div>
                 </div>
@@ -266,26 +250,18 @@
                     <div class="prompt-card prompt-original">
                       <div class="prompt-head">
                         <span class="prompt-marker">1</span>
-                        <span class="prompt-label">Original V*</span>
-                        <span class="outcome outcome-correct">correct</span>
+                        <span class="prompt-label">Original</span>
                       </div>
                       <p class="prompt-question">What is the color of the dog?</p>
-                      <div class="prompt-facts">
-                        <span><strong>GT</strong> A, white</span>
-                        <span><strong>Qwen3.6-Plus</strong> A</span>
-                      </div>
+                      <div class="prompt-answer"><span class="swatch" style="--sw:#ffffff"></span><span class="ans-val">white</span></div>
                     </div>
                     <div class="prompt-card prompt-relabel">
                       <div class="prompt-head">
                         <span class="prompt-marker">2</span>
-                        <span class="prompt-label">Fresh Relabel V*</span>
-                        <span class="outcome outcome-missed">incorrect</span>
+                        <span class="prompt-label">Relabel</span>
                       </div>
                       <p class="prompt-question">What is the color of the bird on the ground?</p>
-                      <div class="prompt-facts">
-                        <span><strong>GT</strong> B, brown</span>
-                        <span><strong>Qwen3.6-Plus</strong> C</span>
-                      </div>
+                      <div class="prompt-answer"><span class="swatch" style="--sw:#8a5a2b"></span><span class="ans-val">brown</span></div>
                     </div>
                   </div>
                 </div>
@@ -357,14 +333,14 @@
           <h2 class="title is-3">Experimental Results</h2>
           <div class="content experiments-copy">
             <p>
-              We evaluate whether REKEY removes the benchmark-specific advantage exposed by the relabel audit, while preserving visual-search difficulty and avoiding VLM-generated shortcut annotations.
+              We ask three questions: does REKEY close the contamination gap (RQ1), does it preserve V*Bench's original difficulty (RQ2), and is human annotation necessary (RQ3)?
             </p>
           </div>
 
           <div class="experiment-block">
             <div class="experiment-heading">
               <span class="experiment-kicker">RQ1</span>
-              <h3>REKEY removes the static benchmark lift</h3>
+              <h3>REKEY closes the contamination gap</h3>
             </div>
             <div class="table-container">
               <table class="table is-striped is-hoverable is-fullwidth experiment-table">
@@ -453,7 +429,7 @@
             <article class="experiment-card">
               <div class="experiment-heading">
                 <span class="experiment-kicker">RQ2</span>
-                <h3>Difficulty is largely preserved</h3>
+                <h3>REKEY preserves the original difficulty</h3>
               </div>
               <p>
                 On LLaVA-1.5-13B, <strong>position accuracy barely moves (&minus;0.4 pp)</strong> after regeneration &mdash; REKEY preserves the visual-search structure while renewing the answer-bearing evidence.
@@ -493,7 +469,7 @@
             <article class="experiment-card">
               <div class="experiment-heading">
                 <span class="experiment-kicker">RQ3</span>
-                <h3>VLM self-annotation creates easier keys</h3>
+                <h3>Human annotation is necessary</h3>
               </div>
               <figure class="experiment-figure">
                 <img src="static/images/human-vlm-radar.jpg"
@@ -508,8 +484,8 @@
           <div class="stress-block">
             <article class="experiment-card">
               <div class="experiment-heading">
-                <span class="experiment-kicker">Stress Tests</span>
-                <h3>Reasoning and agentic search amplify old benchmarks</h3>
+                <span class="experiment-kicker">Robustness</span>
+                <h3>Capability boosts that disappear under REKEY</h3>
               </div>
               <figure class="experiment-figure">
                 <img src="static/images/capability-delta.jpg"
