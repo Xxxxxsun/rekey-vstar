@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation">
+  <meta name="description" content="Project page for REKEY, a visual-key regeneration protocol for contamination-resilient VQA evaluation.">
+  <meta name="keywords" content="REKEY, VQA, visual question answering, benchmark contamination, V*Bench, vision-language models">
+  <meta name="author" content="REKEY authors">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="REKEY Project">
+  <meta property="og:title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation">
+  <meta property="og:description" content="Metadata-grounded visual-key regeneration for contamination-resilient VQA evaluation.">
+  <meta property="og:url" content="https://xxxxxsun.github.io/rekey-vstar/">
+  <meta property="og:image" content="https://xxxxxsun.github.io/rekey-vstar/static/images/leakage-example-0096.jpg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation">
+  <meta name="twitter:description" content="Metadata-grounded visual-key regeneration for contamination-resilient VQA evaluation.">
+  <meta name="twitter:image" content="https://xxxxxsun.github.io/rekey-vstar/static/images/leakage-example-0096.jpg">
+
+  <meta name="citation_title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation">
+  <meta name="citation_author" content="Anonymous ACL submission">
+  <meta name="citation_publication_date" content="2026">
+
+  <title>REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation</title>
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+</head>
+
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <section class="hero publication-header">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation
+            </h1>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Anonymous ACL submission</span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Code and benchmark release</span>
+            </div>
+
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" aria-disabled="true">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://github.com/Xxxxxsun/rekey-vstar" target="_blank" rel="noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="https://huggingface.co/datasets/Xfgll/rekey-vstar-benchmark" target="_blank" rel="noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-database"></i></span>
+                  <span>Dataset</span>
+                </a>
+              </span>
+
+              <span class="link-block">
+                <a href="docs/QUICKSTART.md"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-book"></i></span>
+                  <span>Quickstart</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section hero is-light leakage-section">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full leakage-column">
+          <h2 class="title is-3">Static VQA Benchmarks Show a Leakage Signal</h2>
+          <div class="content has-text-justified">
+            <p>
+              We first ask whether current VQA benchmarks are still measuring visual perception, or whether part of the score comes from memorized answer-bearing details. As a probe, we keep the original images fixed but replace the question with a fresh human-written question targeting a different visual key. If a model truly solves the image, performance should remain stable; instead, accuracy drops sharply across model families.
+            </p>
+            <div class="table-container">
+              <table class="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>Original V*</th>
+                    <th>Fresh Relabel V*</th>
+                    <th>Drop</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Qwen3.6-Plus</td>
+                    <td>90.6%</td>
+                    <td>75.4%</td>
+                    <td class="has-text-danger has-text-weight-semibold">-15.2pp</td>
+                  </tr>
+                  <tr>
+                    <td>Gemini 3.1 Pro</td>
+                    <td>89.4%</td>
+                    <td>68.3%</td>
+                    <td class="has-text-danger has-text-weight-semibold">-21.1pp</td>
+                  </tr>
+                  <tr>
+                    <td>Kimi-latest</td>
+                    <td>85.6%</td>
+                    <td>63.6%</td>
+                    <td class="has-text-danger has-text-weight-semibold">-22.1pp</td>
+                  </tr>
+                  <tr>
+                    <td>Seed-2.0-Lite</td>
+                    <td>91.6%</td>
+                    <td>73.8%</td>
+                    <td class="has-text-danger has-text-weight-semibold">-17.8pp</td>
+                  </tr>
+                  <tr>
+                    <td>MiMo v2.5</td>
+                    <td>83.6%</td>
+                    <td>64.9%</td>
+                    <td class="has-text-danger has-text-weight-semibold">-18.7pp</td>
+                  </tr>
+                  <tr>
+                    <td>Llama 4 Maverick</td>
+                    <td>61.4%</td>
+                    <td>50.3%</td>
+                    <td class="has-text-danger has-text-weight-semibold">-11.1pp</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              This consistent drop indicates that the static benchmark score is partially inflated by leaked or memorized visual-key information. REKEY starts from this observation and makes the visual key renewable.
+            </p>
+            <p class="has-text-centered leakage-intro">
+              Each slide keeps the image fixed and swaps only the small visual key being queried.
+            </p>
+            <div id="leakage-carousel" class="carousel results-carousel leakage-carousel">
+              <div class="item leakage-item">
+                <div class="leakage-slide">
+                  <figure class="leakage-figure">
+                    <img src="static/images/leakage-example-0096.jpg"
+                         alt="Leakage example for vstar 0096 with manually labeled ground-truth targets." loading="eager">
+                  </figure>
+                  <div class="leakage-prompts">
+                    <div class="prompt-card prompt-original">
+                      <div class="prompt-head">
+                        <span class="prompt-marker">1</span>
+                        <span class="prompt-label">Original V*</span>
+                        <span class="outcome outcome-correct">correct</span>
+                      </div>
+                      <p class="prompt-question">What is the color of the bottle cap?</p>
+                      <div class="prompt-facts">
+                        <span><strong>GT</strong> C, red</span>
+                        <span><strong>Qwen3.6-Plus</strong> C</span>
+                      </div>
+                    </div>
+                    <div class="prompt-card prompt-relabel">
+                      <div class="prompt-head">
+                        <span class="prompt-marker">2</span>
+                        <span class="prompt-label">Fresh Relabel V*</span>
+                        <span class="outcome outcome-missed">incorrect</span>
+                      </div>
+                      <p class="prompt-question">What color is the clip?</p>
+                      <div class="prompt-facts">
+                        <span><strong>GT</strong> D, red</span>
+                        <span><strong>Qwen3.6-Plus</strong> B</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item leakage-item">
+                <div class="leakage-slide">
+                  <figure class="leakage-figure">
+                    <img src="static/images/leakage-example-0065.jpg"
+                         alt="Leakage example for vstar 0065 with manually labeled ground-truth targets." loading="lazy">
+                  </figure>
+                  <div class="leakage-prompts">
+                    <div class="prompt-card prompt-original">
+                      <div class="prompt-head">
+                        <span class="prompt-marker">1</span>
+                        <span class="prompt-label">Original V*</span>
+                        <span class="outcome outcome-correct">correct</span>
+                      </div>
+                      <p class="prompt-question">What is the color of the broom?</p>
+                      <div class="prompt-facts">
+                        <span><strong>GT</strong> A, black</span>
+                        <span><strong>Qwen3.6-Plus</strong> A</span>
+                      </div>
+                    </div>
+                    <div class="prompt-card prompt-relabel">
+                      <div class="prompt-head">
+                        <span class="prompt-marker">2</span>
+                        <span class="prompt-label">Fresh Relabel V*</span>
+                        <span class="outcome outcome-missed">incorrect</span>
+                      </div>
+                      <p class="prompt-question">What color is the spring?</p>
+                      <div class="prompt-facts">
+                        <span><strong>GT</strong> D, yellow</span>
+                        <span><strong>Qwen3.6-Plus</strong> B</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item leakage-item">
+                <div class="leakage-slide">
+                  <figure class="leakage-figure">
+                    <img src="static/images/leakage-example-0061.jpg"
+                         alt="Leakage example for vstar 0061 with manually labeled ground-truth targets." loading="lazy">
+                  </figure>
+                  <div class="leakage-prompts">
+                    <div class="prompt-card prompt-original">
+                      <div class="prompt-head">
+                        <span class="prompt-marker">1</span>
+                        <span class="prompt-label">Original V*</span>
+                        <span class="outcome outcome-correct">correct</span>
+                      </div>
+                      <p class="prompt-question">What is the color of the dog?</p>
+                      <div class="prompt-facts">
+                        <span><strong>GT</strong> A, white</span>
+                        <span><strong>Qwen3.6-Plus</strong> A</span>
+                      </div>
+                    </div>
+                    <div class="prompt-card prompt-relabel">
+                      <div class="prompt-head">
+                        <span class="prompt-marker">2</span>
+                        <span class="prompt-label">Fresh Relabel V*</span>
+                        <span class="outcome outcome-missed">incorrect</span>
+                      </div>
+                      <p class="prompt-question">What is the color of the bird on the ground?</p>
+                      <div class="prompt-facts">
+                        <span><strong>GT</strong> B, brown</span>
+                        <span><strong>Qwen3.6-Plus</strong> C</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section method-section">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">How REKEY Renews a Visual Key</h2>
+          <div class="content method-copy">
+            <p>
+              REKEY does not only rewrite the question. It identifies editable visual-key slots, regenerates the local visual evidence under context, and then writes a fresh question whose answer depends on the newly generated key.
+            </p>
+          </div>
+
+          <div class="method-strip" aria-label="REKEY method steps">
+            <article class="method-step">
+              <div class="method-step-kicker">Step 1</div>
+              <h3>Annotate renewable slots</h3>
+              <figure class="method-figure">
+                <img src="static/images/method-step1-slots.jpg?v=cup-case"
+                     alt="Original image with candidate context regions and editable slots." loading="lazy">
+              </figure>
+              <p>
+                Starting from the original VQA image, REKEY marks candidate edit slots and records what each slot can support, such as adding a cup or changing the color of an existing object.
+              </p>
+            </article>
+
+            <article class="method-step">
+              <div class="method-step-kicker">Step 2</div>
+              <h3>Generate within context</h3>
+              <figure class="method-figure">
+                <img src="static/images/method-step2-crop-generate.jpg?v=cup-case"
+                     alt="Context crop sent to a generative model and returned as an edited context patch." loading="lazy">
+              </figure>
+              <p>
+                REKEY crops a larger context window around the slot, prompts a generative model to edit only the marked region, and keeps the surrounding pixels fixed.
+              </p>
+            </article>
+
+            <article class="method-step">
+              <div class="method-step-kicker">Step 3</div>
+              <h3>Paste back and re-question</h3>
+              <figure class="method-figure">
+                <img src="static/images/method-step3-rekey.jpg?v=cup-case"
+                     alt="Regenerated image with the new visual key pasted back and a new question created." loading="lazy">
+              </figure>
+              <p>
+                The generated patch is pasted back into the full image, producing a refreshed benchmark item with a new answer-bearing visual key and a matching multiple-choice question.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section experiments-section">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Experimental Results</h2>
+          <div class="content experiments-copy">
+            <p>
+              We evaluate whether REKEY removes the benchmark-specific advantage exposed by the relabel audit, while preserving visual-search difficulty and avoiding VLM-generated shortcut annotations.
+            </p>
+          </div>
+
+          <div class="result-metrics" aria-label="Key experimental result summary">
+            <div class="result-metric">
+              <span class="metric-value">15.1pp</span>
+              <span class="metric-label">Average Original to Relabel drop across 8 cloud models</span>
+            </div>
+            <div class="result-metric">
+              <span class="metric-value">72.3%</span>
+              <span class="metric-label">Average REKEY accuracy across 8 cloud models and 3 seeds</span>
+            </div>
+            <div class="result-metric">
+              <span class="metric-value">-0.3pp</span>
+              <span class="metric-label">LLaVA position-question gap between Original V* and REKEY</span>
+            </div>
+            <div class="result-metric">
+              <span class="metric-value">+12.4pp</span>
+              <span class="metric-label">Average VLM-annotation shortcut over human REKEY annotations</span>
+            </div>
+          </div>
+
+          <div class="experiment-block">
+            <div class="experiment-heading">
+              <span class="experiment-kicker">RQ1</span>
+              <h3>REKEY removes the static benchmark lift</h3>
+            </div>
+            <div class="table-container">
+              <table class="table is-striped is-hoverable is-fullwidth experiment-table">
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th>Original V*</th>
+                    <th>Fresh Relabel V*</th>
+                    <th>REKEY</th>
+                    <th>REKEY vs Relabel</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Qwen3.6-Plus</td>
+                    <td>90.6</td>
+                    <td>74.3</td>
+                    <td>75.7 +/-5.4</td>
+                    <td class="positive-delta">+1.4</td>
+                  </tr>
+                  <tr>
+                    <td>GPT-5.5</td>
+                    <td>86.9</td>
+                    <td>75.9</td>
+                    <td>77.1 +/-2.1</td>
+                    <td class="positive-delta">+1.2</td>
+                  </tr>
+                  <tr>
+                    <td>Claude Opus 4.7</td>
+                    <td>78.5</td>
+                    <td>59.7</td>
+                    <td>67.2 +/-3.9</td>
+                    <td class="positive-delta">+7.5</td>
+                  </tr>
+                  <tr>
+                    <td>Gemini 3.1 Pro</td>
+                    <td>88.0</td>
+                    <td>69.6</td>
+                    <td>75.0 +/-3.3</td>
+                    <td class="positive-delta">+5.4</td>
+                  </tr>
+                  <tr>
+                    <td>Seed-2.0-Lite</td>
+                    <td>91.6</td>
+                    <td>74.3</td>
+                    <td>79.9 +/-2.6</td>
+                    <td class="positive-delta">+5.6</td>
+                  </tr>
+                  <tr>
+                    <td>Kimi K2.6</td>
+                    <td>81.7</td>
+                    <td>63.4</td>
+                    <td>72.6 +/-0.8</td>
+                    <td class="positive-delta">+9.2</td>
+                  </tr>
+                  <tr>
+                    <td>MiMo v2.5</td>
+                    <td>78.0</td>
+                    <td>66.5</td>
+                    <td>73.6 +/-4.7</td>
+                    <td class="positive-delta">+7.2</td>
+                  </tr>
+                  <tr>
+                    <td>Llama 4 Maverick</td>
+                    <td>61.3</td>
+                    <td>51.8</td>
+                    <td>56.9 +/-0.6</td>
+                    <td class="positive-delta">+5.1</td>
+                  </tr>
+                  <tr class="average-row">
+                    <td>Average</td>
+                    <td>82.1</td>
+                    <td>67.0</td>
+                    <td>72.3</td>
+                    <td class="positive-delta">+5.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="experiment-grid">
+            <article class="experiment-card">
+              <div class="experiment-heading">
+                <span class="experiment-kicker">RQ2</span>
+                <h3>Difficulty is largely preserved</h3>
+              </div>
+              <p>
+                On LLaVA-1.5-13B, position questions remain nearly unchanged after regeneration, suggesting that REKEY preserves the visual-search structure while renewing answer-bearing evidence.
+              </p>
+              <table class="table is-fullwidth compact-result-table">
+                <thead>
+                  <tr>
+                    <th>Setting</th>
+                    <th>Overall</th>
+                    <th>Attr</th>
+                    <th>Position</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Original V*</td>
+                    <td>48.7</td>
+                    <td>43.5</td>
+                    <td>56.6</td>
+                  </tr>
+                  <tr>
+                    <td>REKEY</td>
+                    <td>42.6 +/-2.4</td>
+                    <td>33.2 +/-3.9</td>
+                    <td>56.2 +/-3.3</td>
+                  </tr>
+                  <tr>
+                    <td>Delta</td>
+                    <td>-6.1</td>
+                    <td>-10.2</td>
+                    <td>-0.3</td>
+                  </tr>
+                </tbody>
+              </table>
+            </article>
+
+            <article class="experiment-card">
+              <div class="experiment-heading">
+                <span class="experiment-kicker">RQ3</span>
+                <h3>VLM self-annotation creates easier keys</h3>
+              </div>
+              <figure class="experiment-figure">
+                <img src="static/images/human-vlm-radar.jpg"
+                     alt="Radar chart comparing human REKEY annotations with VLM self-annotations." loading="lazy">
+              </figure>
+              <p>
+                GPT-5.5 slot annotations produce add regions that are 3.2x larger at the median, making the generated benchmark +8.4 to +18.5pp easier than human annotations across models.
+              </p>
+            </article>
+
+            <article class="experiment-card">
+              <div class="experiment-heading">
+                <span class="experiment-kicker">Stress Tests</span>
+                <h3>Reasoning and agentic search amplify old benchmarks</h3>
+              </div>
+              <figure class="experiment-figure">
+                <img src="static/images/capability-delta.jpg"
+                     alt="Bar chart comparing CoT and agentic effects on Original V*, Relabel V*, and REKEY." loading="lazy">
+              </figure>
+              <p>
+                CoT and agentic search give larger gains on Original or Relabel V* than on REKEY, indicating that REKEY is less sensitive to memorized or search-amplified static visual keys.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <div class="bibtex-header">
+        <h2 class="title">BibTeX</h2>
+        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+          <i class="fas fa-copy"></i>
+          <span class="copy-text">Copy</span>
+        </button>
+      </div>
+      <pre id="bibtex-code"><code>@misc{rekey2026,
+  title  = {REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation},
+  author = {Anonymous ACL submission},
+  year   = {2026},
+  url    = {https://github.com/Xxxxxsun/rekey-vstar}
+}</code></pre>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the
+              <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noreferrer">Academic Project Page Template</a>,
+              which was adapted from the
+              <a href="https://nerfies.github.io" target="_blank" rel="noreferrer">Nerfies</a>
+              project page. The website template is licensed under a
+              <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
