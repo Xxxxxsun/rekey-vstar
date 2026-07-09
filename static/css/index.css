@@ -567,52 +567,8 @@ body {
   text-align: center;
 }
 
-.result-metrics {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.85rem;
-  margin: 1.5rem 0;
-  text-align: left;
-}
-
-.result-metric {
-  min-height: 132px;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  background: #fff;
-  padding: 1rem;
-  box-shadow: var(--shadow-sm);
-}
-
-.metric-value {
-  display: block;
-  color: var(--primary-color);
-  font-size: 2rem;
-  font-weight: 800;
-  line-height: 1.05;
-  margin-bottom: 0.55rem;
-}
-
-.metric-label {
-  display: block;
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  font-weight: 600;
-  line-height: 1.35;
-}
-
-.experiment-block,
-.experiment-card {
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius-lg);
-  background: #fff;
-  box-shadow: var(--shadow-sm);
-  text-align: left;
-}
-
 .experiment-block {
-  padding: 1.2rem;
-  margin: 0 0 1rem;
+  text-align: left;
 }
 
 .experiment-heading {
@@ -673,23 +629,6 @@ body {
 .positive-delta {
   color: #15803d;
   font-weight: 800;
-}
-
-.experiment-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.experiment-card {
-  padding: 1rem;
-}
-
-.experiment-card p {
-  color: var(--text-secondary);
-  font-size: 0.92rem;
-  line-height: 1.46;
-  margin: 0.85rem 0 0;
 }
 
 .experiment-figure {
@@ -1081,25 +1020,6 @@ code {
     padding: 0.875rem;
   }
 
-  .result-metrics,
-  .experiment-grid,
-  .experiment-duo {
-    grid-template-columns: 1fr;
-  }
-
-  .result-metric {
-    min-height: auto;
-  }
-
-  .metric-value {
-    font-size: 1.75rem;
-  }
-
-  .experiment-block,
-  .experiment-card {
-    padding: 0.875rem;
-  }
-
   .teaser .hero-body {
     padding: 1rem;
   }
@@ -1233,39 +1153,6 @@ a:focus {
   text-transform: none;
   letter-spacing: 0;
 }
-.near0 {
-  background: var(--good-bg);
-  color: var(--good-ink);
-  border-radius: 6px;
-  padding: 0.06rem 0.4rem;
-}
-.result-takeaway {
-  max-width: 820px;
-  margin: 1.2rem auto 0;
-  padding: 0.85rem 1.15rem;
-  background: var(--good-bg);
-  border-left: 3px solid var(--good);
-  border-radius: 8px;
-  text-align: left;
-  color: var(--text-primary);
-  font-size: 0.97rem;
-  line-height: 1.5;
-}
-.result-takeaway strong { color: var(--good-ink); }
-
-/* Experiments layout: RQ2 + RQ3 as a pair, Stress full width */
-.experiment-duo {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-  align-items: start;
-}
-.stress-block { margin-top: 1.5rem; }
-.stress-block .experiment-figure {
-  max-width: 960px;
-  margin-inline: auto;
-}
 .experiment-copy-list {
   text-align: left;
   margin: 0.35rem 0 0;
@@ -1387,25 +1274,6 @@ a:focus {
   font-weight: 600;
   margin-bottom: 0.85rem !important;
 }
-.prompt-answer {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.98rem;
-}
-.prompt-answer .swatch {
-  flex: 0 0 auto;
-  width: 1.05em;
-  height: 1.05em;
-  border-radius: 4px;
-  background: var(--sw, #999);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.prompt-answer .ans-val {
-  font-weight: 700;
-  color: var(--text-primary);
-  text-transform: capitalize;
-}
 
 /* Analysis layout: two-column bands (text + figure/table), hairline-separated */
 .analysis-band {
@@ -1418,14 +1286,7 @@ a:focus {
   border-top: 1px solid var(--border-color);
   text-align: left;
 }
-.analysis-wide {
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--border-color);
-  text-align: left;
-}
-.band-text h3,
-.analysis-wide h3 {
+.band-text h3 {
   font-size: 1.35rem;
   line-height: 1.28;
   font-weight: 800;
@@ -1443,8 +1304,6 @@ a:focus {
 .band-figure .compact-result-table { margin: 0; font-size: 0.92rem; }
 .band-figure .compact-result-table th,
 .band-figure .compact-result-table td { padding: 0.5em 0.8em; }
-.analysis-wide .experiment-copy-list { margin: 0.7rem 0 0; }
-.analysis-wide .experiment-figure { max-width: 900px; margin: 1.5rem auto 0; }
 
 @media screen and (max-width: 768px) {
   .analysis-band { grid-template-columns: 1fr; gap: 1.25rem; }
@@ -1460,55 +1319,6 @@ a:focus {
   margin: 0;
 }
 
-/* Q/A card facts: ground truth + model answer with a verdict */
-.prompt-facts {
-  display: grid;
-  gap: 0.55rem;
-  padding-top: 0;
-  border-top: none;
-}
-.fact {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.6rem;
-}
-.fact-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: var(--text-light);
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-.fact-label .model-logo {
-  height: 15px !important;
-  width: 15px !important;
-  min-width: 15px;
-  margin: 0;
-  object-fit: contain;
-  flex: 0 0 auto;
-}
-.fact-ans {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  text-transform: capitalize;
-}
-.fact-ans .swatch {
-  flex: 0 0 auto;
-  width: 0.95em;
-  height: 0.95em;
-  border-radius: 4px;
-  background: var(--sw, #999);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.verdict { margin-left: 0.15rem; font-weight: 800; }
-.verdict.ok { color: var(--good); }
-.verdict.no { color: var(--drop); }
 
 /* --- refinements --- */
 /* Smaller, top-aligned RQ2/RQ3 figures */
@@ -1522,45 +1332,6 @@ a:focus {
 /* Carousel question + answer text in black */
 .prompt-question { color: #111; }
 
-/* Fact rows: a shared two-column grid (label | answer) so the swatch and
-   colour word line up between the Ground truth row and the model row; the
-   check/cross just trails the word. display:contents flattens each .fact
-   into the parent grid. */
-.prompt-facts {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 0.55rem 0.9rem;
-  padding-top: 0;
-  border-top: none;
-}
-.fact { display: contents; }
-.fact-label {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: var(--text-light);
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-.fact-label .model-logo { width: 15px !important; height: 15px !important; }
-.fact-ans {
-  justify-self: start;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-weight: 700;
-  color: #111;
-  text-transform: capitalize;
-  font-size: 0.92rem;
-}
-.fact-ans .swatch {
-  width: 15px;
-  height: 15px;
-  border-radius: 4px;
-  background: var(--sw, #999);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
 /* Fact rows: a fixed 4-column grid (label | verdict | swatch | word) so the
    check/cross, colour chip, and word each keep their own column and line up
    across the Ground truth and model rows. */
