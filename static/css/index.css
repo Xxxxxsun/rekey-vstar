@@ -1558,11 +1558,38 @@ a:focus {
   background: var(--sw, #999);
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
-/* Right-align the answer; check/cross sits to its left */
-.fact-ans { justify-self: end; }
-.fact-ans .verdict { order: -1; margin: 0 0.35rem 0 0; }
+/* Fact rows: a fixed 4-column grid (label | verdict | swatch | word) so the
+   check/cross, colour chip, and word each keep their own column and line up
+   across the Ground truth and model rows. */
+.prompt-facts {
+  display: grid;
+  grid-template-columns: 1fr 1.1em 16px auto;
+  align-items: center;
+  column-gap: 0.5rem;
+  row-gap: 0.6rem;
+}
+.f-label {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+.f-label .model-logo { width: 15px !important; height: 15px !important; margin: 0 !important; }
+.f-verdict, .prompt-facts .swatch, .f-word { justify-self: center; }
+.f-word { justify-self: start; }
+.f-verdict { text-align: center; font-weight: 800; line-height: 1; }
+.f-verdict.ok { color: var(--good); }
+.f-verdict.no { color: var(--drop); }
+.prompt-facts .swatch {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  background: var(--sw, #999);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.f-word { font-weight: 700; color: #111; text-transform: capitalize; font-size: 0.92rem; }
 
-/* Robustness band: same text-left/figure-right layout, but a wider figure
-   column since the CoT/agentic bar chart is denser than the radar/table */
-.robust-band { grid-template-columns: 0.68fr 1.32fr; }
-.robust-band .band-figure img { max-width: 640px; }
+/* Robustness uses the default band layout so its chart aligns with RQ2/RQ3 */
