@@ -4,8 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <meta name="title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resistant VQA Evaluation">
-  <meta name="description" content="Project page for REKEY, a visual-key regeneration protocol for contamination-resistant VQA evaluation.">
+  <meta name="title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation">
+  <meta name="description" content="Project page for REKEY, a live benchmark protocol that renews answer-bearing visual keys for contamination-resilient VQA evaluation.">
   <meta name="keywords" content="REKEY, VQA, visual question answering, benchmark contamination, V*Bench, vision-language models">
   <meta name="author" content="REKEY authors">
   <meta name="robots" content="index, follow">
@@ -13,21 +13,23 @@
 
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="REKEY Project">
-  <meta property="og:title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resistant VQA Evaluation">
-  <meta property="og:description" content="Metadata-grounded visual-key regeneration for contamination-resistant VQA evaluation.">
+  <meta property="og:title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation">
+  <meta property="og:description" content="A live benchmark protocol that renews answer-bearing visual keys for contamination-resilient VQA evaluation.">
   <meta property="og:url" content="https://xxxxxsun.github.io/rekey-vstar/">
   <meta property="og:image" content="https://xxxxxsun.github.io/rekey-vstar/static/images/leakage-example-0096.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resistant VQA Evaluation">
-  <meta name="twitter:description" content="Metadata-grounded visual-key regeneration for contamination-resistant VQA evaluation.">
+  <meta name="twitter:title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation">
+  <meta name="twitter:description" content="A live benchmark protocol that renews answer-bearing visual keys for contamination-resilient VQA evaluation.">
   <meta name="twitter:image" content="https://xxxxxsun.github.io/rekey-vstar/static/images/leakage-example-0096.jpg">
 
-  <meta name="citation_title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resistant VQA Evaluation">
+  <meta name="citation_title" content="REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation">
   <meta name="citation_author" content="Anonymous ACL submission">
   <meta name="citation_publication_date" content="2026">
+  <meta name="citation_arxiv_id" content="2606.20736">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2606.20736">
 
-  <title>REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resistant VQA Evaluation</title>
+  <title>REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation</title>
 
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
@@ -36,7 +38,7 @@
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/index.css?v=20260715c">
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -58,21 +60,21 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resistant VQA Evaluation
+              REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation
             </h1>
 
             <div class="is-size-5 publication-authors">
               <span class="author-block">Anonymous ACL submission</span>
             </div>
 
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">Code and benchmark release</span>
+            <div class="publication-tagline">
+              A live VQA benchmark that renews answer-bearing visual keys at evaluation time
             </div>
 
             <div class="publication-links">
               <span class="link-block">
-                <a class="external-link button is-normal is-rounded is-dark" aria-disabled="true"
-                   title="Paper link coming soon" style="opacity: 0.5; pointer-events: none;">
+                <a href="https://arxiv.org/abs/2606.20736" target="_blank" rel="noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
@@ -95,7 +97,7 @@
               </span>
 
               <span class="link-block">
-                <a href="docs/QUICKSTART.md"
+                <a href="https://github.com/Xxxxxsun/rekey-vstar/blob/main/docs/QUICKSTART.md" target="_blank" rel="noreferrer"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fas fa-book"></i></span>
                   <span>Quickstart</span>
@@ -180,7 +182,7 @@
               </table>
             </div>
             <p>
-              This consistent drop indicates that original V*Bench scores are partly inflated by memorized answer-bearing details. REKEY starts from this observation and makes the visual key renewable.
+              This consistent drop is compatible with original V*Bench scores containing benefits from memorized answer-bearing details. REKEY starts from this observation and makes the visual key renewable.
             </p>
             <p class="has-text-centered leakage-intro">
               The same image is paired with a fresh question that targets a different visual key.
@@ -484,15 +486,20 @@
             </div>
           </div>
 
-          <div class="analysis-band">
+          <div class="analysis-band rq3-band">
             <div class="band-text">
               <div class="experiment-heading">
                 <span class="experiment-kicker">RQ3</span>
                 <h3>Human annotation is necessary</h3>
               </div>
               <p>
-                GPT-5.5's self-annotations put the new object in add regions that are <strong>3.2&times; larger</strong> than human ones, making the benchmark <strong>+8.4 to +18.5 pp easier</strong> across models &mdash; human curation is what keeps the difficulty honest.
+                A model annotator changes the task it is supposed to evaluate: its slots are easier to edit and easier to find.
               </p>
+              <ul class="experiment-copy-list metric-list">
+                <li><strong>33.6%</strong> usable Replace annotations</li>
+                <li><strong>3.2&times;</strong> larger Add regions than human annotations</li>
+                <li><strong>+8.4 to +18.5 pp</strong> higher model accuracy</li>
+              </ul>
             </div>
             <div class="band-figure">
               <figure class="experiment-figure">
@@ -502,12 +509,15 @@
             </div>
           </div>
 
-          <div class="analysis-band robust-band">
+          <div class="analysis-band rq1-analysis-band">
             <div class="band-text">
               <div class="experiment-heading">
-                <span class="experiment-kicker">Robustness</span>
+                <span class="experiment-kicker">RQ1 Analysis</span>
                 <h3>Capability boosts that disappear under REKEY</h3>
               </div>
+              <p>
+                Prompting and tool use improve static variants, but their gains do not consistently transfer after visual-key regeneration.
+              </p>
               <ul class="experiment-copy-list">
                 <li><strong>Chain-of-thought</strong> lifts Original / Relabel by up to +6.8 / +10.5 pp &mdash; but on REKEY the effect turns slightly negative (&minus;0.5 to &minus;3.1 pp).</li>
                 <li><strong>Agentic zoom</strong> adds up to +9.5 / +12.4 pp on the static sets, yet only &minus;4.0 to +3.6 pp on REKEY.</li>
@@ -534,11 +544,14 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>@misc{rekey2026,
-  title  = {REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resistant VQA Evaluation},
-  author = {Anonymous ACL submission},
-  year   = {2026},
-  url    = {https://github.com/Xxxxxsun/rekey-vstar}
+      <pre id="bibtex-code"><code>@misc{lin2026rekey,
+  title         = {REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation},
+  author        = {Anonymous ACL submission},
+  year          = {2026},
+  eprint        = {2606.20736},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2606.20736}
 }</code></pre>
     </div>
   </section>

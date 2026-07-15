@@ -1,6 +1,6 @@
 # REKEY
 
-Metadata-grounded visual-key regeneration for contamination-resistant VQA evaluation.
+Metadata-grounded visual-key regeneration for contamination-resilient VQA evaluation.
 
 REKEY refreshes a VQA benchmark by regenerating the small answer-bearing visual detail
 instead of replacing the whole image-question pair. Human annotations mark where a
@@ -10,7 +10,7 @@ record.
 
 This is the code release for:
 
-> REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resistant VQA Evaluation
+> REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation
 
 ## What is included
 
