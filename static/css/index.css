@@ -148,7 +148,37 @@ body {
 .publication-authors {
     font-family: 'Inter', sans-serif !important;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.7rem;
+    line-height: 1.75;
+}
+
+.publication-authors sup,
+.publication-affiliations sup,
+.publication-author-notes sup {
+  color: var(--primary-color);
+  font-size: 0.68em;
+  font-weight: 700;
+  margin-left: 0.08em;
+}
+
+.publication-affiliations {
+  max-width: 900px;
+  margin: 0 auto 0.45rem;
+  color: var(--text-secondary);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.65;
+}
+
+.affiliation-block {
+  display: inline-block;
+  margin: 0 0.45rem 0.2rem;
+}
+
+.publication-author-notes {
+  margin-bottom: 1.4rem;
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  font-weight: 500;
 }
 
 .publication-tagline {
@@ -210,7 +240,7 @@ body {
 
 .author-block {
   display: inline-block;
-  margin-right: 0.5rem;
+  margin: 0 0.35rem 0.15rem;
 }
 
 .publication-banner img {

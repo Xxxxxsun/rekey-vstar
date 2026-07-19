@@ -3,7 +3,26 @@ title: "REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resis
 message: "If you use this code or benchmark, please cite the REKEY paper."
 type: software
 authors:
-  - name: "Anonymous ACL submission"
+  - given-names: "Tengjie"
+    family-names: "Lin"
+  - given-names: "Yutao"
+    family-names: "Sun"
+  - given-names: "Jingwei"
+    family-names: "Ni"
+  - given-names: "Shuhan"
+    family-names: "Ge"
+  - given-names: "Hao-Xuan"
+    family-names: "Ma"
+  - given-names: "Yanting"
+    family-names: "Miao"
+  - given-names: "Wangyue"
+    family-names: "Lu"
+  - given-names: "Mingshuai"
+    family-names: "Chen"
+  - given-names: "Tiancheng"
+    family-names: "Zhao"
+  - given-names: "Jianwei"
+    family-names: "Yin"
 repository-code: "https://github.com/Xxxxxsun/rekey-vstar"
 license: MIT
 date-released: 2026-06-14
