@@ -1,0 +1,211 @@
+{
+  "image_id": "vstar_0046",
+  "question_id": "46",
+  "run_id": "sc_109",
+  "source_image_path": "results/showcase/vstar_0046__sc_109/artifacts/source.png",
+  "composite_image_path": "results/showcase/vstar_0046__sc_109/artifacts/composite.png",
+  "overview_image_path": "results/showcase/vstar_0046__sc_109/overview.png",
+  "sample": {
+    "image_id": "vstar_0046",
+    "question_id": "46",
+    "run_id": "sc_109",
+    "seed": 3145760939,
+    "slot_count": 1,
+    "edits": [
+      {
+        "slot_id": "A1",
+        "operation": "replace",
+        "placement": null,
+        "entity_family": null,
+        "target_family": null,
+        "edit_type": "color_change",
+        "object_name": "",
+        "target_name": "white cap",
+        "answer_attribute": "color",
+        "answer": "purple",
+        "attributes": {
+          "color": "purple"
+        }
+      }
+    ],
+    "probability_trace": {
+      "pipeline_version": "dynamic_vstar_crop_gen_paste_v0",
+      "allow_multislot": true,
+      "preferred_attribute": "color",
+      "slot_count_distribution": [
+        [
+          1,
+          0.8
+        ],
+        [
+          2,
+          0.18
+        ],
+        [
+          3,
+          0.02
+        ]
+      ],
+      "valid_slot_ids": [
+        "A1",
+        "B1",
+        "C1",
+        "D1"
+      ],
+      "selected_slot_ids": [
+        "A1"
+      ],
+      "slot_traces": {
+        "A1": {
+          "slot_seed": 1997105962,
+          "preferred_attribute": "color",
+          "operation": "replace",
+          "target_ref": "white cap",
+          "old_color": "white",
+          "valid_operations": [
+            "replace"
+          ],
+          "slot_weight": 1.7999999999999998
+        }
+      }
+    }
+  },
+  "plan": {
+    "image_id": "vstar_0046",
+    "question_id": "46",
+    "source_question": "What is the color of the man's cap?",
+    "source_category": "direct_attributes",
+    "edits": [
+      {
+        "slot_id": "A1",
+        "mode": "replace",
+        "target_phrase": "the cap",
+        "edit_instruction": "Change ONLY the color of the white cap to purple. Do NOT modify any surrounding pixels. Keep shape, material, texture, and background exactly the same.",
+        "image_prompt": "Change ONLY the color of the white cap to purple. Do NOT modify any surrounding pixels. Keep shape, material, texture, and background exactly the same.",
+        "question_type": "color",
+        "question": "What color is the cap?",
+        "answer": "purple",
+        "distractors": [
+          "gray",
+          "red",
+          "pink"
+        ],
+        "options": {
+          "A": "red",
+          "B": "gray",
+          "C": "pink",
+          "D": "purple"
+        },
+        "correct_label": "D"
+      }
+    ],
+    "question_type": "color",
+    "question": "What color is the cap?",
+    "answer": "purple",
+    "options": {
+      "A": "red",
+      "B": "gray",
+      "C": "pink",
+      "D": "purple"
+    },
+    "correct_label": "D",
+    "planner_metadata": {
+      "backend": "rule",
+      "use_vaw": false,
+      "use_mask": false
+    }
+  },
+  "generations": [
+    {
+      "slot_id": "A1",
+      "context_crop_path": "results/showcase/vstar_0046__sc_109/artifacts/context_A1.png",
+      "clean_canvas_path": "results/showcase/vstar_0046__sc_109/artifacts/clean_canvas_A1.png",
+      "guide_crop_path": "results/showcase/vstar_0046__sc_109/artifacts/guide_canvas_A1.png",
+      "generated_canvas_path": "results/showcase/vstar_0046__sc_109/artifacts/generated_canvas_A1.png",
+      "restored_context_path": "results/showcase/vstar_0046__sc_109/artifacts/restored_context_A1.png",
+      "api_metadata": {
+        "api_url": "https://www.packyapi.com/v1/images/edits",
+        "model": "gpt-image-2",
+        "http_status": 200,
+        "ok": true,
+        "input_image_count": 2,
+        "response_id": null,
+        "response_keys": [
+          "created",
+          "data"
+        ]
+      },
+      "crop": {
+        "slot_id": "A1",
+        "context_xyxy": [
+          6,
+          850,
+          62,
+          973
+        ],
+        "crop_xyxy": [
+          6,
+          850,
+          62,
+          973
+        ],
+        "edit_xyxy": [
+          22,
+          892,
+          41,
+          909
+        ],
+        "edit_xyxy_in_crop": [
+          16,
+          42,
+          35,
+          59
+        ],
+        "output_size": [
+          56,
+          123
+        ]
+      },
+      "canvas": {
+        "size": [
+          1024,
+          1536
+        ],
+        "source_size": [
+          56,
+          123
+        ],
+        "content_xyxy": [
+          162,
+          0,
+          861,
+          1536
+        ],
+        "edit_xyxy_in_canvas": [
+          362,
+          524,
+          599,
+          737
+        ],
+        "scale": 12.487804878048781
+      }
+    }
+  ],
+  "qc": {
+    "qc_pass": null,
+    "qc_reasons": [],
+    "qc_stage": "not_run"
+  },
+  "pipeline_version": "dynamic_vstar_crop_gen_paste_v0",
+  "created_at": "2026-05-26T18:27:18+0800",
+  "files": {
+    "artifacts_dir": "results/showcase/vstar_0046__sc_109/artifacts",
+    "source": "results/showcase/vstar_0046__sc_109/artifacts/source.png",
+    "source_boxed": "results/showcase/vstar_0046__sc_109/artifacts/source_boxed.png",
+    "sample": "results/showcase/vstar_0046__sc_109/artifacts/sample.json",
+    "plan": "results/showcase/vstar_0046__sc_109/artifacts/plan.json",
+    "composite": "results/showcase/vstar_0046__sc_109/artifacts/composite.png",
+    "overview": "results/showcase/vstar_0046__sc_109/overview.png",
+    "manifest": "results/showcase/vstar_0046__sc_109/artifacts/manifest.json"
+  }
+}

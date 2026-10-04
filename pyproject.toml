@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "rekey-vstar"
 version = "0.1.0"
-description = "Metadata-grounded visual-key regeneration for contamination-resistant VQA evaluation."
+description = "Metadata-grounded visual-key regeneration for contamination-resilient VQA evaluation."
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}

@@ -79,7 +79,7 @@ pretty_name: REKEY V* benchmark
 
 This dataset contains regenerated V*Bench-style evaluation instances produced by
 REKEY, a metadata-grounded visual-key regeneration protocol for
-contamination-resistant VQA evaluation.
+contamination-resilient VQA evaluation.
 
 ## Contents
 
@@ -116,7 +116,7 @@ If you use this dataset, cite the REKEY paper:
 
 ```bibtex
 @misc{{rekey2026,
-  title={{REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resistant VQA Evaluation}},
+  title={{REKEY: Metadata-Grounded Visual-Key Regeneration for Contamination-Resilient VQA Evaluation}},
   year={{2026}}
 }}
 ```

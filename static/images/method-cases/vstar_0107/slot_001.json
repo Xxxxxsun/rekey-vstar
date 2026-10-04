@@ -1,0 +1,38 @@
+{
+  "image_id": "vstar_0107",
+  "source_image": "static/images/method-source-selected.jpg",
+  "slot_id": "slot_001",
+  "label": "slot 1",
+  "insert_box": {
+    "x": 1445,
+    "y": 979,
+    "width": 60,
+    "height": 56
+  },
+  "crop_box": {
+    "x": 1386,
+    "y": 930,
+    "width": 213,
+    "height": 156
+  },
+  "context_crop": "static/images/method-cases/vstar_0107/slot_001_context_crop.jpg",
+  "candidates": [
+    {
+      "id": "cup",
+      "image": "static/images/method-cases/vstar_0107/slot_001_candidate_cup.png",
+      "full_image": "static/images/method-cases/vstar_0107/slot_001_final_cup_masked.png"
+    },
+    {
+      "id": "phone",
+      "image": "static/images/method-cases/vstar_0107/slot_001_candidate_phone.png",
+      "full_image": "static/images/method-cases/vstar_0107/slot_001_final_phone_masked.png"
+    },
+    {
+      "id": "bird",
+      "image": "static/images/method-cases/vstar_0107/slot_001_candidate_bird.png",
+      "full_image": "static/images/method-cases/vstar_0107/slot_001_final_bird_masked.png"
+    }
+  ],
+  "selected_candidate": "cup",
+  "final_image": "static/images/method-cases/vstar_0107/slot_001_final.png"
+}

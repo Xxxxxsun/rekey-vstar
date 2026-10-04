@@ -1,0 +1,1060 @@
+{
+  "verifies": [
+    {
+      "key": "INP-X",
+      "result": {
+        "paper": "AI-Generated Image Detectors Overrely on Global Artifacts: Evidence from Inpainting Exchange (INP-X)",
+        "exists": "yes",
+        "verified_id": "arXiv:2602.00192",
+        "title": "AI-Generated Image Detectors Overrely on Global Artifacts: Evidence from Inpainting Exchange",
+        "venue_year": "arXiv preprint (cs.CV; cs.AI), submitted 30 Jan 2026; no conference/journal venue listed in Comments (preprint only). Authors: Elif Nebioglu, Emirhan Bilgic, Adrian Popescu.",
+        "exact_claims": [
+          "Hive Moderation (commercial API): 91.4% (standard INP) -> 54.8% (INP-X) — matches claim exactly",
+          "Sightengine (commercial API): 92.6% (INP) -> 55.0% (INP-X) — matches claim exactly",
+          "Corvi2023 (academic detector): 94.2% (INP) -> 55.4% (INP-X) — matches claim exactly",
+          "SPAI (academic detector): 66.1% (INP) -> 54.2% (INP-X) — matches claim exactly",
+          "Additional detector found: DNF 71.0% (INP) -> 60.4% (INP-X)",
+          "Abstract summary phrasing: detectors drop 'from 91% to 55%, frequently approaching chance level'",
+          "Dataset: 90K-image benchmark, 30k samples each for 3 subsets (real / standard inpainted / exchanged inpainted), built over four source datasets: CelebA-HQ, CityScapes, OpenImages, SUN-RGBD",
+          "Mechanism claim: failures attributed to VAE-based reconstruction inducing a pervasive spectral shift across the whole image including unedited regions",
+          "Mask size finding: increasing mask size generally correlates with higher detection accuracy (no explicit numeric size x blending sweep quoted)",
+          "Comments field: 21 pages, 15 figures, 6 tables",
+          "Code/data: https://github.com/emirhanbilgic/INP-X"
+        ],
+        "what_they_did": "Introduced Inpainting Exchange (INP-X), an operation that keeps the AI-synthesized inpainted region but restores the original real pixels everywhere outside the mask, then re-evaluated pretrained state-of-the-art AI-image detectors (academic + commercial APIs) on a 90K-image benchmark. They show that this collapses detector accuracy to near chance (e.g. Hive 91.4->54.8, Sightengine 92.6->55.0, Corvi2023 94.2->55.4, SPAI 66.1->54.2), arguing detectors over-rely on global VAE-induced spectral artifacts rather than the locally synthesized content, and propose content-aware detection.",
+        "what_they_did_NOT_do": "No fraud-domain focus whatsoever: no fabricated insurance / auto / property / hotel damage and no receipts. Source datasets are faces and scenes (CelebA-HQ, CityScapes, OpenImages, SUN-RGBD), not fraud documents. They do not run a systematic mask-size x blending-strength sweep with quoted numbers (only a qualitative 'larger mask -> higher accuracy' trend). Commercial APIs are limited to Hive and Sightengine; no broader commercial-API panel. No laundering / re-compression / social-media re-upload robustness pipeline is evaluated. The defensive 'small localized edit on an authentic photo for fraud' framing is the verifier's project context, not the paper's stated motivation.",
+        "url": "https://arxiv.org/abs/2602.00192",
+        "confidence": "high — id, title, authors, submission date, and all four claimed collapse numbers (Hive 91.4->54.8, Sightengine 92.6->55.0, Corvi2023 94.2->55.4, SPAI 66.1->54.2) independently confirmed across the arXiv abs page, arXiv HTML full text, HuggingFace papers page, and web search. Only the venue (preprint, no conference) and the absence of any fraud-domain content are clarifications, not discrepancies."
+      }
+    },
+    {
+      "key": "LocalizedDeepfakes",
+      "result": {
+        "paper": "Detecting Localized Deepfakes: How Well Do Synthetic Image Detectors Handle Inpainting? (arXiv:2512.16688)",
+        "exists": "yes",
+        "verified_id": "arXiv:2512.16688",
+        "title": "Detecting Localized Deepfakes: How Well Do Synthetic Image Detectors Handle Inpainting?",
+        "venue_year": "arXiv preprint (2512 = Dec 2025), v1; no conference/journal venue stated. Authors: Serafino Pandolfini, Lorenzo Pellegrini, Matteo Ferrara, Davide Maltoni (University of Bologna, Italy)",
+        "exact_claims": [
+          "<5% mask area: 'all detectors perform near chance' (qualitative, matches the claimed '<5% mask area approx chance')",
+          ">20% mask area: 'performance improves substantially' (qualitative, matches the claimed 'recovery >20%')",
+          "DINOv3 reaches performance comparable to fully-generated-image detection at ~65% mask size",
+          "DINOv2 requires >80% mask size to reach comparable performance",
+          "Detectors evaluated as main backbones: ResNet-50 CLIP, DINOv2 ViT-L/14, DINOv3 ViT-L/16; DINOv3 > DINOv2 > ResNet-50",
+          "Comparison/baseline methods: CNNDetect, DIMD, Dire, FreqDetect, UnivFD, Fusing, GramNet, LGrad, NPR, RINE, DeFake, PatchCraft",
+          "Datasets: BR-Gen (150,000 inpainted / 15,000 real), TGIF (74,808 inpainted / 9,372 real), TGIF2 (112,464 inpainted / 6,248 real); real images from COCO2017, ImageNet, Places",
+          "Headline AUROC examples: BR-Gen DINOv3 = 0.86; TGIF fully-regenerated uncompressed DINOv3 = 0.96 (SD2) / 0.92 (SDXL); TGIF2 DINOv3 = 0.52 (NOTE: these specific AUROC values came from the fast-model extraction and could not be independently re-confirmed against a table in the HTML; treat the 0.86/0.96/0.92/0.52 figures as lower-confidence)"
+        ],
+        "what_they_did": "Systematically evaluated synthetic-image (deepfake) detectors that were originally trained on fully synthetic images, testing how well they transfer to localized inpainting / region-level edits. They analyze detection AUROC as a function of mask size (percentage of image area modified) across three inpainting datasets (BR-Gen, TGIF, TGIF2) using ResNet-50 CLIP, DINOv2 ViT-L/14, and DINOv3 ViT-L/16 backbones plus many prior detectors as baselines. Core finding: detectors rely on global artifacts, so very small edits (<5% area) are near chance, performance recovers as mask grows past ~20%, and large masks (~65% for DINOv3, >80% for DINOv2) approach fully-synthetic-image performance.",
+        "what_they_did_NOT_do": "The paper has NO fraud-domain focus whatsoever — no mention of insurance, auto/property/hotel damage, receipts, or any fraud/claims application. It is a general inpainting-detection benchmark on natural-image datasets (COCO/ImageNet/Places real images). It does NOT report a size x JPEG/blending sweep in the fraud sense (it does note compression effects, e.g. 'uncompressed' TGIF results, but not a deliberate laundering/blending robustness study), does NOT test commercial detection APIs (only open academic backbones/methods), and does NOT study laundering/anti-forensic post-processing as an adversarial dimension. Note also: the '<5% ≈ chance' and '>20% recovery' claims are stated QUALITATIVELY in the text/Figure 4, not as a clean per-bin numeric table; discrete bins (0-5%, 5-10%, etc.) are not formally defined.",
+        "url": "https://arxiv.org/abs/2512.16688",
+        "confidence": "High that the paper exists with this exact ID, title, authors, the three datasets (BR-Gen/TGIF/TGIF2), the three main detector backbones (ResNet-50 CLIP / DINOv2 / DINOv3), and the qualitative <5%-chance and >20%-recovery + 65%/80% mask claims. Medium-low on the specific per-dataset AUROC point values (0.86/0.96/0.92/0.52) and dataset image counts, which came from a fast-model HTML extraction and were not cross-confirmed against a rendered table. Confirmed: NO fraud/insurance/receipt domain content."
+      }
+    },
+    {
+      "key": "DiQuID-SAGI",
+      "result": {
+        "paper": "DiQuID / SAGI-D inpainted-image detection benchmark (arXiv:2502.06593). Confirmed real, but with corrections: the claimed combination of details is split across two versions and one claimed model (FLUX-Fill) is NOT in this paper.",
+        "exists": "yes",
+        "verified_id": "arXiv:2502.06593",
+        "title": "v1 (Feb 2025): \"A Large-scale AI-generated Image Inpainting Benchmark\" (dataset = DiQuID). v2 (current, retitled): \"SAGI: Semantically Aligned and Uncertainty Guided AI Image Inpainting\" (dataset renamed SAGI-D). Same arXiv id, same ~95k-image dataset.",
+        "venue_year": "Preprint, arXiv, submitted Feb 2025 (v1 10 Feb 2025); authors are the MeVer team (CERTH-ITI). Authors: Paschalis Giakoumoglou, Dimitrios Karageorgiou, Symeon Papadopoulos, Panagiotis C. Petrantonakis.",
+        "exact_claims": [
+          "Dataset size: 95,839 inpainted images generated from 78,684 original images (abstract rounds to 'over 95k' / ~78k).",
+          "Source datasets: MS-COCO, RAISE, OpenImages.",
+          "RAISE = 8,156 uncompressed RAW images (RAW high-res forgery-eval set); 7,735 processed, yielding 25,674 image-mask-model combinations. RAISE RAW IS used.",
+          "Inpainting models: HD-Painter, BrushNet, PowerPaint, ControlNet, Inpaint-Anything + Remove-Anything variant (mostly Stable-Diffusion-based; Remove-Anything uses LaMa). FLUX-Fill is NOT among them.",
+          "UGDA = Uncertainty-Guided Deceptiveness Assessment: VLM compares inpainted vs original in two stages with input-order reversal to detect model uncertainty / deceptiveness.",
+          "Spliced (SP) = unmasked region preserved; Fully Regenerated (FR) = unmasked region regenerated. FR generally harder to detect. Split confirmed.",
+          "Human study: ability to distinguish inpainted from real drops from 74% to 35% accuracy after applying the pipeline.",
+          "Detector training on the dataset: in-domain detection +37.4% on average; out-of-domain generalization +26.1%, measured in IoU."
+        ],
+        "what_they_did": "Built a large-scale, model-agnostic AI-inpainting forensics benchmark. A pipeline (Semantically Aligned Object Replacement using LLMs + Uncertainty-Guided Deceptiveness Assessment using VLMs) generates and filters photorealistic inpaintings across multiple SOTA inpainting models, producing 95,839 images from 78,684 originals (MS-COCO, RAISE RAW, OpenImages). Provides a Spliced vs Fully-Regenerated split, a human-evaluated subset, and shows training image-forensic detectors on the data improves in-domain (+37.4%) and out-of-domain (+26.1% IoU) localization.",
+        "what_they_did_NOT_do": "NOT fraud-domain: all imagery is generic natural-scene photography (COCO / RAISE / OpenImages) — no insurance, auto, property, hotel damage, or receipt/document content, and no claims-fraud threat model. Does NOT include FLUX-Fill (or any FLUX model) — the FLUX-Fill claim is incorrect for this paper and instead matches the separate TGIF2 benchmark (arXiv:2603.28613). Does no size x blending sweep, does not test commercial detector APIs, and does not study laundering/re-compression/social-media re-upload robustness. Naming caveat: 'DiQuID' is the v1 dataset name; the current v2 renames it 'SAGI-D' — both denote the same dataset under one arXiv id.",
+        "url": "https://arxiv.org/abs/2502.06593 (also: project page https://mever-team.github.io/SAGI/ ; code https://github.com/mever-team/SAGI ; v1 HTML https://arxiv.org/html/2502.06593v1)",
+        "confidence": "High. arXiv id confirmed real and loaded directly (abs, v1/v2 HTML), plus project page, GitHub, and an independent review. Caveats: (1) dataset has two names across versions (DiQuID -> SAGI-D); (2) FLUX-Fill is NOT in this paper (claim appears to be conflated with TGIF2); (3) paper is general-domain, not fraud-domain."
+      }
+    },
+    {
+      "key": "AIForge-Doc",
+      "result": {
+        "paper": "AIForge-Doc: A Benchmark for Detecting AI-Forged Tampering in Financial and Form Documents (arXiv:2602.20569)",
+        "exists": "yes",
+        "verified_id": "arXiv:2602.20569",
+        "title": "AIForge-Doc: A Benchmark for Detecting AI-Forged Tampering in Financial and Form Documents",
+        "venue_year": "arXiv preprint, submitted 24 Feb 2026 (v1); no peer-reviewed venue confirmed",
+        "exact_claims": [
+          "Median tampered area = 0.92% of total image pixels (IQR [0.35%, 1.55%]); >99% of pixels unmodified per image. This matches the claimed '~1% median-area' (the precise figure is 0.92%, not exactly 1%).",
+          "DocTamper AUC collapses 0.98 (own in-distribution test set) -> 0.563 [0.535, 0.591] on AIForge-Doc — exactly matches the claimed 0.98->0.563 collapse.",
+          "TruFor AUC = 0.751 [0.726, 0.776] zero-shot/OOD vs 0.96 on NIST16 reference.",
+          "GPT-4o zero-shot judge AUC = 0.509 [0.481, 0.537] — essentially chance/random baseline.",
+          "Pixel-level: DocTamper IoU = 0.020 (F1 0.030); TruFor IoU = 0.358 (F1 0.434), pixel-AUC 0.916; DocTamper pixel-AUC 0.675.",
+          "Dataset = 4,061 forged images (3,249 train / 812 test, 80/20 split) from 4 public document datasets: CORD (1,000), WildReceipt (1,696), SROIE (946), XFUND (419), across 9 languages, DocTamper-compatible pixel-precise masks.",
+          "AI inpainting APIs: Gemini 2.5 Flash Image (89.6%) and Ideogram v2 Edit (10.4%).",
+          "Authors: Jiaqi Wu, Yuchen Zhou, Muduo Xu, Zisheng Liang, Simiao Ren, Jiayu Xue, Meige Yang, Siying Chen, Jingheng Huan."
+        ],
+        "what_they_did": "Built the first benchmark targeting diffusion/AI-inpainting-based localized tampering of numeric fields in real financial and form documents (receipts/forms). Used two commercial inpainting APIs (Gemini 2.5 Flash Image, Ideogram v2 Edit) to forge numeric fields on 4,061 real document images from CORD/WildReceipt/SROIE/XFUND, with pixel-precise tampered-region masks. Benchmarked three representative detectors zero-shot (TruFor, DocTamper, GPT-4o judge) and showed all degrade sharply vs their reference/in-distribution performance, with DocTamper's image-level AUC collapsing from 0.98 to 0.563 and near-zero pixel IoU (0.020), GPT-4o at chance (0.509). Concludes existing forgery detectors (trained on Photoshop/GIMP-style edits) are blind to AI-forged document tampering.",
+        "what_they_did_NOT_do": "Scope is strictly DOCUMENT/receipt/form images — it does NOT touch the insurance/auto/property/hotel damage-photo fraud domain or any natural-scene authentic photos. Edits are limited to localized numeric-field forgery; excludes wholesale document synthesis and signature forgery. Does NOT run a systematic size x blending sweep (it reports the area distribution but does not vary mask size/blend as an experimental axis). Does NOT evaluate commercial detector APIs (only TruFor, DocTamper, and a GPT-4o zero-shot judge). Does NOT test laundering / post-processing robustness (JPEG recompression, resize, screenshot, print-scan, etc.). So it is a strong fraud-domain analogue for the 'small localized AI edit collapses detectors' thesis, but on documents only, without the damage-photo domain, the size/blend sweep, commercial APIs, or laundering robustness.",
+        "url": "https://arxiv.org/abs/2602.20569",
+        "confidence": "high — confirmed via both the arXiv abstract page and the arXiv HTML full text (arxiv.org/html/2602.20569v1); cross-checked numbers, also indexed on ResearchGate and covered by trade press (Eftsure, ChannelNews). The only discrepancy is cosmetic: median area is 0.92%, described as '~1%' in the claim."
+      }
+    },
+    {
+      "key": "TGIF-COCOInpaint-DiffSeg",
+      "result": {
+        "paper": "Four real-photo localized-edit benchmarks verified as a group; COCO-Inpaint used as the anchor object (it carries the cited 86.4->24.6 claim). All four confirmed REAL.",
+        "exists": "yes",
+        "verified_id": "2504.18361 (COCO-Inpaint); also confirmed real: 2407.11566 (TGIF, WIFS 2024), 2511.19111 (DiffSeg30k), 2603.28613 (TGIF2)",
+        "title": "COCO-Inpaint: A Benchmark for Detecting and Localizing Inpainting-Based Image Manipulations",
+        "venue_year": "arXiv 2025 (Apr 2025). [TGIF: IEEE WIFS 2024, arXiv 2024; DiffSeg30k: arXiv 2025 (2511), OpenReview; TGIF2: Journal on Information Security (EURASIP/Springer) 2026, DOI 10.1186/s13635-026-00235-9, arXiv 2603.28613]",
+        "exact_claims": [
+          "COCO-Inpaint: 238,302 inpainted images; SIX inpainting models = SD1.5-Inpainting, SDXL-Inpainting, SD3.5, Flux.1-Fill-dev, BrushNet, PowerPaint (Flux.1-Fill/BrushNet/PowerPaint ALL present - matches task)",
+          "COCO-Inpaint: four mask strategies = segmentation, bounding box, random polygon (3-8), random box (3-8); two guidance modes (context-aware, text-guided); built on MS-COCO",
+          "COCO-Inpaint cross-model collapse CONFIRMED in Table 3: SegFormer in-distribution Pixel-F1 ~86.4 drops to ~24.6 cross-model; best cross-model Pixel-F1 only ~0.319; e.g. IML-ViT BrushNet 98.8->19.8, SegFormer SDXL 92.6->25.0 (the cited 86.4->24.6 pair is verbatim-supported)",
+          "TGIF (2407.11566): ~75k forged images; SD2, SDXL, Adobe Firefly; WIFS 2024; authors Mareen, Karageorgiou, Van Wallendael, Lambert, Papadopoulos",
+          "TGIF2 (2603.28613): extends TGIF with FLUX.1 edits + random non-semantic masks; per project page ~271k manipulated images, FLUX.1 variants + SD2/SDXL/Firefly, detectors TruFor/MMFusion degrade on FLUX.1, generative super-resolution (Real-ESRGAN) weakens forensic traces (project-page numbers not cross-verified in PDF)",
+          "DiffSeg30k (2511.19111): 30k images, pixel-level masks, EIGHT diffusion editors = SD2, SD3.5, SDXL, Flux.1, Glide, Kolors, HunyuanDiT1.1, Kandinsky2.2; up to 3 sequential (multi-turn) edits (round ratio ~1:4:5); COCO source; VLM pipeline (Qwen2.5-VL + Grounded-SAM); SegFormer binary mIoU 0.961, semantic mIoU 0.825, whole-image classification acc 0.997 / mAP 0.999 vs CNNSpot 0.942"
+        ],
+        "what_they_did": "All four claimed arXiv IDs are REAL and resolve to the stated benchmarks, verified independently via Semantic Scholar API (own CorpusIds/DOIs, not just spoofable WebFetch), direct arXiv page bodies, and project/dataset pages. (1) COCO-Inpaint 2504.18361: MS-COCO authentic photos + 6 inpainters incl Flux.1-Fill/BrushNet/PowerPaint, mask-strategy stratified, exhibits the cited ~86.4->24.6 cross-model localization collapse. (2) TGIF 2407.11566 = real WIFS 2024 paper (~75k SD2/SDXL/Firefly inpainting forgeries). (3) TGIF2 2603.28613 = real; SURPRISINGLY the future-looking '2603' (Mar 2026) ID is genuine - S2 gives CorpusId 287421421 and a registered Springer/EURASIP DOI 10.1186/s13635-026-00235-9, Journal on Information Security 2026; adds FLUX.1 + random masks + generative-SR laundering analysis. (4) DiffSeg30k 2511.19111 = real (S2 CorpusId 283243851, DBLP); 30k COCO images, 8 diffusion editors, multi-turn (<=3 edits), VLM-driven, semantic-segmentation localization framing.",
+        "what_they_did_NOT_do": "NONE of the four are fraud-domain: all use COCO / general web photos, NOT fabricated insurance/auto/property/hotel damage or receipts/documents. None do a systematic edit-SIZE x BLENDING (compositing/poisson/harmonization) sweep - COCO-Inpaint and DiffSeg30k stratify by mask region/strategy and TGIF2 adds random masks, but none parametrically sweep blend strength. None target commercial detector APIs (Hive, Sightengine, etc.) - evaluations are on open forensic/IMDL/AIGC models (TruFor, MMFusion, IML-ViT, SegFormer, CNNSpot). Only TGIF2 studies laundering, and only via generative super-resolution (Real-ESRGAN) + compression, not JPEG-recompression/screenshot/print-scan robustness sweeps. CAVEAT: TGIF2's exact dataset/metric numbers (271k images etc.) came from the project page / WebFetch summary and were not independently confirmed line-by-line against the PDF; the COCO-Inpaint 86.4->24.6 pair IS verbatim-supported in the v2 HTML Table 3.",
+        "url": "https://arxiv.org/abs/2504.18361 | https://arxiv.org/abs/2407.11566 | https://arxiv.org/abs/2511.19111 | https://arxiv.org/abs/2603.28613 (DOI https://doi.org/10.1186/s13635-026-00235-9)",
+        "confidence": "High that all four arXiv IDs are REAL and titles/IDs match (corroborated by Semantic Scholar CorpusIds/DOIs + direct page bodies). High on COCO-Inpaint specifics incl 6 inpainters, mask strategies, and 86.4->24.6 collapse (verbatim in v2 Table 3). High on DiffSeg30k 8 editors/30k/multi-turn. Medium on TGIF2 exact dataset-size/metric numbers (project-page sourced, not PDF-line-verified). High that none are fraud-domain and none do the size x blending sweep / commercial-API / laundering-sweep aspects of the project."
+      }
+    }
+  ],
+  "fraudSurveys": [
+    {
+      "key": "insurance-claim-image-forensics",
+      "result": {
+        "topic": "Insurance claim-image fraud detection (auto/property/damage/receipts): what image-forensic checks actually run in claims pipelines today, the vendor landscape (Verisk, Shift, FRISS, Tractable, VAARHAFT, SAS, Guidewire, Clearspeed, Duck Creek), the academic state of detecting manipulated/AI-generated and especially locally-inpainted claim/damage photos, and how robust these checks are to small localized AI edits.",
+        "key_works": [
+          {
+            "title": "AI-Generated Image Detectors Overrely on Global Artifacts: Evidence from Inpainting Exchange",
+            "year": "2026",
+            "venue": "arXiv preprint (2602.00192); Nebioglu, Bilgic, Popescu",
+            "oneline": "Shows SOTA AI-image detectors flag inpainted images via image-wide (VAE spectral-shift) artifacts, not the actually-synthesized local region.",
+            "key_result": "Their Inpainting-Exchange intervention (restore real pixels outside the edit, keep synthesized content) drops SOTA and commercial detectors from ~91% to ~55% accuracy (near chance); 90K test set of real/inpainted/exchanged images.",
+            "ref": "arxiv.org/abs/2602.00192"
+          },
+          {
+            "title": "Detecting Localized Deepfakes: How Well Do Synthetic Image Detectors Handle Inpainting?",
+            "year": "2025",
+            "venue": "arXiv preprint (2512.16688); Pandolfini, Pellegrini, Ferrara, Maltoni (Univ. Bologna)",
+            "oneline": "Benchmarks whether detectors trained on fully-synthetic images transfer to localized inpainting edits as the edited region shrinks.",
+            "key_result": "Detectors are near random on edits <5% of image area; usable only above ~20% mask coverage. Best model (DINOv3 ViT-L) ~0.86 AUROC on large-mask BR-Gen but ~0.52 (chance) on Flux-based small-edit TGIF2. Built from 337K inpainted + 30K real images across LaMa/MAT/BrushNet/SD2/SDXL/Firefly/Flux.",
+            "ref": "arxiv.org/abs/2512.16688"
+          },
+          {
+            "title": "The Unwinnable Arms Race of AI Image Detection",
+            "year": "2025",
+            "venue": "arXiv preprint (2509.21135); Aczel, Vettor, Plesner, Wattenhofer (ETH Zurich)",
+            "oneline": "Argues detection faces a structural asymmetry: generators improve faster than detectors generalize.",
+            "key_result": "Detectors trained on one generator degrade sharply on newer generators; simple post-processing (compression, resize, noise) substantially lowers accuracy, undermining real-world deployment — i.e., retraining cannot indefinitely keep pace.",
+            "ref": "arxiv.org/abs/2509.21135"
+          },
+          {
+            "title": "Methods and Trends in Detecting AI-Generated Images: A Comprehensive Review",
+            "year": "2025",
+            "venue": "Computer Science Review / ScienceDirect (also arXiv 2502.15176)",
+            "oneline": "Taxonomy of 7 detection families (spatial CNN, frequency, fingerprint, patch, training-free reconstruction, CLIP/VLM, MLLM) with cross-generator/cross-scene robustness analysis.",
+            "key_result": "Spatial CNN detectors generalize poorly cross-generator; CLIP/VLM and training-free reconstruction methods (AEROBLADE, RIGID) generalize best. Lists standard benchmarks (GenImage, UnivFD, DiffusionForensics, SynthBuster, CIFAKE); notes most methods do binary classification, not manipulation localization.",
+            "ref": "arxiv.org/html/2502.15176v2"
+          },
+          {
+            "title": "Verifying Provenance of Digital Media: Why the C2PA Specifications Fall Short",
+            "year": "2026",
+            "venue": "arXiv preprint (2604.24890); Golaszewski, Krawetz, Sherman et al.",
+            "oneline": "Security analysis of C2PA Content Credentials as a media-authenticity mechanism.",
+            "key_result": "Six failure modes: uncryptographically-bound timestamps, broken certificate-revocation checking (a revoked Nikon cert still validated months later), inconsistent validators (same image valid in one tool, invalid in another), exclusion-range gaps (GPS editable undetected), cert expiry within months, and self-reported conformance. Crucially: absence of credentials is NOT evidence of fraud, and cameras can sign AI images.",
+            "ref": "arxiv.org/html/2604.24890v1"
+          },
+          {
+            "title": "Fighting Fake News: Image Splice Detection via Learned Self-Consistency (EXIF-as-supervision)",
+            "year": "2018",
+            "venue": "ECCV 2018; Huh, Liu, Owens, Efros (UC Berkeley)",
+            "oneline": "Foundational method: train a model to predict EXIF self-consistency so spliced regions (different imaging pipelines) light up — the conceptual basis of metadata/PRNU-style forensics now used commercially.",
+            "key_result": "Detects and localizes splices without manipulation labels by exploiting that composited regions come from different capture pipelines; underpins the 'multiple noise-pattern = manipulation' logic vendors like Verisk describe.",
+            "ref": "arxiv.org/pdf/1805.04096"
+          }
+        ],
+        "deployed_systems": [
+          {
+            "name": "Verisk — Digital Media Forensics (via ClaimSearch)",
+            "what_it_does": "AI-image-forensics layer on the industry-shared ClaimSearch claims/image database. Core checks: (1) noise-pattern/PRNU analysis — flags images containing more than one camera noise pattern as a manipulation sign; (2) duplicate detection against prior claims in ClaimSearch; (3) internet-source detection (image scraped from web); (4) metadata/EXIF consistency (capture date/time/location vs claim); (5) PDF/document tampering. Generative-AI image detection was added as a beta/in-development module.",
+            "evidence": "Verisk product/blog pages + Reinsurance News (Jun 2023): ClaimSearch covers >95% of the industry, 315 insurers signed up to contribute images, 'millions' of claim images; a study of 768,000 claim images found 1,967 duplicates, with one photo reused across 44 claims and duplicates tied to ~$5.3M indemnity across 1,475 claims. GenAI detection described as 'in beta.'"
+          },
+          {
+            "name": "Shift Technology — document/image fraud detection",
+            "what_it_does": "Image similarity scoring to detect reused photos across claims (robust to crop/resize/slight alteration), plus metadata triage (timestamp vs incident, geolocation vs loss site, device match, web-download signals) and network analysis to link claims via shared intermediaries.",
+            "evidence": "Shift case study (spoiled-goods/freezer claim): identical refrigerator photo detected across claims, linked to two other claims via a common broker/intermediary; payment blocked. Carrier Management 2023 viewpoint describes the metadata-first workflow. Largely similarity/metadata-based; no published AI-inpainting detection accuracy."
+          },
+          {
+            "name": "FRISS — Media Check (claims analytics; distributed via Duck Creek)",
+            "what_it_does": "Validates claim media via metadata/EXIF analysis (timestamp/GPS mismatch), reused-media checks across current and past claims, visual-anomaly checks (inconsistent lighting, duplicated patterns, impossible reflections), pixel-level anomaly scanning, and document-forgery signals (duplicate signatures, generic layouts). Positioned explicitly as one layer, not a complete solution.",
+            "evidence": "FRISS 'Digital Deceit' blog + product pages. Cites real cases: NL fraudster forged medical records with AI (~€150k paid before catch); Airbnb host manipulated damage photos for a £12k claim. Available to Duck Creek customers via partnership."
+          },
+          {
+            "name": "VAARHAFT — Fraud Scanner",
+            "what_it_does": "API + browser flow for claim images: fully-AI-generated image detection, subsequent-edit (AI/software) detection with color heatmap localization of suspicious regions, metadata extraction, proprietary photo-hash duplicate checking (no server-side image storage), reverse-image search, content moderation. 'SafeCam' browser session locks exposure and detects screen re-photography to fight screenshot/replay spoofing.",
+            "evidence": "VAARHAFT product pages + ITC Europe profile. Berlin insurtech founded 2023; first financing round May 2024; first 3 paid insurer pilots Jun 2024 with 7 more in pipeline; InsureNXT 'Standalone Pioneer' and Versicherungsforen Claims Rockstar awards. Self-disclaims: 'statistical model... never 100%,' not court-proof; no specific accuracy or generator list published."
+          },
+          {
+            "name": "SAS — agentic fraud-screening pipeline (synthetic-image)",
+            "what_it_does": "Combines computer vision (synthetic/manipulated image detection), OCR (text extraction), and LLM reasoning to risk-score claim media before a decision; explainable output with visual highlighting of suspicious regions, plus monitoring dashboards.",
+            "evidence": "SAS press release (May 2026). Cites ACFE+SAS fraud survey: only 7% of anti-fraud pros say their org is more than moderately prepared for AI-charged fraud, and no insurance respondents exceeded moderate confidence. Product detail is high-level; no published accuracy."
+          },
+          {
+            "name": "Guidewire — ClaimCenter fraud tooling (positioning)",
+            "what_it_does": "Describes multimodal forensic analysis (image/video/audio/text inconsistencies), C2PA Content Credentials for provenance, behavioral analytics over device/IP/timestamp/vendor patterns, and OCR/ML document authentication. Reads as platform positioning rather than a documented detection module.",
+            "evidence": "Guidewire blog. Cites Shift's '20–30% of claims may include altered media' and Deloitte 2025 (35% of insurance execs rank fraud detection a top GenAI priority). No named partnerships or accuracy figures."
+          },
+          {
+            "name": "Tractable — auto/property damage AI with fraud checks",
+            "what_it_does": "Computer-vision damage assessment (pixel-level damage/part detection) that adds AI 'fraud checks' and live-guided video capture intended to ensure the correct, current vehicle is captured (anti-substitution/anti-reuse). Primary value is estimation; fraud detection is a secondary consistency layer.",
+            "evidence": "Tractable insurer pages. Concrete image-manipulation/AI-inpainting detection accuracy is not published; fraud capability is described qualitatively (consistency/accuracy review)."
+          },
+          {
+            "name": "Clearspeed — voice risk assessment (adjacent, NOT image)",
+            "what_it_does": "Voice-analytics risk scoring of claimant answers to fast-track low-risk and flag high-risk claims. Included because insurers pair it with image checks in layered fraud triage, but it does no image forensics.",
+            "evidence": "Allianz partnership ('29% more fraud prevented' headline), RSA and Allianz partnership announcements 2024. Voice-only; no image capability."
+          },
+          {
+            "name": "AppZen / Veryfi / Ramp — receipt & invoice (document-image) fraud",
+            "what_it_does": "Expense/invoice pipelines detecting AI-generated/forged receipts via digital fingerprinting (traces from known fake-receipt generator sites), metadata analysis, pattern/format anomaly detection, merchant authentication, and math/tax validation. Directly relevant to fabricated receipts in claims.",
+            "evidence": "AppZen: 3.5M+ fake receipts created on top-4 fraud sites in 6 months; AI-generated receipts were ~14% of fraudulent documents in Sept 2025 vs ~0% a year earlier (via Ars Technica/FT). Veryfi claims '99.7% accuracy' over 100+ indicators (vendor marketing). Ramp flagged >$1M fraudulent invoices in 90 days post-deployment."
+          }
+        ],
+        "real_base_datasets": [
+          {
+            "name": "GenImage",
+            "contents": "Large multi-generator benchmark of real vs AI-generated images (GANs + multiple diffusion models) for binary AIGC detection; standard for cross-generator generalization tests.",
+            "access": "Public (research)."
+          },
+          {
+            "name": "DiffusionForensics (DIRE)",
+            "contents": "Diffusion-generated images across domains (LSUN-Bedroom, ImageNet, CelebA-HQ) for reconstruction-error-based detection; supports cross-scene evaluation.",
+            "access": "Public (research)."
+          },
+          {
+            "name": "UnivFD / ForenSynths (Wang 2020)",
+            "contents": "GAN-generated images (ProGAN/StyleGAN/BigGAN/CycleGAN) — the classic cross-model generalization benchmark and CLIP-feature detection baseline.",
+            "access": "Public (research)."
+          },
+          {
+            "name": "BR-Gen, TGIF, TGIF2 (used in 'Detecting Localized Deepfakes')",
+            "contents": "Inpainting-focused: 337K inpainted + 30K real images with varied mask sizes (BR-Gen large ~56% masks; TGIF2 small ~5.5% Flux edits), generators LaMa/MAT/PowerPaint/BrushNet/SD2/SDXL/Firefly/Flux — the closest public proxy to small localized edits on real photos.",
+            "access": "Public/research (per the paper); the most directly relevant to the small-localized-edit threat model."
+          },
+          {
+            "name": "INP-X / Inpainting Exchange (2026)",
+            "contents": "90K real / inpainted / 'exchanged' images that isolate locally-synthesized content from global VAE artifacts — purpose-built to test whether detectors truly localize edits.",
+            "access": "Released with the arXiv 2602.00192 paper (research)."
+          },
+          {
+            "name": "Classical forgery sets: CASIA v1/v2, Columbia, Coverage, NIST16, DEFACTO; AutoSplice & CocoGlide (AI-era)",
+            "contents": "Splice/copy-move/object-removal forgeries on natural photos; AutoSplice/CocoGlide add diffusion-based local edits. Used to train/eval manipulation localization (the forensic backbone of vendor 'noise pattern / pixel anomaly' checks).",
+            "access": "Public (research)."
+          },
+          {
+            "name": "Insurance-claim / damage-specific manipulation benchmark",
+            "contents": "None public. Real claim-image corpora (e.g., Verisk ClaimSearch, ~768K-image studies) are proprietary and access-controlled. Car-damage datasets exist for estimation (e.g., CarDD) but not as manipulation-forensics benchmarks.",
+            "access": "Not publicly available — a notable gap for the damage/claim domain."
+          }
+        ],
+        "what_detection_runs_today": "In production claims pipelines the dominant, reliable checks are classical and database-driven, not AI-vs-AI: (1) perceptual-hash / image-similarity DEDUP of a submitted photo against the insurer's and the industry-shared database (Verisk ClaimSearch dedup, FRISS reused-media, Shift similarity scoring) — this is the single most effective real defense and catches photo reuse/recycling regardless of how the image was made; (2) EXIF/metadata consistency (capture timestamp vs incident date, GPS vs loss location, device/make-model, web-download/processing software traces) — cheap and widely used but trivially spoofable/strippable, so it is treated as a soft signal; (3) reverse-image / internet-source search to catch photos scraped from the web; (4) noise-pattern/PRNU and pixel-level splice forensics (a single image containing more than one camera noise signature implies compositing) — Verisk and FRISS describe this for copy-move/splice; (5) document/PDF tamper checks and OCR-based receipt/invoice validation (math, tax, merchant existence, generator fingerprints) for fabricated receipts/estimates; (6) graph/network analytics linking claims via shared intermediaries, devices, IPs; (7) capture-side defenses (VAARHAFT SafeCam, Tractable live-guided capture) that lock the camera and detect screen re-photography to stop replay/screenshot spoofing. Dedicated AI-GENERATED-image detectors are the newest and least mature layer: Verisk's GenAI detection was described as beta/in-development, VAARHAFT/SAS market full-synthetic-image detection, but published, independently-verified accuracy on small localized edits is essentially absent. C2PA provenance is discussed (Guidewire) and increasingly camera-supported (Pixel 10, Samsung AI-edit tagging) but not yet a load-bearing claims check.",
+        "the_gap": "The defensive thesis is well-supported by current evidence: deployed pipelines are strongest against photo REUSE (hashing/dedup) and crude splices (noise-pattern), and weakest against small localized AI inpainting on an otherwise-authentic photo. Three forces converge. (a) Academic results show off-the-shelf and even commercial AI-image detectors collapse to near-chance on small edits: near-random below ~5% mask area, only usable above ~20% coverage (Pandolfini et al. 2025), and a 91%->55% drop when detectors are denied the global VAE artifact and forced to judge the actually-synthesized region (Nebioglu et al. 2026). A fabricated dent/scratch/water-stain is exactly such a small local edit. (b) Metadata/EXIF defenses fail by construction here because the base photo is a genuine capture with a genuine camera/timestamp/GPS — only a small region is altered, so metadata stays consistent. (c) Hash/dedup fails because the image is novel (not reused), and noise-pattern forensics is increasingly defeated by modern diffusion inpainting that re-harmonizes noise. C2PA does not close the gap: absence of credentials is uninformative, cameras can sign AI content, and revocation/validation are broken (Golaszewski et al. 2026); and even where a phone signs originals, an inpainted-then-recaptured image can carry a fresh valid signature. Vendors themselves disclaim completeness (VAARHAFT 'never 100%', FRISS 'not a complete solution', SAS survey: only 7% of anti-fraud pros feel more than moderately prepared). Net: the small-localized-edit-on-authentic-photo threat is the documented blind spot, and a stress-test benchmark in the insurance-damage domain (which does not publicly exist) is the clear unmet need.",
+        "fraud_scale_facts": [
+          "Insurance fraud costs US consumers an estimated $308.6 billion/year; roughly 1 in 10 property-casualty losses includes fraud (SAS / Coalition Against Insurance Fraud, 2026).",
+          "Non-health insurance fraud is estimated at >$40 billion/year in the US (Coalition Against Insurance Fraud, cited by SimpleSolve/FRISS).",
+          "Shift Technology estimate (widely re-cited by Guidewire, SimpleSolve): 20-30% of insurance claims may now include some form of altered images, fabricated documents, or synthetic media.",
+          "Only 7% of anti-fraud professionals say their organization is more than moderately prepared for AI-driven fraud, and no insurance respondents exceeded 'moderate' (ACFE + SAS survey, 2026).",
+          "Verisk ClaimSearch scale: >95% of the industry contributes images, 315 insurers signed up to contribute; a 768,000-image study found 1,967 duplicates, one photo reused across 44 claims, with duplicates tied to ~$5.3M indemnity across 1,475 claims (Verisk / Reinsurance News, 2023).",
+          "Receipt fraud: AI-generated receipts were ~14% of fraudulent documents submitted in September 2025 vs ~0% a year earlier (AppZen, via Ars Technica/FT); surge attributed to OpenAI's March 2025 GPT-4o image generation. 3.5M+ fake receipts created on the top four fake-receipt sites in six months (AppZen).",
+          "Deloitte 2025: 35% of insurance executives rank fraud detection among their top GenAI priorities (cited by Guidewire).",
+          "Illustrative deployed catches/losses: an $85K homeowners claim approved on deepfake video before a post-payout audit (SimpleSolve); a NL claimant collected ~€150k on AI-forged medical records before being caught; an Airbnb host used manipulated damage photos for a £12k claim (FRISS)."
+        ],
+        "ethics_data_notes": "This is a defensive stress-test program; outputs must not become an evasion playbook. Concrete guardrails grounded in the sources: (1) Do not publish or operationalize specific recipes for defeating named vendors (e.g., exact mask sizes, generators, or recapture tricks that evade Verisk/FRISS/VAARHAFT) — report capability gaps at the level of detector families and threat classes, as the academic papers do. (2) Build evaluation data ethically: use public forgery/inpainting benchmarks (GenImage, DiffusionForensics, BR-Gen/TGIF, INP-X, AutoSplice/CocoGlide) and synthetically-edited photos you generate or license; do NOT scrape real insurer claim images (PII, GDPR — note ClaimSearch-class corpora are proprietary and access-controlled). VAARHAFT explicitly markets GDPR-aligned handling and on-device hashing, signalling the privacy bar. (3) Real claim photos contain PII (faces, plates, addresses, geolocation) and health data in some lines — minimize, anonymize, and avoid retaining EXIF/GPS. (4) Coordinated disclosure: findings about a specific deployed detector's blind spot should go to the vendor/insurer before any public release. (5) Be precise that fabricating insurance claims is a crime; framing must stay strictly red-team/defense. (6) Watermark/label all AI-edited test images as synthetic to prevent leakage into real claims or training sets.",
+        "caveats": "[\"Vendor accuracy numbers are largely marketing and not independently verified: e.g., '95% of AI-altered media caught' and Veryfi's '99.7%' receipt accuracy come from vendor/aggregator blogs, not peer-reviewed or third-party audits; treat as upper-bound claims. The trustworthy quantitative robustness numbers here come from academic papers (91%->55%; <5% mask = near chance), not vendors.\",\"Some cited stats are circular/second-hand: the '20-30% of claims include altered media' figure traces to a single Shift Technology estimate re-quoted across many blogs; the $308.6B and $40B fraud figures are industry/advocacy estimates with broad methodology.\",\"I could not fully load several primary vendor product pages (Verisk Digital Media Forensics and the Verisk/Guidewire blogs were JS-rendered, returning only titles on direct fetch); Verisk technical details (noise-pattern, dedup, GenAI-beta) were reconstructed from search snippets + the 2023 Reinsurance News piece, so exact current feature status (e.g., whether GenAI detection has exited beta in 2026) is uncertain.\",\"Dates skew the picture: the Verisk 768K-image study and '315 insurers' figures are from 2023 and may now be larger; VAARHAFT pilot counts are from mid-2024.\",\"No public insurance-damage-specific manipulation benchmark was found despite targeted searches; the small-localized-edit evidence comes from general-domain inpainting benchmarks (BR-Gen/TGIF/INP-X) used as proxies — domain transfer to car/property/hotel damage is plausible but unverified.\",\"FRISS/Shift relationship to acquisitions/consolidation in the insurtech fraud space could not be confirmed; treat vendor org details as point-in-time.\",\"Clearspeed and parts of Tractable/Duck Creek are adjacent (voice, estimation, distribution) rather than image-forensic engines; included for completeness of the claims-triage stack, not as image detectors.\",\"C2PA adoption is moving fast (camera support in 2025-2026) but its value as a claims-fraud check remains weak per the 2026 shortcomings paper; any conclusion about C2PA should be revisited as spec v2.x and revocation handling mature.\"]"
+      }
+    },
+    {
+      "key": "document-receipt-forgery",
+      "result": {
+        "topic": "Document / receipt / invoice forgery and tamper detection — the expense/medical/claims-document branch. Covers AI-inpainting robustness of academic detectors (DocTamper/DTD, AIForge-Doc, DocForge-Bench, Tampered-IC13/T-SROIE, ADCD-Net, TextSleuth) plus deployed expense-audit/document-verification products (AppZen, SAP Concur Verify/Detect, Ramp, Inscribe, Resistant AI).",
+        "key_works": [
+          {
+            "title": "AIForge-Doc: A Benchmark for Detecting AI-Forged Tampering in Financial and Form Documents",
+            "year": "2026",
+            "venue": "arXiv:2602.20569 (Duke/NYU/UNC/USC/Scam.ai)",
+            "oneline": "First benchmark that forges NUMERIC FIELDS of real receipts/forms exclusively with diffusion/AI inpainting APIs (Gemini 2.5 Flash Image, Ideogram v2 Edit) and gives pixel masks; directly on-topic for stress-testing detectors against small localized AI edits of numbers.",
+            "key_result": "4,061 forged images from CORD/WildReceipt/SROIE/XFUND, 9 languages; median tampered area only 0.92% of pixels. Zero-shot detectors collapse: document-specific DocTamper drops to AUC 0.563 (vs 0.98 in-distribution) and IoU 0.020 (vs 0.71); general TruFor AUC 0.751 (vs 0.96 on NIST16); GPT-4o AUC 0.509 (random). 5 of 7 inpainting tools were rejected for failing to produce legible/correct-valued text.",
+            "ref": "https://arxiv.org/html/2602.20569v1"
+          },
+          {
+            "title": "DocForge-Bench: A Comprehensive 0-shot Benchmark for Document Forgery Detection and Analysis",
+            "year": "2026",
+            "venue": "arXiv:2603.01433v2 (UNC/UC Irvine/WashU/Scam.ai)",
+            "oneline": "Unified zero-shot benchmark of 14 detectors across 8 document-forgery datasets; diagnoses that the dominant failure is calibration/threshold, not just feature discrimination, and flags AIGC editing as the open gap.",
+            "key_result": "No method reaches F1>=0.3 on 6+ datasets; Pixel-AUC>=0.76 for most methods yet Pixel-F1 ~0.02-0.35 because tampered pixels are only 0.27-4.17% of the image. Threshold adaptation on just N=10 in-domain images recovers 39-55% of the oracle-F1 gap. All 8 datasets predate generative-AI editing.",
+            "ref": "https://arxiv.org/html/2603.01433v2"
+          },
+          {
+            "title": "Towards Robust Tampered Text Detection in Document Image: New Dataset and New Solution (DocTamper / DTD)",
+            "year": "2023",
+            "venue": "CVPR 2023 (Qu et al., SCUT)",
+            "oneline": "Introduced DocTamper, the most-used document-tamper-localization dataset, and DTD, a JPEG/DCT frequency-aware detector trained with curriculum learning to resist compression — the de-facto baseline that AIForge-Doc/DocForge-Bench show fails on AI inpainting.",
+            "key_result": "170k images (120k train; test split Test 30k / FCD 2k / SCD 18k) over contracts, invoices, receipts, books; tampering = copy-move, splicing, print. DTD uses a Frequency Perception Head over DCT coefficients + curriculum learning (CLTD) to stay robust to JPEG; strong in-distribution but generalizes poorly to diffusion inpainting. Non-commercial, password-gated.",
+            "ref": "https://github.com/qcf-568/DocTamper"
+          },
+          {
+            "title": "ADCD-Net: Robust Document Image Forgery Localization via Adaptive DCT Feature and Hierarchical Content Disentanglement",
+            "year": "2025",
+            "venue": "arXiv:2507.16397",
+            "oneline": "State-of-the-art document forgery localizer that adaptively fuses JPEG-DCT coefficients with RGB and OCR-derived character masks — illustrates why detectors over-rely on JPEG/compression artifacts that AI inpainting + re-photographing can wash out.",
+            "key_result": "Combines adaptive DCT features, RGB stream, and OCR character masks with hierarchical content disentanglement for SOTA on document benchmarks; the DCT dependence is exactly the signal that screenshots/re-saves of AI receipts degrade.",
+            "ref": "https://arxiv.org/pdf/2507.16397"
+          },
+          {
+            "title": "TextSleuth: Towards Explainable Tampered Text Detection",
+            "year": "2024",
+            "venue": "arXiv:2412.14816",
+            "oneline": "MLLM/VLM-based detector that not only localizes tampered text but explains the anomaly in natural language; introduces the ETTD (Explainable Tampered Text Detection) dataset covering insertion/deletion/replacement.",
+            "key_result": "Moves beyond binary masks to grounded explanations of why text looks manipulated; targets both traditional edits and AI/LLM-generated text. (Sibling line: GPT-4o used zero-shot in AIForge-Doc scored near-random AUC 0.509, showing off-the-shelf VLMs are not yet reliable localizers.)",
+            "ref": "https://arxiv.org/pdf/2412.14816"
+          },
+          {
+            "title": "Detecting Tampered Scene Text in the Wild (Tampered-IC13) and Generalized Tampered Scene Text Detection / OSTF",
+            "year": "2022-2025",
+            "venue": "ECCV 2022; AAAI 2025 (Wang et al. / Qu et al.)",
+            "oneline": "Tampered-IC13 is the first word-level tampered-scene-text dataset (built on ICDAR2013, edited with SR-Net); OSTF extends it with forgeries from nine modern generative models, tracking the shift from one editor to many AI editors.",
+            "key_result": "Tampered-IC13: ~300 scene-text images tampered by SR-Net, box-level labels (1=real text, 2=tampered). OSTF re-forges with 9 latest deep generative models, demonstrating that single-generator-trained detectors do not transfer across generators.",
+            "ref": "https://github.com/wangyuxin87/Tampered-IC13"
+          },
+          {
+            "title": "Find it again! — Receipt Dataset for Document Forgery Detection (and T-SROIE)",
+            "year": "2022-2023",
+            "venue": "ICDAR 2023 (La Rochelle L3i); T-SROIE 2022",
+            "oneline": "Realistic receipt-forgery datasets built on SROIE: 'Find it again!' modifies real scanned receipts; T-SROIE was the first to localize AIGC-style (SR-Net) tampering in scanned receipts — closest public analogues to fabricated expense receipts.",
+            "key_result": "'Find it again!' = 988 SROIE-derived scanned receipts, 163 with realistic fraudulent modifications. T-SROIE localizes SR-Net-style tampering on high-res uncropped receipts. Both predate diffusion-API inpainting.",
+            "ref": "https://l3i-share.univ-lr.fr/2023Finditagain/index.html"
+          }
+        ],
+        "deployed_systems": [
+          {
+            "name": "AppZen (AI expense audit / fraud & risk)",
+            "what_it_does": "Auto-audits 100% of T&E submissions pre-payment; explicitly added an AI-generated-fake-receipt detector. Five layers: (1) digital fingerprinting of metadata trails from known fake-receipt generators (e.g. makereceipt.com); (2) pattern recognition for Photoshop-doctored receipts; (3) merchant authentication (does merchant exist / sell the claimed items); (4) mathematical validation (line items, tax, totals); (5) completeness checks (VAT/tax IDs).",
+            "evidence": "AppZen reports ~3.5M fake receipts generated across the top four fraud websites in six months, and that AI-generated receipts reached ~14% of fraudulent documents submitted in Sept 2025 vs 0% a year earlier. https://www.appzen.com/resources/ai-generated-fake-receipts"
+          },
+          {
+            "name": "SAP Concur (Verify / Concur Detect by Oversight)",
+            "what_it_does": "Automated expense-audit service inspects receipt images and metadata (timestamps, server identifiers, travel patterns) to flag receipts likely created by AI or online generators; runs 80M+ compliance checks per month. Openly acknowledges metadata-based detection breaks once a user screenshots/re-photographs the AI receipt (metadata erased).",
+            "evidence": "Detection rate cited as ~18x higher than earlier checks that only matched known online receipt generators; helped customers find 'thousands' of AI receipts. SVP Chris Juneau: 'These receipts have become so good, we tell our customers, Do not trust your eyes.' https://the-decoder.com/ai-fuels-a-new-wave-of-fake-receipts-according-to-sap-concur/"
+          },
+          {
+            "name": "Ramp (invoice / expense fraud detection)",
+            "what_it_does": "Expense-management platform that added AI-based detection of fraudulent invoices/receipts (image + metadata anomalies).",
+            "evidence": "Ramp's new detection software caught over $1M in fraudulent invoices within 90 days. https://www.pymnts.com/news/security-and-risk/2025/phony-ai-created-receipts-become-real-problem-for-businesses/"
+          },
+          {
+            "name": "Inscribe AI (lending / financial-services document fraud)",
+            "what_it_does": "Document-fraud detection for lenders: flags AI-generated, PDF-edited and template-based bank statements and pay stubs by checking font anomalies, metadata tampering, and PDF revision history, plus cross-document corroboration (e.g. pay-stub amount vs bank-statement deposits). ~72s per document.",
+            "evidence": "AI Analyst usage grew ~5x since July 2024 and cut document-review escalations 73%; a single Bluevine case prevented ~$150,000 in fraud loss. https://www.inscribe.ai/document-processing/loan-document-fraud-detection"
+          },
+          {
+            "name": "Resistant AI (Document Forensics)",
+            "what_it_does": "Analyzes each financial document (bank statements, tax forms, invoices, IDs, in PDF or image) '500+ ways' to surface tampering, template-farming/reuse, and AI-generated documents via textures/structural patterns left by image generators. Sold via ABBYY Vantage and AWS Marketplace; used in underwriting, onboarding, insurance claims.",
+            "evidence": "Company states ~1 in 4 financial documents is tampered with and ~1 in 50 are reused or AI-generated. https://resistant.ai/products/documents"
+          }
+        ],
+        "real_base_datasets": [
+          {
+            "name": "DocTamper",
+            "contents": "170k document images (contracts, invoices, receipts, books) with pixel masks; synthetic copy-move/splicing/print edits. Splits: 120k train; test = Test 30k / FCD 2k / SCD 18k. Built from ~50k real bilingual document images.",
+            "access": "BaiduDrive + Kaggle, password by educational-email request; non-commercial only. https://github.com/qcf-568/DocTamper"
+          },
+          {
+            "name": "AIForge-Doc",
+            "contents": "4,061 receipt/form images with numeric fields forged by AI inpainting (Gemini 2.5 Flash Image 89.6%, Ideogram v2 Edit 10.4%); 8-bit grayscale PNG masks (255=tampered) in DocTamper-compatible format; median tampered area 0.92%. 80/20 split (3,249 train / 812 test). 9 languages.",
+            "access": "arXiv 2602.20569; described as released for reproducibility under CC BY-NC-SA 4.0 (non-commercial). https://arxiv.org/abs/2602.20569"
+          },
+          {
+            "name": "SROIE (base) / T-SROIE / 'Find it again!'",
+            "contents": "SROIE = 626 train + 347 test scanned English receipts with company/address/total/date entities. T-SROIE adds SR-Net AIGC-style tampering localization on high-res receipts. 'Find it again!' = 988 SROIE-derived receipts, 163 with realistic fraudulent modifications.",
+            "access": "SROIE via ICDAR 2019 (research registration); 'Find it again!' via La Rochelle L3i. https://l3i-share.univ-lr.fr/2023Finditagain/index.html"
+          },
+          {
+            "name": "CORD",
+            "contents": "1,000 Indonesian receipts (800/100/100), hierarchical OCR + entity-linking labels, 30 subclasses. Used as a real base for AIForge-Doc inpainting.",
+            "access": "Public (research). https://openreview.net/pdf?id=SJl3z659UH"
+          },
+          {
+            "name": "WildReceipt",
+            "contents": "1,768 in-the-wild English receipts, 25 semantic classes, diverse capture/layout; AIForge-Doc used 1,696 of them.",
+            "access": "Public (MMOCR/research)."
+          },
+          {
+            "name": "XFUND",
+            "contents": "Multilingual forms (DE/ES/FR/IT/JA/PT/ZH), 199 pages/language, entity+relation labels; the 'form/document' (non-receipt) base for AIForge-Doc (419 form images used).",
+            "access": "Public (research, Microsoft)."
+          },
+          {
+            "name": "Tampered-IC13 / OSTF",
+            "contents": "Tampered-IC13 ~300 ICDAR2013 scene-text images tampered by SR-Net, word-level box labels (real vs tampered). OSTF re-forges with 9 modern generative models for cross-generator generalization.",
+            "access": "GitHub (research). https://github.com/wangyuxin87/Tampered-IC13 ; https://github.com/qcf-568/OSTF"
+          }
+        ],
+        "what_detection_runs_today": "Two largely separate stacks. (1) ACADEMIC localization: pixel-level tamper localizers that lean heavily on JPEG/DCT compression artifacts and text-region cues — DocTamper/DTD (Frequency Perception Head over DCT + curriculum learning to survive recompression), ADCD-Net (adaptive DCT + RGB + OCR character masks), CTP-Net (character-texture two-stream), ASCFormer/RealTextManipulation, plus general image-forensics nets (TruFor, CAT-Net, MVSS-Net, ManTraNet, PSCC-Net, IML-ViT, SAFIRE). Newer MLLM/VLM approaches (TextSleuth, TextShield-R1) add explanations. (2) DEPLOYED expense/claims verification: AppZen, SAP Concur Verify/Detect, Ramp, Inscribe, Resistant AI. In production these rely far more on METADATA and CROSS-REFERENCE signals than on pixel forensics: EXIF/PDF metadata and generator fingerprints, PDF revision history, font/kerning anomalies, mathematical consistency (line items/tax/totals), merchant-existence and inventory checks, duplicate/template-reuse detection, and cross-document corroboration (receipt vs card transaction, pay stub vs bank deposits). SAP Concur and Inscribe both add some image/generator-artifact analysis on top.",
+        "the_gap": "Small, localized AI inpainting of numeric fields on otherwise-authentic photos is the documented blind spot. (1) Academic localizers trained on copy-move/splice/JPEG-composite collapse on diffusion inpainting: in AIForge-Doc the document-specialist DocTamper falls to AUC 0.563 / IoU 0.020 and general TruFor to AUC 0.751, while a zero-shot VLM (GPT-4o) is random (0.509). (2) The tampered area is tiny — median ~0.92% of pixels (0.27-4.17% across DocForge-Bench) — so even when ranking is okay (Pixel-AUC>=0.76) the fixed-threshold Pixel-F1 stays ~0.02-0.35; DocForge-Bench shows this is largely a CALIBRATION failure (adapting a threshold on just 10 in-domain images recovers 39-55% of the gap), not pure feature failure. (3) Deployed metadata defenses are brittle by their vendors' own admission: SAP Concur states that once an AI receipt is screenshotted or re-photographed the identifying metadata is erased, defeating metadata-based detection — exactly the 'edit a real photo' threat model. (4) Detectors over-fit to JPEG/DCT statistics that AI generation + re-photographing disrupt, and to specific generators (single-generator training does not transfer, per OSTF). Net: there is no public detector that reliably localizes small AI numeric-field edits on real claim/expense photos today, and benchmarks (AIForge-Doc, DocForge-Bench) postdate the threat by only months.",
+        "fraud_scale_facts": [
+          "AppZen: AI-generated fake receipts rose to ~14% of all fraudulent documents submitted in Sept 2025, up from 0% the prior year.",
+          "AppZen: ~3.5 million fake receipts were generated across the top four fake-receipt websites within six months.",
+          "Ramp's new detection software caught over $1 million in fraudulent invoices within 90 days.",
+          "SAP Concur runs 80M+ compliance checks per month; its AI-receipt detection is cited as ~18x more effective than prior checks that only matched known online generators; SVP Chris Juneau: 'Do not trust your eyes.'",
+          "Medius survey: ~30% of UK/US finance professionals reported an uptick in falsified receipts after GPT-4o's launch (2024).",
+          "SAP Concur context: 70% of CFOs believe employees may be using AI to falsify expense records; 10% are certain it has happened.",
+          "Resistant AI: ~1 in 4 financial documents is tampered with; ~1 in 50 are reused or AI-generated.",
+          "Inscribe: a single Bluevine case prevented ~$150,000 in fraud loss; AI Analyst usage grew ~5x since July 2024 and cut review escalations 73%.",
+          "ACFE benchmark frequently cited by vendors: organizations lose ~5% of annual revenue to fraud; manual audits only spot-check ~10-20% of expense reports."
+        ],
+        "ethics_data_notes": "All recommended datasets are real-photo-derived and either public-research or non-commercial. DocTamper is password-gated, non-commercial, education-email only. AIForge-Doc is released under CC BY-NC-SA 4.0 (non-commercial, share-alike) and frames itself as defensive (closing a detector blind spot); the abstract/metadata viewed did not expose a full ethics statement, and it was not confirmed from the pages fetched whether the exact generation prompts/recipe are withheld — treat that as unverified (see caveats). Base receipt/form corpora (SROIE, CORD, WildReceipt, XFUND) are standard research OCR datasets containing real receipts/forms with PII-like fields (merchant, totals, addresses), so derived forgery sets inherit privacy considerations; use under their research licenses only. For a DEFENSIVE stress-test, prefer evaluating released detector weights on AIForge-Doc / DocForge-Bench / T-SROIE rather than regenerating new forged numeric fields; if generation is needed, keep it to localized synthetic numeric edits on already-public research images, never on third-party real claims, and do not publish generation recipes. This report intentionally contains no operational forgery/evasion recipe.",
+        "caveats": "Uncertainty flags: (1) arXiv IDs 2602.20569 (AIForge-Doc) and 2603.01433 (DocForge-Bench) carry 2026 month-codes and Scam.ai/academic authorship; the headline numbers (DocTamper AUC 0.563 / IoU 0.020; Pixel-F1 0.02-0.35; 39-55% calibration recovery) come from those papers' own self-reported tables and were not independently reproduced — treat as authors' claims. (2) AIForge-Doc's exact license (CC BY-NC-SA 4.0) and whether it withholds generation prompts came from the arXiv abstract/metadata view, not the full PDF's ethics section, which I could not fully fetch (HTTP/size errors); verify in the PDF before relying on it. (3) Vendor statistics (AppZen 14% / 3.5M, Ramp $1M/90d, SAP Concur 18x / 80M, Inscribe $150k/5x/73%, Resistant AI 1-in-4 / 1-in-50, Medius 30%) are self-reported marketing figures with no independent audit and varying measurement windows — directional, not benchmark-grade. (4) Deployed products do not disclose model internals, so 'metadata/cross-reference vs pixel forensics' weighting is inferred from public pages. (5) DTD/ADCD-Net method specifics (Frequency Perception Head, curriculum learning, OCR masks) were partly drawn from search summaries because the CVPR PDF and ADCD-Net PDF failed to fetch (socket close / size limit); core claims are corroborated across multiple sources but exact figures should be checked in the papers. (6) GPT-4o zero-shot AUC 0.509 reflects naive prompting, not a tuned VLM pipeline. (7) Some sources are US-search-biased; non-US deployed tools may be underrepresented."
+      }
+    },
+    {
+      "key": "real-damage-photo-datasets",
+      "result": {
+        "topic": "Real damage-photo datasets usable as authentic bases for a controlled AI-edit detection benchmark (insurance/auto/property/hotel damage + receipts)",
+        "key_works": [
+          {
+            "title": "CarDD: A New Dataset for Vision-based Car Damage Detection",
+            "year": "2023",
+            "venue": "IEEE Transactions on Intelligent Transportation Systems (TITS); arXiv 2211.00945",
+            "oneline": "First large-scale public car-damage detection/segmentation dataset; the strongest single auto-damage base.",
+            "key_result": "4,000 high-res car-damage images (avg ~684k px), >9,000 instances across 6 categories: dent, scratch, crack, glass shatter, tire flat, lamp broken; bbox + pixel-level segmentation; train/val/test splits. Images sourced from Flickr/Shutterstock (so original camera EXIF is generally stripped). Access requires signing a license form (emailed link / Google Drive).",
+            "ref": "https://cardd-ustc.github.io/ ; https://arxiv.org/abs/2211.00945"
+          },
+          {
+            "title": "VehiDE Dataset: New dataset for Automatic vehicle damage detection in Car insurance",
+            "year": "2023",
+            "venue": "IEEE (conf, doc 10299490); hosted on Kaggle",
+            "oneline": "Largest public vehicle-damage set framed explicitly for insurance claims.",
+            "key_result": "13,945 high-res damaged-car photos, >32,000 damage instances across ~8 categories (dent, broken glass, scratch, lost part, punctured, torn, broken, lights) plus non-damage; supports classification/detection/instance-seg/salient-object. Annotation rule mirrors insurance pricing (adjacent same-type damage on one part = one instance). On Kaggle (hendrichscullen).",
+            "ref": "https://www.kaggle.com/datasets/hendrichscullen/vehide-dataset-automatic-vehicle-damage-detection"
+          },
+          {
+            "title": "xBD: A Dataset for Assessing Building Damage from Satellite Imagery (xView2 challenge)",
+            "year": "2019",
+            "venue": "CVPR Workshops; arXiv 1911.09296; DIU xView2",
+            "oneline": "Canonical post-disaster building/property damage base; satellite, not ground-level.",
+            "key_result": "22,068 bi-temporal (pre/post) 1024x1024 RGB images from Maxar WorldView (~0.3m), 19 disaster events, 850,736 building polygons with 4-level ordinal damage (no/minor/major/destroyed) spanning flood, wildfire, earthquake, hurricane, tsunami, volcano. License CC BY-NC-SA 3.0. Overhead imagery, no consumer-camera EXIF.",
+            "ref": "https://xview2.org/ ; https://arxiv.org/pdf/1911.09296"
+          },
+          {
+            "title": "MVTec AD: A Comprehensive Real-World Dataset for Unsupervised Anomaly Detection",
+            "year": "2019",
+            "venue": "CVPR; MVTec",
+            "oneline": "De-facto industrial surface-defect benchmark; useful as a generic object-with-defect base.",
+            "key_result": "5,354 high-res color images, 15 categories (10 objects, 5 textures), >70 defect types incl. scratches, dents, cracks, contaminations; defect-free train set + defect test set with pixel-precise masks. Free for non-commercial research (registration). Controlled studio capture, not claim-style phone photos.",
+            "ref": "https://www.mvtec.com/company/research/datasets/mvtec-ad"
+          },
+          {
+            "title": "SROIE (ICDAR 2019) and CORD: Consolidated Receipt Dataset",
+            "year": "2019",
+            "venue": "ICDAR 2019 competition / Clova AI (NeurIPS workshop)",
+            "oneline": "Public receipt-image corpora — the realistic base for fabricated-receipt edits.",
+            "key_result": "SROIE: ~1,000 scanned receipt images with text-localisation, OCR, and key-info-extraction annotations. CORD: 1,000 of 11,000 Indonesian shop/restaurant receipts released (rest withheld for PII), box-level text + parse-class labels, captured in-the-wild (noisier). Both widely mirrored on Kaggle/HF.",
+            "ref": "https://rrc.cvc.uab.es/?ch=13 ; CORD: https://github.com/clovaai/cord"
+          },
+          {
+            "title": "IMD2020 / GIM / COCO-Inpaint (image-manipulation localization benchmarks)",
+            "year": "2020-2025",
+            "venue": "WACV (IMD2020); arXiv 2406.16531 (GIM); arXiv 2504.18361 (COCO-Inpaint)",
+            "oneline": "Reference benchmarks for the detection side the project stress-tests, incl. modern generative/inpainting edits.",
+            "key_result": "IMD2020: 414 authentic + 2,010 real-world manipulated images (splice/copy-move) with manual masks; classic localization benchmark alongside Columbia, Coverage, CASIAv1, NIST16. GIM: million-scale generative-manipulation detection/localization. COCO-Inpaint: dedicated inpainting-detection benchmark (closest analogue to small localized AI edits).",
+            "ref": "https://github.com/greatzh/Image-Forgery-Datasets-List ; https://arxiv.org/pdf/2406.16531 ; https://arxiv.org/pdf/2504.18361"
+          }
+        ],
+        "deployed_systems": [
+          {
+            "name": "Verisk (claims-image analytics / State of Insurance Fraud)",
+            "what_it_does": "Insurance-data vendor reporting AI image-edit fraud trends and selling image/metadata analysis to detect digitally altered claim photos; primary source of 2026 fraud-scale figures.",
+            "evidence": "Verisk 2026 State of Insurance Fraud Report cited across PRNewswire/ROI-NJ/ECIKS; reports 42% of carriers see AI/digital manipulation exploited and 36% of consumers would alter a claim image."
+          },
+          {
+            "name": "Zurich Insurance Special Investigation Unit",
+            "what_it_does": "Forensic analysis of claim images: metadata/EXIF timestamp checks plus pixel-level anomaly detection for AI editing; documented real cases of altered plates and reused salvage-yard photos.",
+            "evidence": "Zurich case study: SIU found metadata timestamps predating the claimed accident by years and pixel-level AI-editing anomalies."
+          },
+          {
+            "name": "Allianz (computer-vision fraud + 'Incognito')",
+            "what_it_does": "ML/computer-vision system comparing vehicle/property damage images against genuine cases to flag digitally altered or staged incidents; 'Incognito' supervised model for fraud triage.",
+            "evidence": "Allianz deployed Incognito (2023); Allianz UK reported £37.7M fraud savings H1 2024 and warned digital photo distortion is becoming a major scam."
+          },
+          {
+            "name": "Inaza / TruthScan / SimpleSolve and similar insurtech detectors",
+            "what_it_does": "Commercial 'manipulated/AI-generated image detection' APIs marketed to insurers for claim-photo screening.",
+            "evidence": "Vendor pages market manipulated-image-detection APIs; industry reports ~30% of claims contain AI-altered media and claim 40-50% synthetic-fraud-loss reduction — vendor-sourced, treat as marketing."
+          },
+          {
+            "name": "C2PA / Content Credentials",
+            "what_it_does": "Provenance standard cryptographically binding capture/edit history (incl. EXIF/XMP/IPTC as tamper-evident assertions) to images; relevant to authenticating claim photos at capture.",
+            "evidence": "C2PA 2.x explainer; widely noted that social-platform re-encoding and metadata stripping break credentials, limiting real-world coverage of claim uploads."
+          }
+        ],
+        "real_base_datasets": [
+          {
+            "name": "CarDD",
+            "contents": "4,000 high-res real car-damage photos, >9,000 instances, 6 categories (dent/scratch/crack/glass shatter/tire flat/lamp broken); bbox + segmentation masks",
+            "access": "License form required (email -> Google Drive link); non-commercial research; bound by Flickr/Shutterstock terms"
+          },
+          {
+            "name": "VehiDE",
+            "contents": "13,945 real damaged-car photos, >32,000 instances, ~8 insurance-aligned categories + non-damage; classification/detection/instance-seg/salient-object labels",
+            "access": "Public on Kaggle (hendrichscullen); confirm exact Kaggle license on the page before use"
+          },
+          {
+            "name": "COCO Car Damage Detection / Car Damage Severity / Car Damage Assessment (Kaggle)",
+            "contents": "Several smaller real-photo sets: COCO-format damage masks; severity classes (minor/moderate/severe) for insurance triage; assorted dent/scratch/smash sets (~hundreds to a few thousand images each)",
+            "access": "Public on Kaggle; mixed/unspecified licenses, often community-scraped (verify per dataset)"
+          },
+          {
+            "name": "Roboflow Universe car-damage sets (CAPSTONE 3.2k, Car Damage Assessment 3,772, Car Damage V5 3,001, etc.)",
+            "contents": "Many real-photo auto-damage detection/segmentation datasets, smartphone/claim-style images, bumper/door/fender/windshield damage labels",
+            "access": "Public on Roboflow Universe; per-dataset licenses (frequently CC BY 4.0 / public domain); provenance and EXIF inconsistent"
+          },
+          {
+            "name": "xBD / xView2",
+            "contents": "22,068 pre/post 1024x1024 Maxar satellite tiles, 850,736 building polygons, 4-level damage; flood/fire/earthquake/hurricane/tsunami",
+            "access": "Free via xview2.org registration; CC BY-NC-SA 3.0; overhead (satellite), not ground-level claim photos"
+          },
+          {
+            "name": "MVTec AD (and MVTec AD 2)",
+            "contents": "5,354 high-res images, 15 object/texture categories, >70 defect types (scratch/dent/crack/contamination), pixel-precise masks",
+            "access": "Free for non-commercial research (registration); studio-controlled capture"
+          },
+          {
+            "name": "SROIE / CORD (receipts)",
+            "contents": "SROIE ~1,000 scanned receipts; CORD 1,000 released in-the-wild receipts; text boxes, OCR, key-field/parse-class labels",
+            "access": "SROIE via ICDAR RRC (registration); CORD on GitHub/HF (MIT-style); PII partially withheld in CORD"
+          },
+          {
+            "name": "Furniture/hotel-room damage (Roboflow furniture-defect ~116 imgs; Nyckel damaged/undamaged classifier)",
+            "contents": "Small furniture-damage detection set (~116 images) and a 2-class furniture-damage classifier; closest available to hotel-room/furniture damage",
+            "access": "Roboflow public (small); Nyckel is a hosted pretrained model, not a downloadable dataset. Note: no large public hotel-room damage dataset found"
+          },
+          {
+            "name": "Authentic-provenance photo bases (SIDD, RAISE-RAW, Forchheim, MIT-Adobe FiveK)",
+            "contents": "Real camera photos WITH genuine capture provenance: SIDD ~30k smartphone shots (5 phones); RAISE thousands of camera RAW images; Forchheim Image DB for camera ID in the wild; FiveK 5k RAW DSLR. Generic scenes, not damage-specific",
+            "access": "Public for research (per-dataset terms); valuable when the benchmark needs real EXIF/RAW provenance that damage datasets lack"
+          }
+        ],
+        "what_detection_runs_today": "Production claim-photo screening combines: (1) metadata/EXIF forensics (timestamp vs. claimed-incident date, GPS, device, software tags, double-JPEG/quantization-table checks) as used by Zurich SIU; (2) computer-vision similarity/anomaly models that compare submitted damage against genuine damage and reverse-image-search for reused stock/salvage photos (Allianz); (3) commercial 'AI-generated/manipulated image detection' APIs (Inaza, TruthScan, SimpleSolve, plus Verisk analytics) — largely vendor-benchmarked; and (4) emerging provenance via C2PA/Content Credentials at capture. Academically, the relevant detectors are image-manipulation localization / inpainting-detection models trained/evaluated on IMD2020, CASIA, NIST16, COCO-Inpaint, and GIM. Key weakness the project targets: most of this is tuned to splicing, full AI-generation, or compression artifacts — small localized generative edits (inpainting) on otherwise authentic, re-encoded claim photos with stripped EXIF are the hardest and least-covered case.",
+        "the_gap": "There is no public benchmark of authentic damage photos carrying small, localized, modern AI edits (inpaint/object-add/remove) at claim-realistic resolution and re-encoding. Existing damage datasets (CarDD, VehiDE, xBD, MVTec) are real bases but were built for damage *detection*, not edit-provenance, and most are sourced from Flickr/Shutterstock/satellite/studio — so they usually lack original consumer-camera EXIF (the very metadata insurers rely on). Existing manipulation benchmarks (IMD2020, CASIA, COCO-Inpaint, GIM) use generic non-damage content and often older edit styles. So the project must marry a real damage base (CarDD/VehiDE/Roboflow auto sets; SROIE/CORD receipts; small furniture sets) with controlled localized AI edits, and decide whether to (a) accept EXIF-stripped bases or (b) re-capture / use provenance-bearing bases (SIDD/RAISE/Forchheim style) to study the metadata-forensics axis. No public hotel-room damage dataset of meaningful scale currently exists — a genuine collection gap.",
+        "fraud_scale_facts": [
+          "Verisk 2026 State of Insurance Fraud Report: 42% of carriers say AI and digital-manipulation tools are actively exploited for fraudulent claims.",
+          "Verisk 2026: 36% of surveyed consumers would consider digitally altering a claim image/document even if it breaks insurer rules; reported to rise to ~55% for Gen Z.",
+          "Reported figure: ~23% of fake claims now use AI-generated/edited damage photos as primary evidence (secondary reporting of Verisk 2026).",
+          "Total US insurance fraud is estimated at ~$308.6B/year (Coalition Against Insurance Fraud); ~1 in 10 property-casualty losses involves fraud — AI-edited media is a growing slice, not the whole figure.",
+          "Admiral (UK) reported fraud up ~71% in 2025 vs prior year, partly attributed to easier AI image/document tampering.",
+          "Cited trend: AI-enhanced fraud cases grew ~4x, from ~20,000 (2022) to >80,000 (2025) (SAS-attributed).",
+          "ACFE/SAS survey: only ~7% of anti-fraud professionals feel more than moderately prepared to detect AI-charged fraud; insurance respondents expressed no more than moderate confidence.",
+          "Allianz UK reported £37.7M fraud savings in H1 2024 and flagged digital photo distortion as an emerging major scam.",
+          "Industry/vendor claim: ~76% of insurers say manipulated-media submissions have grown more sophisticated; carriers using AI detection report 40-50% lower synthetic-fraud losses (vendor-sourced, unverified)."
+        ],
+        "ethics_data_notes": "Defensive framing only: this maps authentic bases for a controlled detector stress-test; no operational fraud/evasion method is provided. Data/licensing constraints to respect: CarDD requires a signed license and is bound by Flickr/Shutterstock terms (non-commercial, no redistribution of source images); xBD is CC BY-NC-SA 3.0 (non-commercial, share-alike); MVTec AD is non-commercial research only; many Kaggle/Roboflow damage sets are community-scraped with unclear or absent licenses and possible third-party copyright — verify each before use and avoid redistributing base images. Receipts (CORD/SROIE) and any real claim photos can contain PII (names, addresses, license plates, prices, GPS in EXIF); CORD already withholds 10k images for that reason — scrub/redact and avoid re-identifiable content. If building an edited-image benchmark, label every edited sample clearly as synthetic, restrict to research distribution, and prefer provenance/consent-clean bases where possible. Editing real people's property photos raises consent issues even for defensive research.",
+        "caveats": "Several headline fraud numbers are vendor/press-sourced (Verisk, SAS, Admiral, insurtech vendors) and not independently audited; the $308.6B is total US fraud (Coalition Against Insurance Fraud), NOT AI-edit-specific — treat the 23%/42%/55%/40-50% figures as directional. The Verisk 2026 PDF would not parse as text, so its exact numbers come from secondary reporting (PRNewswire, ROI-NJ, ECIKS) and may differ slightly from the primary release. EXIF/provenance claims are inferred: CarDD draws on Flickr/Shutterstock which routinely strip EXIF, and xBD/MVTec are satellite/studio, so 'no real consumer-camera provenance' is a strong inference, not a per-image audit — verify by sampling actual files. VehiDE's exact Kaggle license, file size, and format were not confirmed (page would not render); check the live Kaggle page. Roboflow/Kaggle image counts and licenses drift over time. No sizeable public hotel-room/furniture damage dataset was found (only tiny Roboflow sets and a hosted Nyckel classifier) — this is a likely real gap rather than a search miss, but worth a deeper targeted search before concluding. Dataset availability and download mechanisms (forms, registrations) can change; reconfirm access at build time."
+      }
+    },
+    {
+      "key": "tampered-evidence-legal-scale",
+      "result": {
+        "topic": "Tampered / AI-generated photo evidence in insurance fraud and courts: documented scale of doctored-photo claim fraud, legal-forensic evidentiary standards for AI-edited/deepfake evidence, and the academic forensics literature on authenticating tampered images — used to motivate defensive stress-testing of AI-image detectors against small, localized AI edits on otherwise-authentic damage/receipt photos.",
+        "key_works": [
+          {
+            "title": "Can VLMs Detect and Localize Fine-Grained AI-Edited Images? (FragFake benchmark)",
+            "year": "2025",
+            "venue": "arXiv preprint (Sun, Zhang, Luo, et al.)",
+            "oneline": "Builds FragFake, a large-scale benchmark of diffusion-edited images across source datasets, editors, and edit types, and frames detection+localization (not just binary) as a VLM task.",
+            "key_result": "Pretrained VLMs incl. GPT-4o perform poorly at detecting/localizing localized edits; fine-tuned models (e.g., Qwen2.5-VL) reach high accuracy and much higher object precision — i.e., off-the-shelf detectors fail on fine-grained edits, the exact threat model of this project.",
+            "ref": "arXiv:2505.15644"
+          },
+          {
+            "title": "COCO-Inpaint: A Benchmark for Detecting and Localizing Inpainting-Based Image Manipulations",
+            "year": "2025",
+            "venue": "arXiv preprint (Yan, Hong, Zhan, et al.)",
+            "oneline": "Benchmark of 238,302 inpainted images from six SOTA inpainting models, four mask strategies, optional text guidance, targeting intrinsic real-vs-inpainted inconsistencies rather than semantic artifacts.",
+            "key_result": "Provides a rigorous protocol exposing that existing image-manipulation-detection-and-localization (IMDL) methods struggle to generalize across inpainting generators — directly relevant to localized 'add/remove damage' edits.",
+            "ref": "arXiv:2504.18361"
+          },
+          {
+            "title": "TruFor: Leveraging all-round clues for trustworthy image forgery detection and localization",
+            "year": "2023",
+            "venue": "CVPR 2023 (Guillaro, Cozzolino, et al.)",
+            "oneline": "Fuses RGB with a learned noise-sensitive fingerprint (Noiseprint++) to produce a forgery localization map plus a confidence map and image-level integrity score.",
+            "key_result": "Strong, widely-cited baseline for splicing/copy-move/inpainting localization on classic benchmarks; a standard detector to stress-test, but trained largely on non-diffusion forgeries so transfer to modern AI edits is a known weak point.",
+            "ref": "arXiv:2212.10957"
+          },
+          {
+            "title": "CAT-Net: Compression Artifact Tracing Network",
+            "year": "2021",
+            "venue": "WACV 2021 / IJCV (Kwon et al.)",
+            "oneline": "First to feed JPEG DCT coefficients directly into a segmentation network and to jointly use RGB+DCT streams for forgery localization; trained on ~900k images.",
+            "key_result": "Highest robustness across JPEG quality factors among contemporaries — a key baseline because real claim photos are re-compressed/messenger-laundered, which degrades most detectors.",
+            "ref": "CVPR/WACV 2021; github.com/mjkwon2021/CAT-Net"
+          },
+          {
+            "title": "DocTamper: Towards Robust Tampered Text Detection in Document Images",
+            "year": "2023",
+            "venue": "CVPR 2023 (Qu et al.)",
+            "oneline": "Large synthetic document-tampering dataset (120k train fakes; test splits DocTamper-Test 30k, FCD 2k, SCD 18k) over contracts, receipts, invoices, books with copy-move/splice/print edits, plus a robust detector.",
+            "key_result": "Most widely used benchmark for receipt/invoice tampering localization — directly applicable to the fabricated-receipts arm of this project.",
+            "ref": "CVPR 2023; github.com/qcf-568/DocTamper"
+          },
+          {
+            "title": "AIForge-Doc: A Benchmark for Detecting AI-Forged Tampering in Financial and Form Documents",
+            "year": "2026",
+            "venue": "arXiv preprint",
+            "oneline": "First benchmark targeting diffusion-inpainting tampering specifically in financial/form documents (CORD, WildReceipt, SROIE, XFUND) across nine languages.",
+            "key_result": "4,061 forged document images isolating the modern AI-inpainting threat to receipts/invoices, where older copy-move/splice detectors underperform.",
+            "ref": "arXiv:2602.20569"
+          },
+          {
+            "title": "X-Edit: Detecting and Localizing Edits in Images Altered by Text-Guided Diffusion Models",
+            "year": "2025",
+            "venue": "CVPR 2025 (and arXiv:2505.11753)",
+            "oneline": "Inverts an image with a pretrained diffusion model and feeds the inverted features to a segmentation network with channel/spatial attention to localize text-guided diffusion edits.",
+            "key_result": "Demonstrates that diffusion-inversion features localize subtle text-guided edits better than RGB-only forensics — a SOTA candidate detector for the project's edit type.",
+            "ref": "arXiv:2505.11753"
+          },
+          {
+            "title": "AutoSplice: A Text-prompt Manipulated Image Dataset for Media Forensics",
+            "year": "2023",
+            "venue": "CVPRW 2023 (Jia et al.)",
+            "oneline": "3,621 manipulated + 2,273 authentic images created with language-guided (DALL-E 2-era) manipulation, one of the first text-prompt splicing forensics datasets.",
+            "key_result": "Early evidence that diffusion/text-guided splices defeat detectors tuned on classic copy-move/splice corpora.",
+            "ref": "arXiv:2304.06870"
+          },
+          {
+            "title": "ForensicHub: A Unified Benchmark & Codebase for All-Domain Fake Image Detection and Localization",
+            "year": "2025",
+            "venue": "arXiv preprint",
+            "oneline": "Unifies datasets, detectors, and evaluation across natural-image forgery, document tampering, deepfake, and AIGC detection domains.",
+            "key_result": "Useful infrastructure to evaluate many baselines consistently against a common localized-edit threat model.",
+            "ref": "arXiv:2505.11003"
+          },
+          {
+            "title": "Deepfakes on trial / Adapting the Rules of Evidence for the Age of AI (legal-forensic analyses)",
+            "year": "2025",
+            "venue": "Thomson Reuters Institute; Quinn Emanuel; ISBA; U. Baltimore Law Review",
+            "oneline": "Surveys how courts authenticate AI/deepfake evidence under FRE 901/902/104, the proposed Rule 707 / draft Rule 901(c), and the 'liar's dividend'.",
+            "key_result": "Documents that the current authentication bar is low (reasonable-jury, more-likely-than-not) and not designed for deepfakes, motivating better forensic tooling and provenance — the responsible-disclosure framing.",
+            "ref": "thomsonreuters.com AI-in-courts; quinnemanuel.com publications; ubaltlawreview.com 2025/12/01"
+          }
+        ],
+        "deployed_systems": [
+          {
+            "name": "Shift Technology (document/image fraud detection)",
+            "what_it_does": "AI fraud-detection used by hundreds of insurers; for images it does similarity/duplicate detection (image-feature similarity scoring) to catch reused or recycled damage photos even after crop/resize/slight alteration, and flags manipulated documentation.",
+            "evidence": "Shift case studies and Microsoft customer story (Shift + Azure OpenAI) describe 'reused photo fraud' detection and document-fraud detection via image similarity scoring."
+          },
+          {
+            "name": "Verisk Anti-Fraud Analytics",
+            "what_it_does": "Vendor anti-fraud analytics including image-authenticity / digital-media manipulation detection for claims; published the March 2026 'State of Insurance Fraud' study on AI-edited claim media.",
+            "evidence": "Verisk newsroom / GlobeNewswire press release (Mar 17, 2026); quote from Shane Riedman, president, Anti-Fraud Analytics."
+          },
+          {
+            "name": "Zurich (UK) visual claims analysis",
+            "what_it_does": "Insurer-side AI that differentiates vehicle-damage types, verifies photo authenticity, and aims to detect manipulated/deepfake images using metadata, damage-pattern and visual-consistency checks.",
+            "evidence": "Multiple trade reports describe Zurich's visual analysis and its head of claims fraud (Scott Clayton) flagging photo-manipulation as an 'emerging threat.'"
+          },
+          {
+            "name": "Clearspeed (voice analytics)",
+            "what_it_does": "Not an image detector — voice-analytics risk scoring at FNOL; deployed by Allianz to triage suspicious claims, often cited alongside image-fraud coverage.",
+            "evidence": "Allianz–Clearspeed partnership announcements (2024); Allianz reported 29% rise in fraud prevention."
+          },
+          {
+            "name": "Tractable",
+            "what_it_does": "Computer-vision for auto/property claims that estimates damage/repair from photos; primarily an automation/estimation tool whose photo-intake pipeline is a fraud surface rather than a dedicated tamper detector.",
+            "evidence": "Industry write-ups describe Tractable's CV damage-estimation; named in playbooks alongside fraud-at-intake discussion."
+          },
+          {
+            "name": "SAS insurance fraud analytics",
+            "what_it_does": "ML anomaly/network/risk-scoring for claims; publicly described red-flags for AI-doctored images (inconsistent shadow angles, non-physical damage patterns, blurred plates, unusually clean backgrounds).",
+            "evidence": "Insurance Business UK piece quoting SAS fraud specialist Adam Hall on generative-AI claim images."
+          }
+        ],
+        "real_base_datasets": [
+          {
+            "name": "DocTamper",
+            "contents": "~120k synthetic tampered document images (train) + test splits (Test 30k, FCD 2k, SCD 18k) over contracts, receipts, invoices, books; copy-move/splice/print edits with tamper masks.",
+            "access": "Public via GitHub (qcf-568/DocTamper), CVPR 2023."
+          },
+          {
+            "name": "AIForge-Doc",
+            "contents": "4,061 diffusion-inpainting-forged financial/form documents derived from CORD, WildReceipt, SROIE, XFUND across nine languages (receipts/invoices/forms).",
+            "access": "Public benchmark released with arXiv:2602.20569."
+          },
+          {
+            "name": "DEFACTO",
+            "contents": "~149k–229k forged images sampled from MS-COCO, auto-manipulated by copy-move, splicing, and inpainting with localization masks.",
+            "access": "Public at defactodataset.github.io."
+          },
+          {
+            "name": "IMD2020",
+            "contents": "~2,010 real-world 'in-the-wild' manipulated images + 414 authentic, JPEG/PNG, collected from the internet (real manipulations, not synthetic).",
+            "access": "Public at staff.utia.cas.cz/novozada/db/."
+          },
+          {
+            "name": "AutoSplice",
+            "contents": "3,621 manipulated + 2,273 authentic images produced by text/language-guided (DALL-E 2-era) splicing.",
+            "access": "Public (CVPRW 2023, arXiv:2304.06870)."
+          },
+          {
+            "name": "COCO-Inpaint",
+            "contents": "238,302 inpainted images from six SOTA inpainting models, four mask strategies, optional text guidance, built on COCO; designed around real-vs-inpainted inconsistency.",
+            "access": "Public benchmark (arXiv:2504.18361)."
+          },
+          {
+            "name": "CASIA / Columbia / Coverage / NIST16 / Realistic Tampering (classic IMD suite)",
+            "contents": "Long-standing copy-move/splice forgery datasets with masks; small and pre-diffusion but standard for baseline evaluation.",
+            "access": "Public; widely mirrored (see greatzh/Image-Forgery-Datasets-List)."
+          },
+          {
+            "name": "FragFake",
+            "contents": "Large-scale benchmark of diffusion-edited (localized) images spanning multiple source datasets, editing models, and common edit types, with detection+localization labels.",
+            "access": "Released with arXiv:2505.15644 (2025)."
+          },
+          {
+            "name": "Document receipt OCR/IE corpora as authentic base",
+            "contents": "SROIE, CORD, WildReceipt, XFUND — authentic receipts/invoices/forms commonly used as the clean base onto which tampering is synthesized.",
+            "access": "Public (standard document-understanding datasets)."
+          }
+        ],
+        "what_detection_runs_today": "In claims practice, the dominant deployed defenses are NOT pixel-level AI-edit forensics but (1) image-similarity / duplicate detection to catch reused or recycled photos (Shift Technology), (2) metadata/EXIF and visual-consistency heuristics plus damage-pattern physics checks (Zurich, SAS red-flags: shadow angles, non-physical damage, blurred plates, too-clean backgrounds), (3) anomaly/network analytics and risk scoring on claim data, and (4) non-image triage like voice analytics (Clearspeed). Provenance via C2PA/Content Credentials is emerging but is opt-in, easily stripped, and only proves a manifest is untampered — it cannot certify an un-credentialed photo is authentic. In the forensics research stack, deployed/evaluated detectors are RGB+noise fusion models (TruFor, MMFusion/Noiseprint++), JPEG/DCT-aware models (CAT-Net), document-tamper localizers (DocTamper), and newer diffusion-edit localizers (X-Edit) and VLM-based detectors; per Verisk (Mar 2026), 65% of insurers use third-party AI detection tools and 50% use internally built ones, yet only 58% are 'very confident' detecting edits to real photos, 43% at scale, and 32% at spotting deepfakes — and 66% think most digital-media fraud goes undetected.",
+        "the_gap": "The threat this project targets — small, localized AI edits (add a crack/dent, erase pre-existing damage, alter a receipt total) on an otherwise authentic photo — sits in the worst-case blind spot of current tooling. (1) Most fielded checks are similarity/metadata/physics heuristics that a fresh, single-source localized edit on a genuine photo can pass: it is not a duplicate, retains plausible EXIF, and only one small region is changed. (2) Academic detectors generalize poorly across unseen editors (GAN vs diffusion gap is large), degrade under JPEG/messenger re-compression, and the literature explicitly notes that when forensic artifacts are subtle, models fall back on semantic priors and miss faint manipulation cues; localization on small/non-object regions is the hardest case. (3) FragFake shows pretrained VLMs (incl. GPT-4o) are poor at fine-grained edit detection/localization, so 'just ask a foundation model' is not a reliable defense. (4) On the legal side, authentication standards (FRE 901, more-likely-than-not, reasonable-jury) were not built for deepfakes; proposed Rule 707/draft 901(c) mainly cover acknowledged-AI evidence, leaving disputed-authenticity edits under-addressed, and the 'liar's dividend' lets genuine photos be dismissed as fakes. The defensive contribution is a rigorous, edit-size-graded stress test of these detectors on realistic insurance/auto/property/hotel damage and receipt photos to quantify exactly where small localized edits evade detection — without publishing any edit/evasion recipe.",
+        "fraud_scale_facts": [
+          "Allianz and Zurich (UK) reported a ~300% rise in claims involving manipulated/'shallowfake' photos and documents between 2021-22 and 2022-23 (reported to The Guardian, May 2024).",
+          "Allianz UK stopped >32,400 fraud cases in 2025, preventing ~£174m in payouts (up from £157m in 2024); cited AI-doctored images of vehicles/property lifted from social media plus fabricated repair invoices for false third-party claims.",
+          "Documented Allianz case: a tradesman's van photo was copied from his company's social media, given an AI-generated bumper crack, and used to claim ~£1,000 in non-existent repairs.",
+          "Allianz UK also reported an 84% rise in staged accidents and a 61% rise in contrived accidents in 2025 (broader fraud context).",
+          "ABI: £1.16bn of fraudulent general-insurance claims detected in 2024 (+2% vs £1.14bn in 2023); 98,400+ fraud claims detected (+12% vs 88,100); motor was 53% of claims — 51,700 motor scams worth £576m.",
+          "Verisk 'State of Insurance Fraud' (Mar 17, 2026; 1,000 US consumers + 300 claims professionals): 98% of insurers say AI editing tools are driving digital-media fraud; 99% have encountered manipulated/AI-altered documentation; 76% say submissions grew more sophisticated in the past year.",
+          "Verisk consumer behavior: 36% of consumers would consider digitally altering a claim image/document even against insurer rules — rising to 55% Gen Z, 49% Millennials, 28% Gen X, 12% Boomers; 13% even found creating images of non-existent damage 'acceptable.'",
+          "Verisk insurer confidence gaps: only 58% very confident detecting edits to real photos/videos, 43% at scale, 32% at identifying deepfakes; 66% believe digital-media fraud goes undetected often/very often.",
+          "Industry figures (Insurance Business UK, citing SAS/Adyen/Insurance Fraud Register): average detected fake claim ~£84,000; ~1 in 7 claims proven fraudulent; ~£50 average annual premium impact from fraud; generative AI can doctor a claim image in seconds.",
+          "Swiss Re SONAR 2025 flagged deepfakes/AI-manipulated evidence (photos and documents) as an amplifying insurance-fraud risk (specific figures not retrieved; page access-restricted)."
+        ],
+        "ethics_data_notes": "This is defensive/measurement work: the goal is to quantify detector blind spots on small localized edits, not to produce manipulations. Recommended practices: (1) Use only authentic base photos with clear rights/consent or licensed/public datasets; for receipts/forms use de-identified or synthetic-PII versions of SROIE/CORD/WildReceipt/XFUND rather than real personal financial data. (2) Treat any generated tampered images as restricted research artifacts — do NOT release the edited images, masks-as-templates, prompt recipes, or per-editor evasion parameters; release only aggregate detector-performance metrics and, if needed, gated access under agreement. (3) Avoid real claimants' or real victims' damage photos scraped from social media (the exact fraud vector); synthesize or commission base imagery instead. (4) Coordinate responsible disclosure with detector vendors/insurers (Verisk, Shift, etc.) before publication, mirroring security-research norms. (5) Keep evaluation reproducible via public base datasets (DEFACTO, COCO-Inpaint, AutoSplice, IMD2020, DocTamper, AIForge-Doc) so others can verify findings without the withheld attack details. Legal-forensic framing (FRE 901/707, Mendones, liar's dividend) supports the public-interest justification: better-characterized detectors and provenance help courts and insurers, while careful artifact handling prevents misuse.",
+        "caveats": "[\"Several headline scale figures are insurer/vendor self-reported (Allianz, Zurich, Verisk, SAS/Adyen) and not independently audited; the widely-cited '300%' is a year-over-year rise off an unstated, likely small base and conflates 'shallowfakes' (Photoshop/app edits) with genuine AI/diffusion edits.\",\"Verisk's March 2026 study is a survey (1,000 consumers + 300 professionals), so 'willingness/awareness' percentages reflect stated attitudes, not measured fraud rates; sampling/weighting details beyond US-only were not fully verified.\",\"ABI/Allianz figures are UK-centric (£, UK market); US/other-market scale for AI-edited claim photos specifically is thinner and mostly anecdotal.\",\"I could not load the Swiss Re SONAR 2025 page (HTTP 403) or the Verisk vendor page body directly; Verisk numbers came from the GlobeNewswire press release and trade coverage — treat exact percentages as press-release-sourced.\",\"Several academic items are arXiv preprints (FragFake, COCO-Inpaint, AIForge-Doc, ManipShield, ForensicHub), some dated 2026, which may be non-peer-reviewed or pre-publication; benchmark counts and SOTA claims should be re-checked against final versions.\",\"Some retrieved arXiv IDs carry future-looking dates (e.g., 2602.*, 2603.*, 2605.*) consistent with the simulated June 2026 'current' date; verify these resolve to real papers before citation.\",\"'Deployed detection' for insurers is partly marketing: vendors advertise 'deepfake/manipulation detection,' but public evidence shows the robust, in-production capability is mostly duplicate/reused-photo and metadata/anomaly detection, not validated pixel-level AI-edit localization — real capability on small localized edits is largely unproven publicly.\",\"Mendones v. Cushman & Wakefield involved AI-generated/deepfake video and altered images in a housing dispute (detected partly via obvious artifacts), not an insurance claim; it is the closest reported 'deepfake evidence detected in court' case but is not directly an insurance-fraud precedent.\",\"Legal status is in flux: proposed FRE 707 and draft Rule 901(c) were in public comment (comment window cited through Feb 16, 2026) and may change; do not treat them as enacted.\"]"
+      }
+    },
+    {
+      "key": "fraud-domain-gap-and-frontier-edits",
+      "result": {
+        "topic": "The fraud-domain gap in AI-edit detection for physical DAMAGE photos (auto/property/hotel/receipts), and frontier instruction-editor capability to synthesize localized damage (dents, cracks, scratches, water/mold/fire) on authentic photos. Bottom line: as of mid-2026, AIForge-Doc covers AI-forged DOCUMENTS but no public benchmark/paper covers AI-edited PHYSICAL-DAMAGE photos with per-pixel ground truth; frontier editors can plausibly add localized damage; the convergence of (capability + active fraud + zero damage-domain detection benchmark) is the genuine gap.",
+        "key_works": [
+          {
+            "title": "AIForge-Doc: A Benchmark for Detecting AI-Forged Tampering in Financial and Form Documents",
+            "year": "2026",
+            "venue": "arXiv (2602.20569)",
+            "oneline": "The single closest published benchmark to the fraud-domain framing: AI-inpainted tampering of receipts/forms with pixel-precise masks. Documents only — not damage photos.",
+            "key_result": "4,061 forged images from CORD/WildReceipt/SROIE/XFUND, tampered via Gemini 2.5 Flash Image (89.6%) + Ideogram v2 (10.4%), median tampered region 0.92% of pixels, pixel-level masks. All detectors degrade: TruFor AUC 0.751, DocTamper 0.563, GPT-4o 0.509 (random).",
+            "ref": "https://arxiv.org/html/2602.20569v1"
+          },
+          {
+            "title": "DiffSeg30k: A Multi-Turn Diffusion Editing Benchmark for Localized AIGC Detection",
+            "year": "2025",
+            "venue": "arXiv (2511.19111) / HF Papers",
+            "oneline": "Pixel-level localized-edit detection benchmark — strong on method, but generic COCO object editing, zero damage/insurance content.",
+            "key_result": "30k COCO images, 8 diffusion editors (SD2/SD3.5/SDXL/Flux.1/Glide/Kolors/HunyuanDiT/Kandinsky), multi-turn (up to 3) add/remove/attribute edits, pixel masks; baselines FCN-8s/SegFormer-B2/DeepLabv3+. No damage categories.",
+            "ref": "https://arxiv.org/html/2511.19111"
+          },
+          {
+            "title": "LocateEdit-Bench: A Benchmark for Instruction-Based Editing Localization",
+            "year": "2026",
+            "venue": "arXiv (2602.05577)",
+            "oneline": "Per-pixel localization of instruction-editor edits with masks via SAM-style segmentation — closest on instruction-editor + pixel-mask axis, but generic objects only.",
+            "key_result": "~400k pairs from OmniEdit (LAION/OpenImages); editors Qwen-Image-Edit/Flux-Kontext/Step1X-Edit/BAGEL; object swap/add/attribute; masks via ChatGPT+SAM3. SegFormer best (96.0% acc, 87.0 F1); heavy cross-editor degradation. No damage content.",
+            "ref": "https://arxiv.org/html/2602.05577"
+          },
+          {
+            "title": "TGIF2: Extended Text-Guided Inpainting Forgery Dataset & Benchmark",
+            "year": "2026",
+            "venue": "arXiv (2603.28613) / IDLab-MEDIA UGent",
+            "oneline": "Largest text-guided inpainting forensics benchmark, includes the exact frontier fill tools of interest (Firefly, Flux.1 Fill) — but COCO semantic object inpainting, not damage.",
+            "key_result": "~3,124 COCO images -> 271,788 manipulated images across 19 subsets; editors SD2/SDXL/Adobe Firefly/FLUX.1[schnell/dev/Fill]; spliced + fully-regenerated; semantic + random masks; ~25 IFL+SID detectors. FLUX.1 hardest to detect; generative super-resolution destroys forensic traces.",
+            "ref": "https://arxiv.org/html/2603.28613v1"
+          },
+          {
+            "title": "FragFake / Can VLMs Detect and Localize Fine-Grained AI-Edited Images?",
+            "year": "2025",
+            "venue": "arXiv (2505.15644)",
+            "oneline": "Large fine-grained AI-edit detection benchmark with VLM judges — but text-pair labels (no per-pixel masks) and generic editing, no damage.",
+            "key_result": "98,412 edited images (COCO/ADE20K/FFHQ); 6 editors incl. Gemini-IG; add/replace/background/expression. Pretrained GPT-4o ~0.81-0.83 acc / 45-46% object precision; fine-tuned Qwen2.5-VL ~0.99 acc. No pixel masks, no damage.",
+            "ref": "https://arxiv.org/html/2505.15644"
+          },
+          {
+            "title": "CarDD: A New Dataset for Vision-based Car Damage Detection",
+            "year": "2023",
+            "venue": "IEEE T-ITS / arXiv 2211.00945",
+            "oneline": "The natural authentic base for a damage-edit benchmark: real car-damage photos with pixel masks, built to insurance-claim standards — but it is for damage assessment, NOT forgery detection.",
+            "key_result": "4,000 high-res images, 9,000+ instances, 6 damage classes (dent/scratch/crack/glass shatter/lamp broken/tire flat), pixel-level instance masks; annotated by 20 annotators incl. 5 insurance experts per Ping An claim standards. No AI-edited/forgery split.",
+            "ref": "https://cardd-ustc.github.io/"
+          },
+          {
+            "title": "A new wave of vehicle insurance fraud fueled by generative AI",
+            "year": "2025",
+            "venue": "arXiv (2510.19957) — industry white paper (UVeye)",
+            "oneline": "Frames the threat of GenAI-fabricated crash/damage photos and vendor countermeasures; positions the problem but is not a benchmark.",
+            "key_result": "Authors Amir Hever & Itai Orr (UVeye); describes AI-fabricated damage evidence at scale; notes deepfake-detection countermeasures have 'significant limitations' (false pos/neg); proposes UVeye layered solution. No public dataset, no per-pixel ground truth.",
+            "ref": "https://arxiv.org/abs/2510.19957"
+          },
+          {
+            "title": "AI-Generated Image Detectors Overrely on Global Artifacts: Evidence from Inpainting Exchange",
+            "year": "2026",
+            "venue": "arXiv (2602.00192)",
+            "oneline": "Diagnostic showing SID detectors lean on global texture rather than local edited regions — explains WHY they fail on small localized damage edits.",
+            "key_result": "Detectors trained on fully-AI images largely miss small localized inpaints; localization remains the weak axis — directly relevant to small-damage-edit evasion.",
+            "ref": "https://arxiv.org/html/2602.00192v1"
+          }
+        ],
+        "deployed_systems": [
+          {
+            "name": "Verisk Digital Media Forensics",
+            "what_it_does": "P&C insurance digital-media forensic service that flags manipulated/AI-edited claim images and documents; Verisk is a C2PA contributing member and combines provenance + forensic analysis + cross-carrier data sharing.",
+            "evidence": "https://www.verisk.com/blog/how-data-sharing-and-digital-media-forensics-are-reshaping-fraud-detection/ ; 2026 State of Insurance Fraud Study (https://www.verisk.com/resources/campaigns/verisk-state-of-insurance-fraud-study/)"
+          },
+          {
+            "name": "Allianz / LV= fraud team + Clearspeed partnership",
+            "what_it_does": "Manual + ML fraud screening that caught the cracked-bumper 'shallowfake' van case by image-matching to a social-media original; Clearspeed adds voice analytics. Allianz reported a 300% rise in app-distorted image/video/doc claims (2021-22 vs 2022-23).",
+            "evidence": "https://www.techdirt.com/2024/05/06/welcome-to-the-brave-new-world-of-vehicle-insurance-fraud-powered-by-shallowfakes/ ; https://www.insurancebusinessmag.com/uk/news/technology/aigenerated-images-now-being-used-for-motor-insurance-fraud--report-532346.aspx"
+          },
+          {
+            "name": "Third-party / homegrown insurer AI detectors",
+            "what_it_does": "Per Verisk 2026: ~65% of insurers use third-party AI-based detection tools and ~50% use internally built AI to detect edited media; confidence is high for simple edits (58%) but low for deepfakes (32%).",
+            "evidence": "https://www.dig-in.com/news/half-of-insurers-use-homegrown-ai-to-fight-deepfakes-verisk ; https://www.verisk.com/company/newsroom/ai-editing-tools-are-fueling-a-new-era-of-insurance-fraud-according-to-new-research-from-verisk/"
+          },
+          {
+            "name": "Commercial damage/fraud-vision vendors (UVeye, Inspektlabs, Inaza, TruthScan)",
+            "what_it_does": "Vendor offerings claiming AI-edited damage-image / manipulated-claim detection (shadow/lighting/pixel-pattern anomalies, metadata checks, receipt forgery). Marketing-grade; no published per-pixel benchmark accuracy.",
+            "evidence": "https://inspektlabs.com/fraud-detection ; https://www.inaza.com/apis/manipulated-image-detection-ai-for-insurance ; https://truthscan.com/blog/fake-damage-images-in-insurance-claim/"
+          },
+          {
+            "name": "C2PA / Content Credentials provenance",
+            "what_it_does": "Provenance metadata standard (Adobe, OpenAI, Microsoft, Sony, BBC, Verisk, etc.) being explored for claim-image authentication; not a detector — absence of a manifest does not prove authenticity, and it is strippable.",
+            "evidence": "https://en.wikipedia.org/wiki/Content_Credentials ; https://www.verisk.com/blog/how-data-sharing-and-digital-media-forensics-are-reshaping-fraud-detection/"
+          }
+        ],
+        "real_base_datasets": [
+          {
+            "name": "CarDD",
+            "contents": "4,000 real high-res car-damage photos, 9,000+ instances, 6 fine-grained damage classes with pixel-level instance/segmentation masks; built to Ping An insurance-claim standards. Ideal authentic base + ready-made damage masks for constructing an AI-edited damage benchmark.",
+            "access": "Public, request form at https://cardd-ustc.github.io/ (also harpreetsahota/CarDD on HF)"
+          },
+          {
+            "name": "Roboflow 'Car Damage Images' / community car-damage sets",
+            "contents": "Multiple open community datasets of real vehicle damage with bounding-box/segmentation labels (dents, scratches, broken parts); varied quality, useful for diversity/scale.",
+            "access": "Public (Roboflow Universe), e.g. https://universe.roboflow.com/car-damage-kadad/car-damage-images"
+          },
+          {
+            "name": "Document/receipt bases reused by AIForge-Doc (CORD v2, WildReceipt, SROIE, XFUND)",
+            "contents": "Real receipts/forms (Indonesian/English/multilingual receipts + multilingual forms) — the authentic base layer for the receipt-fraud half of the fraud domain; AIForge-Doc already pairs them with AI-inpainted tampering + masks.",
+            "access": "Public datasets; AIForge-Doc derived set per arXiv 2602.20569"
+          },
+          {
+            "name": "COCO val2017 (as used by DiffSeg30k / TGIF2 / FragFake)",
+            "contents": "General natural images — the standard authentic base for current generic edit-detection benchmarks. Includes a 'vehicle' supercategory but no damage and no insurance framing; shows the methods exist but the domain content does not.",
+            "access": "Public (cocodataset.org)"
+          },
+          {
+            "name": "Property/hotel damage imagery",
+            "contents": "No equivalent public, mask-annotated authentic dataset for water/mold/fire/structural property or hotel-room damage was found — a notable secondary gap relative to auto (CarDD).",
+            "access": "None found public with per-pixel damage masks (gap)"
+          }
+        ],
+        "what_detection_runs_today": "In practice, insurers run a mix of: (1) commercial/in-house ML claim-screening and 'digital media forensics' (Verisk, plus ~65% third-party + ~50% homegrown AI tools per Verisk 2026), (2) classic image-forensics signals (shadow/lighting inconsistency, repeated-pixel/clone patterns, JPEG/compression and metadata/EXIF analysis), (3) reverse-image/social-media matching (how the LV=/Allianz cracked-bumper case was caught), (4) emerging C2PA/Content-Credentials provenance checks, and (5) general AIGC/inpainting detectors (TruFor, DocTamper, CAT-Net, B-Free, SID detectors) borrowed from the document/forensics literature. Crucially, none of these is trained or benchmarked on AI-edited physical-DAMAGE photos with per-pixel ground truth — the published evidence (AIForge-Doc, TGIF2, 2602.00192) shows these detectors degrade sharply on small localized AI inpaints and over-rely on global artifacts, so confidence on damage-domain edits is essentially unvalidated.",
+        "the_gap": "Confirmed: there is NO public benchmark or paper that detects/localizes small AI edits on PROPERTY/AUTO/HOTEL physical-DAMAGE photos (added dents/cracks/scratches/water-stains/mold/fire) with per-pixel ground truth. The space splits cleanly: (a) the document side is freshly covered by AIForge-Doc (receipts/forms, AI inpainting, pixel masks) — so the receipt half of the fraud domain is addressed; (b) the localized-edit detection methodology exists (DiffSeg30k, LocateEdit-Bench, TGIF2, FragFake all have masks and/or instruction-editor coverage incl. Firefly/Flux/Gemini) — but every one uses generic COCO/OmniEdit object edits with ZERO damage or insurance semantics; (c) the damage-vision side exists (CarDD, with real damage + insurance-grade masks) but only for damage ASSESSMENT, never paired with AI-forgery detection. No work sits at the intersection {authentic damage photo + frontier instruction-edited added-damage + per-pixel forgery mask + detector evaluation}. Additionally, no detection study with per-pixel ground truth evaluates the named frontier instruction editors specifically on the damage-synthesis task; the only damage-domain artifacts are industry white papers (UVeye 2510.19957) and vendor marketing without public data or masks. So beyond AIForge-Doc, the property/auto/damage-photo detection problem is genuinely unaddressed, and CarDD + AIForge-Doc's methodology are the natural building blocks to close it.",
+        "fraud_scale_facts": [
+          "Allianz UK reported a 300% increase in claims where apps were used to distort real images/videos/documents ('shallowfakes') between 2021-22 and 2022-23 (Techdirt/Allianz; FrankonFraud).",
+          "Documented case: LV= (Allianz-owned) received a van photo lifted from social media with an AI-added cracked bumper plus a fake repair bill of >£1,000; caught by matching to the original social-media image.",
+          "Verisk 2026 State of Insurance Fraud Study (1,000 US consumers + 300 claims pros, Dec 2025–Jan 2026): 98% of insurers say AI editing is fueling more digital fraud; 99% have encountered AI-altered documentation; 76% say altered submissions grew more sophisticated in the past year.",
+          "Verisk: insurer detection confidence is 58% for edits to real photos/videos but only 32% for deepfakes; ~65% use third-party AI detection tools, ~50% use homegrown AI.",
+          "Verisk consumer side: 36% of consumers would consider digitally altering a claim image/document; 55% of Gen Z are open to it.",
+          "Industry/press figures (lower-confidence): AI-edited claim photos reportedly appear in ~23% of fake claims; AI-generated fake receipts rose from ~0% (2024) to ~14% of fraudulent documents by late 2025; an estimate of ~$308.6B annual US AI-generated-image insurance-fraud exposure circulates (vendor-sourced).",
+          "UK ABI context: ~45,800 fraudulent motor claims in 2023, motor fraud ~£501M (8% up vs 2022); overall detected fraudulent claims rose to ~£1.1bn in 2024."
+        ],
+        "ethics_data_notes": "Defensive framing only — do not publish operational recipes. Frontier editors (Gemini 2.5 Flash Image 'Nano-Banana', gpt-image, Adobe Firefly/Photoshop Generative Fill, Flux.1 Fill) plausibly CAN add localized realistic damage: their documented strengths are exactly fine localized natural-language edits with consistency, and they already power AIForge-Doc (Gemini/Ideogram for receipts) and TGIF2 (Firefly/Flux for object inpainting); a damage-synthesis benchmark should describe capability at a high level and withhold prompt/pipeline specifics. Legal exposure for fraudulent edits is real: property policies' concealment/forfeiture clauses void coverage, and statutes (e.g., NY Penal Law §176.00 et seq., NY Insurance Law §405(a)) criminalize and mandate reporting (Debevoise, Jan 2026). For a defensive dataset: prefer authentic bases with clear licenses (CarDD via request form; COCO; public receipt sets), keep all AI-edited damage strictly within a research/eval sandbox, never attach to real claims, log provenance, and consider C2PA/Content-Credentials labeling of synthetic samples. C2PA is a provenance aid, not a detector — manifests are strippable and absence proves nothing.",
+        "caveats": "Uncertainty flags: (1) arXiv IDs 2602.* / 2603.* (AIForge-Doc, LocateEdit-Bench, TGIF2) are dated early-to-mid 2026 and were read via HTML abstracts/papers, not fully audited — treat scale/AUC numbers as reported-not-verified, and a very recent damage-specific benchmark could exist but be unindexed. (2) The strongest claim ('no damage-photo edit-detection benchmark with per-pixel ground truth') is a negative result from extensive but not exhaustive search; I searched arXiv/web hard and found only document, generic-object, or damage-assessment work, never the intersection. (3) Several fraud-scale figures (23% of fake claims, $308.6B, 14% fake receipts) come from vendor/press sources (TruthScan, ECIKS, FrankonFraud) and should be cited as industry estimates, not peer-reviewed; the Allianz 300%, the LV= case, and the Verisk survey percentages are the most solid. (4) Frontier-editor damage capability is inferred from documented localized-edit strengths and analogous inpainting use (Firefly/Flux in TGIF2, Gemini in AIForge-Doc) plus the real cracked-bumper case — I deliberately did not run or detail any damage-generation pipeline. (5) Property/hotel and water/mold/fire damage have even thinner public data than auto: no mask-annotated authentic base comparable to CarDD was found, so that sub-domain is the most open. (6) Verisk Digital Media Forensics and UVeye capabilities are partly marketing; no independent per-pixel accuracy on damage edits is published."
+      }
+    },
+    {
+      "key": "defender-and-provenance-stack",
+      "result": {
+        "topic": "The realistic DEFENDER stack for claim-photo authenticity (EXIF/metadata consistency, PRNU/sensor fingerprint, reverse-image/stock-reuse, perceptual hashing across claims, C2PA/Content Credentials/camera attestation, SynthID, and capture-time provenance insurtech) — and what each catches vs. misses for a small localized AI edit (e.g., an added dent/scratch/water stain) on an otherwise genuine phone JPEG, plus survival of provenance signals under inpainting. Defensive framing: model the real defender to stress-test detectors.",
+        "key_works": [
+          {
+            "title": "Editing Away the Evidence: Diffusion-Based Image Manipulation and the Failure Modes of Robust Watermarking",
+            "year": "2026",
+            "venue": "arXiv preprint (2603.12949)",
+            "oneline": "Systematically tests whether localized/inpainting diffusion edits destroy 'robust' invisible watermarks.",
+            "key_result": "Localized diffusion inpainting substantially reduces watermark detectability across SynthID, Tree-Ring, Stable Signature, TrustMark and VINE; re-generating a region effectively strips the per-pixel signal in that region. Directly relevant: an attacker who only edits the damage region locally removes the watermark there while leaving the rest intact, so a single global detector verdict is unreliable.",
+            "ref": "https://arxiv.org/pdf/2603.12949"
+          },
+          {
+            "title": "Authenticated Contradictions from Desynchronized Provenance and Watermarking",
+            "year": "2026",
+            "venue": "CVPR 2026 Workshop on Authenticity & Provenance in the Age of AI (APAI)",
+            "oneline": "Shows C2PA provenance and SynthID-style watermarks can disagree, producing 'authenticated fakes'.",
+            "key_result": "Formalizes the 'Integrity Clash': an asset can carry a cryptographically VALID C2PA manifest asserting human authorship while its pixels carry an AI watermark — both checks pass independently. Achieved via 'metadata-washing' through standard editing pipelines (omitting a single permitted assertion field), not crypto breakage. Their cross-layer audit (jointly checking provenance + watermark) reaches 100% classification on 3,500 test images — implying that checking provenance OR watermark alone is exploitable. Authors: Nemecek, He, Cheng, Ayday.",
+            "ref": "https://arxiv.org/abs/2603.02378"
+          },
+          {
+            "title": "PRNU-based Image Forgery Localization with Deep Multi-scale Fusion",
+            "year": "2022",
+            "venue": "ACM TOMM (Trans. on Multimedia Computing, Communications & Applications)",
+            "oneline": "Deep multi-scale fusion to localize tampered regions from disrupted PRNU sensor noise.",
+            "key_result": "PRNU-based methods can in principle localize any tampering type — splicing, copy-move AND inpainting — because re-synthesized regions lose the camera's sensor fingerprint. But the same line of work documents that PRNU is very weak in dark/saturated/textured regions, needs a per-device reference fingerprint (typically ~100-200 flat-field images from the SAME phone), and has high false-positive rates on compressed/cropped images. This is the core 'survives inpainting but rarely deployable for one-off claim JPEGs' result.",
+            "ref": "https://dl.acm.org/doi/10.1145/3548689"
+          },
+          {
+            "title": "On the Influence of Denoising in PRNU based Forgery Detection",
+            "year": "2010",
+            "venue": "ACM MM&Sec Workshop",
+            "oneline": "Classic result that inpainting/denoising erases PRNU in the edited region, enabling detection but also showing fragility.",
+            "key_result": "Establishes that any region that is denoised, alpha-matted or inpainted loses its PRNU correlation, which is exactly what makes PRNU a candidate signal against localized AI edits — provided a clean reference fingerprint for that phone exists.",
+            "ref": "https://dl.acm.org/doi/10.1145/1877972.1878002"
+          },
+          {
+            "title": "TGIF / TGIF2: Text-Guided Inpainting Forgery Dataset",
+            "year": "2024",
+            "venue": "IEEE WIFS 2024",
+            "oneline": "~75k locally inpainted forgeries (SD2, SDXL, Adobe Firefly) over real COCO photos, with masks.",
+            "key_result": "Demonstrates the exact gap a defender must model: classic forgery-localization methods detect splices but FAIL on diffusion-regenerated/inpainted regions, while synthetic-image detectors can flag 'fake' but cannot localize the edited area. Provides real base photos + localized AI edits + ground-truth masks. Code/data on GitHub; source photos CC-BY-4.0 (COCO).",
+            "ref": "https://arxiv.org/abs/2407.11566"
+          },
+          {
+            "title": "COCO-Inpaint: A Benchmark for Detecting and Localizing Inpainting-Based Image Manipulations",
+            "year": "2025",
+            "venue": "arXiv (2504.18361)",
+            "oneline": "Benchmark specifically for inpainting-based localized manipulations over real COCO images.",
+            "key_result": "Confirms inpainting localization is a distinct, hard task and that detectors trained on splicing generalize poorly to diffusion inpainting — the precise failure mode a claim-photo defender faces with small added-damage edits.",
+            "ref": "https://arxiv.org/html/2504.18361v2"
+          }
+        ],
+        "deployed_systems": [
+          {
+            "name": "Verisk Digital Media Forensics (integrated with ClaimSearch)",
+            "what_it_does": "Carrier-facing claims forensics suite. Runs (1) Image Matching against the ClaimSearch database to find duplicate/reused damage photos across carriers and prior claims; (2) Metadata/EXIF analysis to validate capture date/time/location vs. the claim narrative; (3) Pixel-level manipulation detection; (4) Deepfake/GenAI image detection (newer capability); (5) Internet-source detection (image scraped from the web). Strong on REUSE and metadata inconsistency; the pixel/deepfake module is the part aimed at a localized AI edit but is the least battle-tested against subtle inpainting.",
+            "evidence": "Verisk product page + blog; cites a staged Segway-accident scheme caught by matching the same damage photos across six carriers within a month (image originated from a Reddit post). https://www.verisk.com/products/digital-media-forensics/ and https://www.verisk.com/blog/breaking-down-digital-media-fraud-for-claims-in-the-ai-era/"
+          },
+          {
+            "name": "Truepic (Lens SDK + Capture, C2PA founding member)",
+            "what_it_does": "Capture-time provenance. The Lens SDK replaces the native camera inside an insurer's app, verifies device integrity, and cryptographically signs the image at the moment of capture with time/geolocation, emitting a C2PA manifest (Truepic was first to support C2PA 2.0 / 2.1 for enterprises). Used for insurance virtual inspections to verify vehicle/property location and condition. This shifts trust to capture rather than post-hoc forensics — strongest defense against post-capture editing IF the insurer forces in-app capture.",
+            "evidence": "Truepic blog/insurance pages and Qualcomm writeup; Lens iOS/Android SDK docs. https://www.truepic.com/ , https://www.truepic.com/blog/truepic-first-with-c2pa-2-0-support-for-enterprises , https://lens.truepic.dev/docs/ios-sdk"
+          },
+          {
+            "name": "Serelay",
+            "what_it_does": "Capture-time verification competitor to Truepic: secure mobile camera that embeds a cryptographic fingerprint plus capture metadata at the moment of capture, with a commercial API for enterprises (insurance, journalism). Any post-capture manipulation is flagged because it breaks the at-capture binding.",
+            "evidence": "Vendor descriptions and press (piloted with Wall Street Journal). https://www.fastcompany.com/90675759/truepic-series-b-sdk-fake-images-dating-apps-social-media"
+          },
+          {
+            "name": "VAARHAFT Fraud Scanner",
+            "what_it_does": "Claims-intake image-authenticity API focused on the German/EU insurance market. Provides: AI-generation/manipulation scoring, pixel & noise forensics with heatmap overlays marking processed regions, EXIF/C2PA metadata validation, reverse-image/duplicate search using hashing + perceptual fingerprints incl. a cross-insurance (federated) duplicate check, and a 'SafeCam' controlled recapture link. Claims to adapt to new image generators within ~48h. GDPR-compliant, modular API.",
+            "evidence": "VAARHAFT blog/product pages and ITC Europe coverage. https://www.vaarhaft.com/blog/detect-fake-insurance-claim-images , https://europe.insuretechconnect.com/news-articles/vaarhaft-ai-detection-fake-claim-images-fight-insurance-fraud"
+          },
+          {
+            "name": "Google SynthID",
+            "what_it_does": "Invisible watermark + detector embedded by Google's own generative image models (and some text/audio/video). For a DEFENDER it only helps if the fraudulent edit was made with a SynthID-enabled tool; it then can flag the AI-touched region — but only probabilistically ('watermarked'/'not'/'uncertain').",
+            "evidence": "Google ai.google.dev SynthID pages describe probabilistic detection; independent reporting + arXiv work show localized re-generation/heavy edits degrade detectability. https://deepmind.google/technologies/synthid/"
+          },
+          {
+            "name": "Zurich (Quantexa-powered real-time fraud detection) + Allianz fraud team",
+            "what_it_does": "Production insurer fraud programs. Zurich runs real-time fraud detection (Quantexa partnership) and reports catching ~£260k/day of bogus claims in 2024; its fraud team specifically cites catching fake car images via metadata anomalies + Error Level Analysis. Allianz UK publicly flagged manipulated 'shallowfake' images as an emerging scam and is enhancing fraud prevention. These show the real-world defender often leans on metadata + ELA + network/entity analytics rather than a dedicated inpainting localizer.",
+            "evidence": "Insurance Age (Zurich/Quantexa, £260k/day); TruthScan citing Zurich metadata+ELA success; Allianz/Express & Star 'shallowfake' warning. https://www.insuranceage.co.uk/insight/7957488/zurich-strengthens-fraud-defences-with-ai , https://www.expressandstar.com/news/uk-news/2024/05/02/insurers-warn-about-fake-and-manipulated-images-being-used-in-claims/"
+          },
+          {
+            "name": "Reverse-image / stock-reuse search (Google Images, TinEye, Yandex) + perceptual hashing",
+            "what_it_does": "Commodity layer used to catch recycled/stock damage photos and cross-claim reuse. Perceptual hashes (pHash) and visual embeddings find near-duplicates across an insurer's archive and the public web. Catches 'reused photo' fraud and near-duplicate variants; does NOT catch a brand-new genuine photo with a small localized AI addition.",
+            "evidence": "Industry guides describe matching damage photos to Shutterstock/Getty/Google/TinEye/Yandex and cross-claim duplicate detection. https://truescreen.io/articles/photo-verification/ , https://www.vaarhaft.com/blog/detect-fake-insurance-claim-images"
+          },
+          {
+            "name": "C2PA Content Credentials in capture devices (Leica M11-P, Sony Alpha firmware, etc.)",
+            "what_it_does": "In-camera signing of provenance at capture for high-end cameras. Largely irrelevant to claim photos shot on consumer phones today (claimants don't use C2PA cameras), but represents the 'attestation at capture' end of the stack the project should model as the strong-but-rarely-present signal.",
+            "evidence": "C2PA / Content Credentials ecosystem (Leica/Sony/Adobe). https://contentcredentials.org/ , https://c2pa.org/faqs/"
+          }
+        ],
+        "real_base_datasets": [
+          {
+            "name": "TGIF / TGIF2 (Text-Guided Inpainting Forgery Dataset)",
+            "contents": "~75k locally inpainted forgeries generated with SD2, SDXL and Adobe Firefly over real MS-COCO photos, each with a ground-truth tamper mask; designed jointly for forgery LOCALIZATION and synthetic-image detection. Most directly models 'small localized AI edit on a real photo'.",
+            "access": "Public on GitHub (IDLabMedia/tgif-dataset); source images CC-BY-4.0 (COCO). https://github.com/IDLabMedia/tgif-dataset"
+          },
+          {
+            "name": "COCO-Inpaint",
+            "contents": "Benchmark of inpainting-based localized manipulations over real COCO images with masks, built to test detection AND localization of diffusion inpainting specifically.",
+            "access": "Public (arXiv 2504.18361 with released benchmark). https://arxiv.org/html/2504.18361v2"
+          },
+          {
+            "name": "AutoSplice",
+            "contents": "2,273 real + 3,621 manipulated images; text-prompt (DALL-E-2-style) local inpainting over Visual News photos; provided at JPEG QF 75/90/100 to model recompression. Good for testing detector robustness to JPEG.",
+            "access": "Public (paper + GitHub). https://www.researchgate.net/publication/373135248_AutoSplice_A_Text-prompt_Manipulated_Image_Dataset_for_Media_Forensics"
+          },
+          {
+            "name": "CocoGlide",
+            "contents": "512 photorealistic local inpainting forgeries from COCO 2017 val using the GLIDE diffusion model; small but a standard diffusion-inpainting localization benchmark.",
+            "access": "Public via forgery-localization benchmark repos. https://github.com/greatzh/Image-Forgery-Datasets-List"
+          },
+          {
+            "name": "Classic forgery-localization sets: CASIA v1/v2, Columbia, Coverage, DSO-1, IMD2020",
+            "contents": "CASIA v2 (7,491 authentic / 5,123 forged: splicing, copy-move, removal/inpainting); Columbia (splicing); Coverage (copy-move); DSO-1 (spliced + masks); IMD2020 ('in-the-wild' real manipulations from the internet with manual masks). These are the legacy baselines a defender's localizer is usually trained/evaluated on — and which generalize poorly to modern diffusion inpainting.",
+            "access": "Public; index at https://github.com/greatzh/Image-Forgery-Datasets-List"
+          },
+          {
+            "name": "'Zooming In on Fakes' — Localized AI-Generated Image dataset",
+            "contents": "Recent dataset purpose-built for detecting SMALL localized AI edits on real photos (vs. fully synthetic), using a forgery-amplification approach. Closest in spirit to the claim-photo threat model.",
+            "access": "arXiv 2504.11922 (Cai et al., 2025). https://www.arxiv.org/pdf/2504.11922v3"
+          }
+        ],
+        "what_detection_runs_today": "In production claim pipelines the realistic defender stack is layered and leans heavily on the CHEAP, ROBUST layers rather than a pixel-perfect inpainting localizer: (1) Reuse/duplicate detection — perceptual hashing + visual embeddings against the carrier's own archive and cross-carrier databases (Verisk ClaimSearch Image Matching, VAARHAFT cross-insurance duplicate check) plus reverse-image search (TinEye/Yandex/Google) for stock/web reuse; this is the highest-yield, most reliable layer. (2) Metadata/EXIF consistency — checking capture timestamp, timezone, geotag and device against the claim story, and flagging missing/stripped metadata or screenshots (insurers therefore demand ORIGINAL files, not screenshots). (3) Classic pixel forensics — Error Level Analysis and noise/clone forensics with heatmaps; Zurich's fraud team explicitly credits metadata anomalies + ELA for catching fake car images. (4) A newer GenAI/deepfake image classifier (Verisk deepfake module, VAARHAFT, TruthScan) giving a probabilistic 'manipulated?' score. (5) Entity/network analytics (Quantexa at Zurich) connecting claims/people. Capture-time provenance (Truepic Lens, Serelay; C2PA) is the strongest single control but is only present where the insurer forces in-app capture — it is adopted for virtual inspections but is NOT yet the default for inbound claimant photos. SynthID/watermark detection plays essentially no role in claim photos because the genuine base image is unwatermarked and only the edit might (or might not) carry a watermark.",
+        "the_gap": "No single signal reliably catches a SMALL localized AI edit (added dent/scratch/water stain) on an otherwise genuine, freshly-captured phone JPEG — which is exactly the threat the project should stress-test. Reuse/reverse-image/perceptual-hash layers see nothing because the photo is genuinely new and unique. Metadata/EXIF is clean because the base capture is real and the editing app can preserve/regenerate plausible EXIF (and many insurers only check for MISSING/inconsistent metadata, not subtle edits). PRNU — the one passive signal that genuinely survives and localizes inpainting (the edited region loses the sensor fingerprint) — is rarely usable in practice: it needs ~100-200 reference images from the SAME phone to estimate the fingerprint, fails in dark/saturated/textured regions (where damage often is), and degrades badly under social-media recompression/cropping. C2PA proves nothing for an unsigned consumer JPEG (no manifest to break), can be stripped silently by messaging/upload re-encoding, and is vulnerable to re-signing / 'metadata-washing' that yields 'authenticated fakes' (Integrity Clash). SynthID/robust watermarks are largely absent on the base photo and, per 'Editing Away the Evidence,' localized diffusion inpainting strips the watermark precisely in the edited region while leaving the rest detectable — so a global verdict misleads. GenAI image classifiers and forgery localizers trained on splicing/older GANs generalize poorly to modern diffusion inpainting (TGIF, COCO-Inpaint) and small edits sit below their thresholds. Net: the genuinely hard, under-defended case is the localized diffusion inpaint on a real phone capture, and the only durable defenses are (a) capture-time provenance enforced at intake (Truepic/Serelay) and (b) PRNU when the actual phone is available — neither of which most inbound claims satisfy.",
+        "fraud_scale_facts": [
+          "Allianz UK: incidents using apps to distort real images/videos/documents rose ~300% between 2021-22 and 2022-23 ('shallowfakes' — edits made with phone apps/Photoshop to add damage or alter details), warning it has 'all the signs of becoming the latest big scam' (May 2024).",
+          "UK insurers reported a rise in manipulated car-damage images in May 2024 — fraudsters adding dents/scratches and fake registration plates to photos that pass simple checks (Express & Star, PetaPixel, inkl).",
+          "Zurich: real-time fraud detection (Quantexa partnership) detected the equivalent of ~£260,000 of bogus claims every day in 2024; fraud team credits catching fake car images via metadata anomalies + Error Level Analysis.",
+          "Verisk Digital Media Forensics example: a staged Segway-accident scheme was uncovered when the same damage photos were matched across SIX different carriers within a month (image traced to a Reddit post).",
+          "Synthetic-voice fraud at insurers rose 475% in 2024, contributing to a ~19% YoY rise in overall insurance fraud attempts (note: voice, not image).",
+          "Deepfake fraud attempts across financial services rose ~2,100% over three years and deepfakes were ~6.5% of all fraud attacks; average deepfake loss ~US$600k/incident (Signicat/Regula — broad FS, not image-specific).",
+          "Industry surveys: only ~22% of organizations have implemented measures specifically against AI-driven fraud; insurers cited as ~20x more exposed than banks due to reliance on documents/images/voice in claims."
+        ],
+        "ethics_data_notes": "Defensive use only. All recommended datasets are public, research-released, and built on permissively-licensed real photos: TGIF/TGIF2, CocoGlide and COCO-Inpaint derive from MS-COCO (CC-BY-4.0); AutoSplice derives from Visual News; classic sets (CASIA/Columbia/Coverage/DSO-1/IMD2020) are standard public forensics benchmarks. These supply REAL base photos + localized AI/inpainting edits + ground-truth masks, so a stress-test of detectors needs no creation of new fraudulent claim material. For PRNU experiments, use public source-camera datasets (e.g., Dresden Image Database, VISION) for reference fingerprints rather than real claimants' devices. Do NOT scrape or reuse real insurance claim photos (PII: plates, faces, addresses, geolocation) — use synthetic/staged damage or the public datasets above. Keep the work to measuring detector failure rates and provenance-signal survival; do not publish per-tool evasion procedures. C2PA/Content Credentials, Truepic/Serelay, SynthID and Verisk verdicts should be treated as black-box defenders to evaluate, with results reported as catch/miss rates, not as bypass instructions.",
+        "caveats": "[\"Several of the most on-point sources are 2026 arXiv PREPRINTS (2603.12949 'Editing Away the Evidence'; 2603.02378 APAI workshop) — not yet peer-reviewed/widely replicated; treat their headline numbers (e.g., 100% cross-layer audit accuracy) as indicative, not settled. The arXiv IDs are unusually recent and should be re-verified.\",\"Vendor capability claims (Verisk deepfake module, VAARHAFT '48h to new generators', Truepic, TruthScan accuracy figures) are largely marketing; independent benchmark evidence on SUBTLE localized inpainting (vs. fully synthetic images) is thin. The deepfake/GenAI classifiers' real catch rate on small edits is the biggest uncertainty.\",\"There is NO authoritative public statistic for the prevalence or $ loss of LOCALIZED-AI-edited claim photos specifically; the deetech 2026 report explicitly states 'no single authoritative source tracks deepfake fraud in insurance.' The 300% 'shallowfake' figure covers app-based edits broadly (incl. non-AI Photoshop), and many cited deepfake stats are VOICE/identity fraud, not damage-photo edits — do not over-generalize them to image fraud.\",\"PRNU's 'survives inpainting' property is real in the lab but its practical usability for one-off claim JPEGs (reference-fingerprint requirement, textured/dark-region failure, recompression sensitivity) means it is best modeled as an 'only-if-phone-available' control, not a default defender.\",\"C2PA adoption in inbound claimant photos is still low; statements that insurers 'use C2PA' mostly refer to insurer-controlled in-app capture (Truepic/Serelay virtual inspections), not consumer phones — verify per-carrier before assuming it is in the live defender stack.\",\"Some retrieved fraud statistics come from vendor blogs (TruthScan, deetech, VAARHAFT) that have a commercial interest; cross-check against primary insurer statements (Allianz, Zurich) where possible.\"]"
+      }
+    }
+  ],
+  "synth": {
+    "verified_core_claims": "CONFIRMED (high confidence, cross-checked via arXiv abs/HTML + Semantic Scholar CorpusIds/DOIs + project pages): (1) INP-X = arXiv:2602.00192 — all four headline collapse pairs verbatim-confirmed: Hive 91.4->54.8, Sightengine 92.6->55.0, Corvi2023 94.2->55.4, SPAI 66.1->54.2; 90K benchmark over CelebA-HQ/CityScapes/OpenImages/SUN-RGBD; mechanism = VAE-induced global spectral shift. (2) LocalizedDeepfakes = arXiv:2512.16688 — exists with stated title/authors (Pandolfini et al., Univ. Bologna); the qualitative size-dependence claims CONFIRMED (<5% mask ~chance; recovery >20%; DINOv3 comparable at ~65% mask, DINOv2 >80%); three backbones (ResNet-50 CLIP/DINOv2/DINOv3) and datasets (BR-Gen/TGIF/TGIF2) confirmed. (3) DiQuID/SAGI-D = arXiv:2502.06593 — exists; 95,839 inpainted from 78,684 originals (MS-COCO/RAISE-RAW/OpenImages); UGDA pipeline; SP vs FR split; human accuracy 74%->35%; in-domain +37.4% / OOD +26.1% IoU all confirmed. (4) AIForge-Doc = arXiv:2602.20569 — exists; median tampered area 0.92% (claim said ~1%); DocTamper AUC 0.98->0.563, TruFor 0.751, GPT-4o 0.509; 4,061 forged from CORD/WildReceipt/SROIE/XFUND via Gemini 2.5 Flash Image (89.6%) + Ideogram v2 (10.4%) all confirmed. (5) The four-paper group all REAL: COCO-Inpaint 2504.18361 (six inpainters incl. Flux.1-Fill/BrushNet/PowerPaint; cross-model Pixel-F1 86.4->24.6 verbatim in v2 Table 3), TGIF 2407.11566 (WIFS 2024), DiffSeg30k 2511.19111 (30k COCO, 8 editors, multi-turn), TGIF2 2603.28613 (real Springer/EURASIP DOI 10.1186/s13635-026-00235-9). Cross-cutting confirmed fact: NONE of the verified papers is fraud-domain — all use faces/scenes/COCO/RAISE or generic documents; none does a parametric edit-size x blending sweep, tests a broad commercial-API panel, or runs a laundering/re-compression robustness sweep (TGIF2 only studies generative-SR laundering). The defensive small-localized-edit-on-authentic-photo framing is the project's, not any single paper's stated motivation.",
+    "unconfirmed_or_suspect_refs": [
+      "FLUX-Fill claimed as part of DiQuID/SAGI-D (2502.06593): CONFIRMED FALSE — FLUX-Fill is NOT in that paper; the claim is conflated with TGIF2 (2603.28613). The arXiv id 2502.06593 is real, but the FLUX-Fill attribution is a discrepancy.",
+      "LocalizedDeepfakes (2512.16688) specific per-dataset AUROC point values BR-Gen DINOv3=0.86, TGIF SD2=0.96/SDXL=0.92, TGIF2=0.52: LOWER-CONFIDENCE — came from a fast-model HTML extraction and were not cross-confirmed against a rendered table. The paper, datasets, backbones, and the <5%/>20% qualitative trend ARE confirmed; only these four numbers are suspect.",
+      "TGIF2 (2603.28613) exact dataset/metric figures (~271k / 271,788 manipulated images, 19 subsets, FLUX.1-hardest, generative-SR laundering): MEDIUM CONFIDENCE — arXiv id and Springer DOI are real and verified, but the headline counts are project-page/WebFetch-sourced, not PDF-line-verified.",
+      "Provenance/watermark and defender preprints cited ONLY inside the surveys and NOT independently id-verified in the VERIFICATIONS block: 'Editing Away the Evidence' (claimed arXiv:2603.12949), 'Authenticated Contradictions / Integrity Clash' (claimed arXiv:2603.02378), C2PA-shortcomings paper (claimed arXiv:2604.24890), LocateEdit-Bench (claimed arXiv:2602.05577), UVeye white paper (claimed arXiv:2510.19957), FragFake (claimed arXiv:2505.15644), X-Edit (claimed arXiv:2505.11753), 'Zooming In on Fakes' (claimed arXiv:2504.11922), 'Unwinnable Arms Race' (claimed arXiv:2509.21135). These carry future-looking 2026 month-codes or were survey-sourced; treat all as UNCONFIRMED until each id is resolved on arXiv before any citation.",
+      "All vendor accuracy/scale figures (Veryfi 99.7%, AppZen 14%/3.5M, Verisk 768K-study and 2026 survey percentages, Allianz/Zurich 300%, $308.6B, 23%-of-fake-claims, 40-50% loss reduction): self-reported marketing/press, not peer-reviewed or audited — directional only."
+    ],
+    "fraud_domain_gap": "Beyond AIForge-Doc the fraud-domain space splits into three non-overlapping pieces, and the damage-photo intersection is empty. (a) DOCUMENT side is now covered: AIForge-Doc (2602.20569) does AI-inpainting tampering of numeric fields on real receipts/forms (CORD/WildReceipt/SROIE/XFUND) with pixel masks; DocForge-Bench and DocTamper/T-SROIE/'Find it again!' surround it. So the receipt/invoice half of claims fraud is addressed (months old, not deeply). (b) LOCALIZED-EDIT DETECTION METHODOLOGY exists and is mature: DiffSeg30k (2511.19111), COCO-Inpaint (2504.18361), TGIF2 (2603.28613), INP-X (2602.00192), LocalizedDeepfakes (2512.16688), and (if real) LocateEdit-Bench/FragFake — all provide masks and/or instruction-editor coverage including the exact frontier fills of interest (Firefly, Flux.1-Fill, Gemini). But every one uses generic COCO/OmniEdit object edits with ZERO damage/insurance semantics. (c) DAMAGE-VISION side exists but only for ASSESSMENT, never forgery: CarDD (4,000 real car-damage photos, pixel masks, built to Ping An insurance-claim standards, 6 classes dent/scratch/crack/glass/lamp/tire), VehiDE (13,945 insurance-framed damaged-car photos), xBD (satellite building damage), MVTec AD (studio surface defects). PRECISE GAP: there is NO public benchmark or paper sitting at the intersection {authentic property/auto/hotel physical-damage photo + frontier instruction-edited ADDED damage (dent/crack/scratch/water-stain/mold/fire) + per-pixel forgery ground-truth mask + detector evaluation}. What is MISSING specifically: (1) no damage-domain detection benchmark at all; (2) no per-pixel evaluation of the named frontier editors (gpt-image, Gemini/Nano-Banana, Firefly, Flux.1-Fill) on the damage-synthesis task; (3) property/hotel/water-mold-fire damage has NO mask-annotated authentic base comparable to CarDD (auto is the only well-covered sub-domain — property/hotel is a second, deeper gap); (4) no systematic edit-size x blending/harmonization sweep and no laundering (JPEG re-compress / screenshot / messenger re-upload / print-scan) robustness sweep in ANY domain; (5) no broad commercial-API panel (Hive/Sightengine/Verisk/VAARHAFT) tested on small localized edits. The convergence of (frontier capability + documented active fraud + zero damage-domain detection benchmark) is the genuine, narrow opening.",
+    "recommended_real_bases": [
+      "CarDD (4,000 real high-res car-damage photos; 9,000+ instances; 6 fine-grained classes; pixel-level instance masks; built to Ping An insurance-claim standards by annotators incl. 5 insurance experts) — the single strongest authentic base; its damage masks double as ready-made edit-region priors. License form required; non-commercial; bound by Flickr/Shutterstock terms (so original consumer EXIF is generally stripped).",
+      "VehiDE (13,945 real damaged-car photos; 32,000+ instances; ~8 insurance-aligned categories + non-damage; Kaggle) — adds scale and explicit insurance pricing-rule annotation; confirm the live Kaggle license before use.",
+      "Roboflow Universe / Kaggle auto-damage sets (CAPSTONE, Car Damage Assessment 3,772, Car Damage V5, COCO Car Damage, severity sets) — smartphone/claim-style diversity to complement CarDD/VehiDE; per-dataset licenses vary (often CC BY 4.0); verify each.",
+      "Receipt/form bases reused by AIForge-Doc: CORD, WildReceipt, SROIE, XFUND (+ T-SROIE / 'Find it again!') — the authentic base for the document half; standard research OCR corpora with PII-like fields (use under research license, scrub PII).",
+      "Provenance-bearing real-camera bases (RAISE-RAW, SIDD, VISION, Dresden, Forchheim, MIT-Adobe FiveK) — REQUIRED if you want to study the metadata/PRNU axis honestly, because CarDD/VehiDE lack genuine consumer-camera EXIF/RAW; use these as the 'real provenance' control or as a re-capture pipeline reference.",
+      "Established localized-edit/forgery benchmarks as the DETECTION-SIDE references to stress-test and to borrow methodology from: COCO-Inpaint (2504.18361), TGIF/TGIF2 (2407.11566 / 2603.28613, source CC-BY-4.0 COCO), DiffSeg30k (2511.19111), INP-X (2602.00192), AutoSplice, CocoGlide, IMD2020, DEFACTO, CASIA/NIST16 — public, mask-bearing, and exactly the detectors-to-break.",
+      "GAP NOTE: no public hotel-room/furniture or water-mold-fire property-damage dataset of meaningful scale exists (only ~116-image Roboflow furniture-defect sets and a hosted Nyckel classifier). xBD (satellite) and MVTec (studio) are poor proxies for ground-level claim photos. Property/hotel imagery would have to be commissioned, licensed, or re-captured — this is the binding data constraint for going beyond auto."
+    ],
+    "defender_model": "A realistic 2026 claim-photo authenticity pipeline is LAYERED and leans on cheap/robust database and metadata signals, not a pixel-perfect inpainting localizer. Model the defender as: (1) REUSE/DUPLICATE detection — perceptual hashing (pHash) + visual embeddings against the carrier's own archive and the industry-shared cross-carrier database (Verisk ClaimSearch Image Matching covering >95% of the industry; VAARHAFT federated cross-insurance duplicate check; Shift/FRISS reused-media), plus reverse-image search (TinEye/Yandex/Google) for stock/web scrapes. This is the HIGHEST-YIELD, most reliable layer and the one with documented catches (Segway scheme matched across 6 carriers; 768K-image study found 1,967 dups). (2) METADATA/EXIF consistency — capture timestamp/timezone/GPS/device vs the claim narrative, plus missing-metadata/screenshot flags (insurers therefore demand ORIGINAL files). Cheap, widely used, treated as a SOFT signal because trivially spoofable/strippable. (3) CLASSIC PIXEL FORENSICS — Error Level Analysis, noise/clone/double-JPEG checks, PRNU/noise-pattern (a single image with >1 camera noise signature implies compositing); Zurich SIU credits metadata anomalies + ELA for catching fake car images. (4) NEWER GenAI/deepfake CLASSIFIER — a probabilistic 'manipulated?' score (Verisk deepfake module described as beta/in-development; VAARHAFT, TruthScan, Inaza, UVeye, Inspektlabs) — the least battle-tested layer against subtle inpainting. (5) ENTITY/NETWORK ANALYTICS (Quantexa at Zurich) linking claims/people/devices. (6) CAPTURE-TIME PROVENANCE — Truepic Lens SDK / Serelay in-app signed capture, C2PA Content Credentials — the STRONGEST single control, but only present where the insurer forces in-app capture (virtual inspections), NOT for typical inbound claimant phone photos. WHY THE THREAT EVADES IT (model this as the attack surface): a fresh, unique, genuinely-captured phone JPEG with one small AI-added dent passes (1) [not a duplicate], passes (2) [base capture is real, EXIF stays consistent, editors can preserve/regenerate plausible EXIF], often passes (3) [modern diffusion re-harmonizes noise; ELA weak], sits below (4)'s threshold [<5% mask ~chance per LocalizedDeepfakes; 91->55% per INP-X], and defeats (6) [no manifest on consumer JPEG; absence proves nothing; C2PA strippable/re-signable]. The only durable passive signal is PRNU (edited region loses the sensor fingerprint) but it needs ~100-200 reference images from the SAME phone, fails in dark/saturated/textured regions where damage lives, and degrades under recompression — so it is an 'only-if-phone-available' control, not a default. Net defender to beat: dedup + EXIF + ELA + a probabilistic GenAI classifier; capture-time provenance and PRNU are strong but usually absent.",
+    "frontier_editor_feasibility": "FEASIBLE for adding damage; PARTIALLY studied for detection but never in the damage domain. CAPABILITY: frontier instruction editors are documented to do exactly fine localized natural-language edits with surrounding-context consistency, and they already power adjacent benchmarks — Gemini 2.5 Flash Image (Nano-Banana) and Ideogram v2 do the numeric-field inpainting in AIForge-Doc; Adobe Firefly and Flux.1[Fill] do object inpainting in TGIF2; Qwen-Image-Edit/Flux-Kontext/Step1X/BAGEL drive LocateEdit-Bench (if real); gpt-image is the same model class. Adding a dent/scratch/crack/water-stain/mold/scorch to an authentic damage photo is a strictly easier, more textural local edit than legible numeric-field synthesis, so it is plausibly within reach for these editors with localized inpainting. The real cracked-bumper Allianz/LV= case (AI-added bumper crack on a social-media van photo, >£1,000 claim) is field evidence the capability already exists in the wild. QUALITY CAVEAT: expect a non-trivial reject rate (AIForge-Doc rejected 5 of 7 tools for illegible/incorrect output; damage is more forgiving on legibility but harder on physical plausibility — shadow direction, reflection, material consistency, edge harmonization, scale). DETECTION-IS-STUDIED status: localized-edit DETECTION of these exact editors IS studied on generic content (TGIF2 shows FLUX.1 hardest to detect and generative-SR destroys forensic traces; DiffSeg30k/COCO-Inpaint/INP-X/LocalizedDeepfakes all evaluate detectors on diffusion inpainting and show collapse on small edits), but NO study evaluates detection of frontier-editor DAMAGE synthesis on real damage photos with per-pixel ground truth. So: editors can almost certainly do it; detectors are known to fail on small localized diffusion edits generically; the damage-specific detection question is genuinely open and is the project's contribution surface.",
+    "feasibility_for_fraud_corpus": "FEASIBLE and relatively cheap for the AUTO sub-domain; expensive/blocked for property/hotel. BUILD RECIPE (auto): take CarDD + VehiDE + Roboflow auto sets as authentic bases; use their existing damage masks (or fresh masks) as edit-region priors; generate localized added-damage edits via a small panel of frontier editors (e.g., Gemini 2.5 Flash Image, Flux.1-Fill, Firefly, gpt-image) in BOTH spliced (preserve unmasked real pixels, INP-X/SP style) and fully-regenerated modes; keep DocTamper-compatible per-pixel masks. Add a deliberate edit-SIZE x BLENDING sweep and a LAUNDERING sweep (JPEG QF, resize, screenshot, messenger re-upload, optional generative-SR) — these are precisely the axes ALL verified papers skipped, so they are where the marginal novelty sits. EFFORT/COST: a CarDD-scale corpus (a few thousand to ~10-30k edited images across 4 editors x 2 modes x size/blend/laundering grid) is a modest API/compute spend (low-thousands USD of editor-API calls) plus the dominant cost = quality filtering and mask QA (manual or VLM-assisted accept/reject, given the expected reject rate). Detector eval is cheap: run released weights of TruFor, DocTamper, CAT-Net, IML-ViT, SegFormer, DINOv3, plus 1-2 commercial APIs if budget allows. FEASIBILITY BLOCKERS: (1) PROPERTY/HOTEL/water-mold-fire has no public mask-annotated base — covering it requires commissioning/licensing/re-capturing imagery, a real time-and-money cost that likely pushes the first paper to AUTO-ONLY (+ receipts via AIForge-Doc bases). (2) CarDD/Shutterstock licensing forbids redistributing base images and the bases lack genuine consumer EXIF, so a metadata/PRNU axis needs provenance-bearing bases (RAISE/SIDD/VISION) or a re-capture step. (3) Commercial-API detector access (Hive/Sightengine/Verisk/VAARHAFT) is paywalled/gated — partial coverage is realistic, full panel is not. Overall: a gated AUTO+receipt corpus is clearly buildable in a few weeks at low cost; the science is real but the per-component novelty is thin, so value depends on the size/blend/laundering/commercial-API axes plus the domain-shift evidence, not on the corpus existing per se.",
+    "ethics_gating_plan": "Strictly defensive red-team framing; outputs must not become an evasion playbook. Concrete gates: (1) BASE DATA — use only licensed/public bases (CarDD via signed form, VehiDE/Roboflow per their licenses, CORD/SROIE/WildReceipt/XFUND research-only); NEVER scrape real insurer claim images or victims'/claimants' social-media property photos (the exact fraud vector); for receipts use de-identified or synthetic-PII versions. Respect non-redistribution (CarDD/Shutterstock, xBD CC BY-NC-SA, MVTec non-commercial). (2) PII — claim/damage photos carry faces, plates, addresses, GPS; scrub/redact, strip/avoid retaining EXIF-GPS, drop re-identifiable content; note CORD already withholds 10k images for PII. (3) ARTIFACT RELEASE — release ONLY aggregate detector catch/miss metrics and (optionally) GATED access to edited images under a research agreement; do NOT publicly release the edited images as scrapeable files, the masks-as-templates, the exact per-editor prompts, the size/blend parameters that evade a named detector, or any recapture/metadata-washing trick. Report capability gaps at the level of DETECTOR FAMILIES and THREAT CLASSES (as INP-X/LocalizedDeepfakes/AIForge-Doc do), never as a tuned recipe against a named vendor. (4) LABELING — watermark/label every AI-edited sample as synthetic (and consider C2PA labeling) to prevent leakage into real claims or training sets. (5) COORDINATED DISCLOSURE — share specific blind-spot findings with affected detector vendors/insurers (Verisk, Shift, VAARHAFT, Truepic) before public release, mirroring security norms. (6) LEGAL/FRAMING — state plainly that fabricating claims is a crime (e.g., NY Penal Law 176, Insurance Law 405(a); policy concealment/forfeiture clauses); keep the public-interest justification (FRE 901/707, liar's dividend) front and center. (7) MODEL the defenders (C2PA/Truepic/SynthID/Verisk) as black boxes reporting catch/miss rates, not as bypass instructions. (8) CONSENT — even defensively, editing real people's property raises consent issues; prefer consent-clean or commissioned bases.",
+    "recommended_minimum_viable_paper": "Title direction: 'Can detectors catch a fabricated dent? A damage-domain stress test of localized AI-edit detection on authentic auto-claim photos.' SCOPE the MVP to AUTO damage + receipts (defer property/hotel to future work, given no public base). DELIVERABLES that are genuinely new vs the verified literature: (1) FIRST damage-domain localized-edit detection benchmark — CarDD/VehiDE authentic bases + frontier-editor added-damage (Gemini/Flux.1-Fill/Firefly/gpt-image) in spliced + fully-regenerated modes, with per-pixel masks (the empty intersection). (2) The TWO axes every verified paper skipped: a parametric edit-SIZE x BLENDING/harmonization sweep, and a LAUNDERING robustness sweep (JPEG/resize/screenshot/messenger re-upload/generative-SR). (3) DOMAIN-SHIFT quantification: take detectors that 'work' on generic inpainting (COCO-Inpaint/TGIF2/INP-X numbers) and show how much further they drop on damage content and small damage edits — i.e., reproduce the INP-X 91->55 / LocalizedDeepfakes <5%-mask-~chance / AIForge-Doc 0.98->0.563 collapse but in the damage domain. (4) A BROADER detector panel than any single prior paper: open weights (TruFor, DocTamper, CAT-Net, IML-ViT, SegFormer, DINOv3) PLUS at least one commercial API (Hive/Sightengine/VAARHAFT) — INP-X had only Hive+Sightengine, AIForge-Doc had none. (5) DEFENDER-STACK realism: report not just classifier AUC but how the layered defender (dedup/EXIF/ELA/provenance) fares — show the small-edit case slips every layer. HONEST NOVELTY POSITIONING: frame as 'domain transfer + missing robustness axes + realistic defender,' NOT as a new method — the method/methodology already exists (DiffSeg30k/COCO-Inpaint/LocateEdit-Bench), so the contribution is the damage corpus, the size/blend/laundering sweeps, the commercial-API panel, and the defender-stack evaluation. This is a solid benchmark/measurement paper for a forensics venue (WIFS/IH&MMSec/workshop), NOT a flagship-conference method paper.",
+    "go_no_go": "QUALIFIED GO — proceed, but only on the AUTO (+receipt) framing and only if you own the size/blend/laundering/commercial-API axes; otherwise it is a thin re-skin. CANDID ASSESSMENT: The fraud-domain GAP is real and well-documented (no benchmark at {authentic damage photo + frontier added-damage + per-pixel mask + detector eval}; property/hotel even thinner). Frontier editors can plausibly synthesize the damage; the threat is field-attested (cracked-bumper case, Verisk/Allianz/Zurich data); the defender genuinely fails on small localized edits. BUT novelty is THIN per-component: the detection methodology, the 'detectors collapse on small inpaints' finding (INP-X, LocalizedDeepfakes, AIForge-Doc, COCO-Inpaint all already show it), and the authentic damage bases all pre-exist — the paper's only true novelty is (a) the damage DOMAIN, (b) the size x blending sweep, (c) the laundering sweep, and (d) a broader commercial-API panel + realistic defender stack. That is enough for a strong benchmark/measurement paper at a forensics venue, NOT a top-tier method paper; do not oversell. RISKS to manage: (1) several survey-cited refs (2603.12949, 2603.02378, 2604.24890, 2602.05577, 2510.19957, FragFake, X-Edit) are UNCONFIRMED — verify every arXiv id before citing, and correct the FLUX-Fill/DiQuID conflation. (2) Property/hotel has no public base — scope the MVP to auto+receipts or budget for commissioned imagery. (3) CarDD lacks real EXIF and forbids redistribution — use provenance-bearing bases for any metadata/PRNU claims and release only gated/aggregate artifacts. (4) A competing group could publish the obvious 'damage-domain AIForge-Doc analogue' first, since CarDD + AIForge-Doc methodology are the natural building blocks — move fast or differentiate hard on the laundering/commercial-API/defender-stack axes. NO-GO only if you cannot secure a commercial-API detector, cannot add the size/blend/laundering sweeps, and intend to claim a novel method — in that case it collapses to a domain re-run of existing benchmarks."
+  }
+}

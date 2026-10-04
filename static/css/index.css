@@ -148,45 +148,7 @@ body {
 .publication-authors {
     font-family: 'Inter', sans-serif !important;
     font-weight: 500;
-    margin-bottom: 0.7rem;
-    line-height: 1.75;
-}
-
-.publication-authors sup,
-.publication-affiliations sup,
-.publication-author-notes sup {
-  color: var(--primary-color);
-  font-size: 0.68em;
-  font-weight: 700;
-  margin-left: 0.08em;
-}
-
-.publication-affiliations {
-  max-width: 900px;
-  margin: 0 auto 0.45rem;
-  color: var(--text-secondary);
-  font-family: 'Inter', sans-serif;
-  line-height: 1.65;
-}
-
-.affiliation-block {
-  display: inline-block;
-  margin: 0 0.45rem 0.2rem;
-}
-
-.publication-author-notes {
-  margin-bottom: 1.4rem;
-  color: var(--text-secondary);
-  font-size: 0.86rem;
-  font-weight: 500;
-}
-
-.publication-tagline {
-  max-width: 760px;
-  margin: 0 auto 1.25rem;
-  color: var(--text-secondary);
-  font-size: 1.08rem;
-  font-weight: 500;
+    margin-bottom: 1.5rem;
 }
 
 .publication-venue {
@@ -240,7 +202,7 @@ body {
 
 .author-block {
   display: inline-block;
-  margin: 0 0.35rem 0.15rem;
+  margin-right: 0.5rem;
 }
 
 .publication-banner img {
@@ -346,63 +308,12 @@ body {
   margin-right: auto;
 }
 
-.leakage-section .content > p:not(.leakage-intro) {
-  text-align: left;
-}
-
 .leakage-intro {
   color: var(--text-secondary);
   font-size: 1rem;
   max-width: 920px;
   margin-left: auto;
   margin-right: auto;
-}
-
-.leakage-table {
-  max-width: 720px;
-  margin: 1.5rem auto 0.75rem;
-  font-size: 0.9rem;
-}
-
-.leakage-table th,
-.leakage-table td {
-  padding: 0.45em 0.9em;
-  vertical-align: middle;
-}
-
-.leakage-table td:not(:first-child),
-.leakage-table th:not(:first-child) {
-  text-align: right;
-}
-
-.leakage-table .drop-cell {
-  white-space: nowrap;
-}
-
-.leakage-table .drop-track {
-  display: inline-block;
-  width: 60px;
-  height: 7px;
-  border-radius: 4px;
-  background: rgba(214, 69, 69, 0.15);
-  margin-right: 8px;
-  vertical-align: middle;
-  overflow: hidden;
-}
-
-.leakage-table .drop-fill {
-  display: block;
-  height: 100%;
-  background: #d64545;
-  border-radius: 4px;
-}
-
-.leakage-table .drop-val {
-  color: #d64545;
-  font-weight: 700;
-  display: inline-block;
-  min-width: 3.6em;
-  text-align: right;
 }
 
 .leakage-slide {
@@ -536,10 +447,14 @@ body {
 
 .method-strip {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(780px, 84%);
   gap: 1rem;
   margin-top: 1.5rem;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
   padding: 0.25rem 0 0.75rem;
+  scroll-snap-type: x mandatory;
   text-align: left;
 }
 
@@ -605,8 +520,52 @@ body {
   text-align: center;
 }
 
-.experiment-block {
+.result-metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.85rem;
+  margin: 1.5rem 0;
   text-align: left;
+}
+
+.result-metric {
+  min-height: 132px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  background: #fff;
+  padding: 1rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.metric-value {
+  display: block;
+  color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 0.55rem;
+}
+
+.metric-label {
+  display: block;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.experiment-block,
+.experiment-card {
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  text-align: left;
+}
+
+.experiment-block {
+  padding: 1.2rem;
+  margin: 0 0 1rem;
 }
 
 .experiment-heading {
@@ -651,15 +610,6 @@ body {
   text-align: right;
 }
 
-.compact-result-table {
-  font-size: 0.8rem;
-}
-
-.compact-result-table th,
-.compact-result-table td {
-  padding: 0.35em 0.4em;
-}
-
 .average-row {
   font-weight: 800;
 }
@@ -667,6 +617,23 @@ body {
 .positive-delta {
   color: #15803d;
   font-weight: 800;
+}
+
+.experiment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.experiment-card {
+  padding: 1rem;
+}
+
+.experiment-card p {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  line-height: 1.46;
+  margin: 0.85rem 0 0;
 }
 
 .experiment-figure {
@@ -1011,10 +978,6 @@ code {
     font-size: 1rem !important;
   }
 
-  .publication-tagline {
-    font-size: 0.95rem;
-  }
-
   .button {
     margin: 0.25rem !important;
     font-size: 0.875rem !important;
@@ -1044,18 +1007,6 @@ code {
     padding: 1rem;
   }
 
-  .leakage-section .container,
-  .leakage-section .columns,
-  .leakage-section .leakage-column {
-    width: 100%;
-    max-width: 100%;
-    min-width: 0;
-  }
-
-  .leakage-section .leakage-column {
-    flex: 0 1 100%;
-  }
-
   .leakage-slide {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -1066,11 +1017,29 @@ code {
   }
 
   .method-strip {
-    grid-template-columns: 1fr;
+    grid-auto-columns: minmax(280px, 88vw);
     gap: 0.75rem;
   }
 
   .method-step {
+    padding: 0.875rem;
+  }
+
+  .result-metrics,
+  .experiment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-metric {
+    min-height: auto;
+  }
+
+  .metric-value {
+    font-size: 1.75rem;
+  }
+
+  .experiment-block,
+  .experiment-card {
     padding: 0.875rem;
   }
 
@@ -1173,286 +1142,5 @@ a:focus {
     background: transparent !important;
     color: var(--text-primary) !important;
     box-shadow: none !important;
-  }
-}
-
-/* =====================================================================
-   Academic redesign pass: model logos, result emphasis, experiment
-   layout, redesigned carousel Q/A cards.
-   ===================================================================== */
-:root {
-  --good: #1f8a5b;
-  --good-bg: rgba(31, 138, 91, 0.10);
-  --good-ink: #14663f;
-  --drop: #cf4b4b;
-}
-
-/* Model-family logos in tables */
-.model-logo {
-  height: 16px;
-  width: 16px;
-  object-fit: contain;
-  vertical-align: -3px;
-  margin-right: 8px;
-}
-
-/* RQ1: REKEY collapses onto the Relabel line (closeness = the point) */
-.experiment-table th.vs-col { color: var(--good); }
-.experiment-table th.vs-col small {
-  display: block;
-  margin-top: 2px;
-  font-weight: 600;
-  font-size: 0.68rem;
-  color: var(--text-light);
-  text-transform: none;
-  letter-spacing: 0;
-}
-.experiment-copy-list {
-  text-align: left;
-  margin: 0.35rem 0 0;
-  padding: 0;
-  list-style: none;
-  color: var(--text-secondary);
-  font-size: 0.93rem;
-  line-height: 1.5;
-}
-.experiment-copy-list li {
-  position: relative;
-  padding-left: 1.1rem;
-  margin-bottom: 0.3rem;
-}
-.experiment-copy-list li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.55em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--primary-color);
-}
-.experiment-copy-list strong { color: var(--text-primary); }
-
-.metric-list {
-  margin-top: 1rem;
-}
-
-.metric-list li {
-  margin-bottom: 0.55rem;
-}
-
-/* RQ2 compact table: mark preserved position vs dropped attribute */
-.compact-result-table .preserved { color: var(--good); font-weight: 800; }
-.compact-result-table .dropped { color: var(--drop); font-weight: 700; }
-
-/* Redesigned carousel Q/A cards */
-.prompt-card {
-  border: 1px solid var(--border-color);
-  border-left-width: 1px;
-  border-top: 3px solid var(--pc-accent, var(--primary-color));
-  border-radius: 10px;
-  background: #fff;
-  padding: 0.95rem 1.05rem 1.05rem;
-  box-shadow: var(--shadow-sm);
-}
-.prompt-original { --pc-accent: #2563eb; border-left-color: var(--border-color); }
-.prompt-relabel { --pc-accent: #dc2626; border-left-color: var(--border-color); }
-.prompt-head {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin-bottom: 0.7rem;
-}
-.prompt-marker {
-  flex: 0 0 auto;
-  width: 1.5rem;
-  height: 1.5rem;
-  border-radius: 6px;
-  background: var(--pc-accent);
-  font-size: 0.85rem;
-}
-.prompt-label {
-  flex: 1 1 auto;
-  min-width: 0;
-  color: var(--text-primary);
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-.outcome {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.28rem;
-  padding: 0.18rem 0.55rem 0.18rem 0.5rem;
-  font-size: 0.68rem;
-}
-.outcome::before { font-size: 0.8rem; line-height: 1; }
-.outcome-correct::before { content: "\2713"; }
-.outcome-missed::before { content: "\2715"; }
-.prompt-question {
-  font-size: 1rem !important;
-  font-weight: 600;
-  line-height: 1.4;
-  margin-bottom: 0.7rem !important;
-}
-.prompt-facts {
-  gap: 0.3rem;
-  padding-top: 0.6rem;
-  border-top: 1px solid var(--border-color);
-  color: var(--text-primary);
-  font-size: 0.85rem;
-}
-.prompt-facts > span {
-  display: flex;
-  justify-content: space-between;
-  gap: 0.5rem;
-}
-.prompt-facts strong {
-  color: var(--text-light);
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 0.72rem;
-  letter-spacing: 0.03em;
-  margin-right: 0;
-}
-
-/* Left-align model columns (logos read better flush-left) */
-.model-cell { text-align: left !important; }
-.leakage-table thead th:first-child,
-.experiment-table thead th:first-child { text-align: left !important; }
-
-/* Q/A cards v2: Original/Relabel title over a divider, then question, then
-   the ground-truth answer as a colour swatch (no letters, no model row). */
-.prompt-head {
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 0.6rem;
-  margin-bottom: 0.8rem;
-}
-.prompt-original .prompt-label { color: #2563eb; }
-.prompt-relabel .prompt-label { color: #dc2626; }
-.prompt-question {
-  color: #334155;
-  font-weight: 600;
-  margin-bottom: 0.85rem !important;
-}
-
-/* Analysis layout: two-column bands (text + figure/table), hairline-separated */
-.analysis-band {
-  display: grid;
-  grid-template-columns: 0.82fr 1.18fr;
-  gap: 2.75rem;
-  align-items: center;
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--border-color);
-  text-align: left;
-}
-.band-text h3 {
-  font-size: 1.35rem;
-  line-height: 1.28;
-  font-weight: 800;
-  color: var(--text-primary);
-  margin: 0.2rem 0 0;
-}
-.band-text p {
-  color: var(--text-secondary);
-  font-size: 0.98rem;
-  line-height: 1.55;
-  margin: 0.65rem 0 0;
-}
-.band-figure { min-width: 0; }
-.band-figure img { width: 100%; height: auto; display: block; }
-.band-figure .compact-result-table { margin: 0; font-size: 0.92rem; }
-.band-figure .compact-result-table th,
-.band-figure .compact-result-table td { padding: 0.5em 0.8em; }
-
-@media screen and (max-width: 768px) {
-  .analysis-band { grid-template-columns: 1fr; gap: 1.25rem; }
-}
-
-/* RQ1 flows as a clean full-width block (no card box), like the bands */
-.experiment-block {
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  border-radius: 0;
-  padding: 0;
-  margin: 0;
-}
-
-
-/* --- refinements --- */
-/* Smaller, top-aligned RQ2/RQ3 figures */
-.analysis-band {
-  grid-template-columns: 1fr 0.85fr;
-  align-items: start;
-}
-.band-figure img { max-width: 380px; margin: 0 auto; }
-.band-figure .compact-result-table { max-width: 440px; margin-inline: auto; }
-
-/* Carousel question + answer text in black */
-.prompt-question { color: #111; }
-
-/* Fact rows: a fixed 4-column grid (label | verdict | swatch | word) so the
-   check/cross, colour chip, and word each keep their own column and line up
-   across the Ground truth and model rows. */
-.prompt-facts {
-  display: grid;
-  grid-template-columns: 1fr 1.1em 16px auto;
-  align-items: center;
-  column-gap: 0.5rem;
-  row-gap: 0.6rem;
-}
-.f-label {
-  justify-self: start;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  color: #1a1a1a;
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-.f-label .model-logo { width: 15px !important; height: 15px !important; margin: 0 !important; }
-.f-verdict, .prompt-facts .swatch, .f-word { justify-self: center; }
-.f-word { justify-self: start; }
-.f-verdict { text-align: center; font-weight: 800; line-height: 1; }
-.f-verdict.ok { color: var(--good); }
-.f-verdict.no { color: var(--drop); }
-.prompt-facts .swatch {
-  width: 16px;
-  height: 16px;
-  border-radius: 4px;
-  background: var(--sw, #999);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.f-word { font-weight: 700; color: #111; text-transform: capitalize; font-size: 0.92rem; }
-
-/* RQ3 and the additional RQ1 analysis use balanced text-and-figure bands. */
-
-.rq3-band,
-.rq1-analysis-band {
-  align-items: center;
-}
-
-.rq3-band .band-figure img,
-.rq1-analysis-band .band-figure img {
-  max-width: 440px;
-}
-
-@media screen and (max-width: 768px) {
-  .analysis-band {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1.25rem;
-  }
-
-  .band-text,
-  .band-figure {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .band-figure {
-    overflow-x: auto;
   }
 }

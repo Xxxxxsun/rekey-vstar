@@ -1,0 +1,65 @@
+{
+  "image_id": "vstar_0046",
+  "question_id": "46",
+  "run_id": "sc_109",
+  "seed": 3145760939,
+  "slot_count": 1,
+  "edits": [
+    {
+      "slot_id": "A1",
+      "operation": "replace",
+      "placement": null,
+      "entity_family": null,
+      "target_family": null,
+      "edit_type": "color_change",
+      "object_name": "",
+      "target_name": "white cap",
+      "answer_attribute": "color",
+      "answer": "purple",
+      "attributes": {
+        "color": "purple"
+      }
+    }
+  ],
+  "probability_trace": {
+    "pipeline_version": "dynamic_vstar_crop_gen_paste_v0",
+    "allow_multislot": true,
+    "preferred_attribute": "color",
+    "slot_count_distribution": [
+      [
+        1,
+        0.8
+      ],
+      [
+        2,
+        0.18
+      ],
+      [
+        3,
+        0.02
+      ]
+    ],
+    "valid_slot_ids": [
+      "A1",
+      "B1",
+      "C1",
+      "D1"
+    ],
+    "selected_slot_ids": [
+      "A1"
+    ],
+    "slot_traces": {
+      "A1": {
+        "slot_seed": 1997105962,
+        "preferred_attribute": "color",
+        "operation": "replace",
+        "target_ref": "white cap",
+        "old_color": "white",
+        "valid_operations": [
+          "replace"
+        ],
+        "slot_weight": 1.7999999999999998
+      }
+    }
+  }
+}

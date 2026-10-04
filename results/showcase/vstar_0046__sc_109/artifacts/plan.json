@@ -1,0 +1,45 @@
+{
+  "image_id": "vstar_0046",
+  "question_id": "46",
+  "source_question": "What is the color of the man's cap?",
+  "source_category": "direct_attributes",
+  "edits": [
+    {
+      "slot_id": "A1",
+      "mode": "replace",
+      "target_phrase": "the cap",
+      "edit_instruction": "Change ONLY the color of the white cap to purple. Do NOT modify any surrounding pixels. Keep shape, material, texture, and background exactly the same.",
+      "image_prompt": "Change ONLY the color of the white cap to purple. Do NOT modify any surrounding pixels. Keep shape, material, texture, and background exactly the same.",
+      "question_type": "color",
+      "question": "What color is the cap?",
+      "answer": "purple",
+      "distractors": [
+        "gray",
+        "red",
+        "pink"
+      ],
+      "options": {
+        "A": "red",
+        "B": "gray",
+        "C": "pink",
+        "D": "purple"
+      },
+      "correct_label": "D"
+    }
+  ],
+  "question_type": "color",
+  "question": "What color is the cap?",
+  "answer": "purple",
+  "options": {
+    "A": "red",
+    "B": "gray",
+    "C": "pink",
+    "D": "purple"
+  },
+  "correct_label": "D",
+  "planner_metadata": {
+    "backend": "rule",
+    "use_vaw": false,
+    "use_mask": false
+  }
+}

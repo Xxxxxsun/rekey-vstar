@@ -1,0 +1,827 @@
+[
+  {
+    "image_id": "vstar_0006",
+    "issue_type": "not_unique",
+    "description": "Multiple candles visible in the scene. The question asks 'What color is the candle?' (singular) but the edit changed several candles to pink. Ambiguous which candle is being asked about."
+  },
+  {
+    "image_id": "vstar_0006",
+    "issue_type": "background_changed",
+    "description": "The edited crop shows noticeable changes to surrounding pixels -- people and background elements appear altered compared to the input crop, not just the candle color."
+  },
+  {
+    "image_id": "vstar_0008",
+    "issue_type": "too_small",
+    "description": "The added blue bag is very small in the full image and hard to distinguish. In the crop, the bag blends into the scene near a person and is not clearly identifiable as a blue bag."
+  },
+  {
+    "image_id": "vstar_0009",
+    "issue_type": "generation_artifact",
+    "description": "The red bucket is placed on top of a road sign/barrier post, which looks spatially implausible. The bucket appears to be floating in midair on the highway median rather than resting on a natural surface."
+  },
+  {
+    "image_id": "vstar_0010",
+    "issue_type": "generation_artifact",
+    "description": "The added 'white box' looks like an amorphous white blob or crushed plastic rather than a recognizable box shape. Poor generation quality -- the object is not identifiable as a box."
+  },
+  {
+    "image_id": "vstar_0011",
+    "issue_type": "too_small",
+    "description": "The black dog is placed in the dark lower-left corner of a sunset/mountain scene. The object is extremely small in the full image and nearly invisible due to the dark lighting conditions. Color is impossible to determine at this scale and lighting."
+  },
+  {
+    "image_id": "vstar_0014",
+    "issue_type": "generation_artifact",
+    "description": "The white bottle is not clearly visible in the edited result crop. The scene shows a person standing near planters/benches, but no distinct bottle object is apparent. The added object may have failed to generate or is obscured."
+  },
+  {
+    "image_id": "vstar_0016",
+    "issue_type": "generation_artifact",
+    "description": "The added 'white bicycle' is not recognizable as a bicycle in the edited crop. The result shows indistinct structures that do not resemble a bicycle shape."
+  },
+  {
+    "image_id": "vstar_0017",
+    "issue_type": "too_small",
+    "description": "The black bag is placed in a dark nighttime scene. Being black against a dark background makes the bag nearly invisible. Difficult to identify the object or determine its color."
+  },
+  {
+    "image_id": "vstar_0020",
+    "issue_type": "generation_artifact",
+    "description": "The red bucket is not visible in the edited result. The object appears to be occluded behind a green fence or failed to generate. Cannot identify a red bucket in the crop."
+  },
+  {
+    "image_id": "vstar_0021",
+    "issue_type": "generation_artifact",
+    "description": "The spider on the blue sail was supposed to be recolored to yellow, but in the edited crop the spider/logo does not appear clearly yellow. The sail remains predominantly blue and the color change is not convincingly applied to the spider graphic."
+  },
+  {
+    "image_id": "vstar_0023",
+    "issue_type": "background_changed",
+    "description": "Person's jacket color changed from beige/light to red in the edited crop; surrounding appearance of people altered beyond the handbag target"
+  },
+  {
+    "image_id": "vstar_0025",
+    "issue_type": "too_small",
+    "description": "Added bucket is barely visible in the full scene and unclear even in the crop; object shape is ambiguous and not clearly recognizable as a bucket"
+  },
+  {
+    "image_id": "vstar_0026",
+    "issue_type": "too_small",
+    "description": "Added boat is an extremely small dark speck on the water in the full scene; color is indistinguishable as blue at this scale"
+  },
+  {
+    "image_id": "vstar_0027",
+    "issue_type": "not_unique",
+    "description": "Multiple white/light objects visible on the ground near the added box area; the target box is not clearly distinguishable from other similar-looking objects in the scene"
+  },
+  {
+    "image_id": "vstar_0030",
+    "issue_type": "too_small",
+    "description": "Pet collar is extremely small even in the crop view; the color change from purple to black is nearly impossible to verify visually"
+  },
+  {
+    "image_id": "vstar_0031",
+    "issue_type": "mask_bleed",
+    "description": "Edit region substantially altered beyond the phone; large pink/purple area appeared on clothing and surrounding region is significantly different from the original"
+  },
+  {
+    "image_id": "vstar_0033",
+    "issue_type": "generation_artifact",
+    "description": "Added gray flag is not clearly visible in the edited crop near the church tower; the object may have failed to generate or blends indistinguishably into the building facade"
+  },
+  {
+    "image_id": "vstar_0034",
+    "issue_type": "background_changed",
+    "description": "Surrounding motorcycle area is visibly altered in the edited crop beyond just the helmet; multiple dark objects appeared and the scene composition changed"
+  },
+  {
+    "image_id": "vstar_0035",
+    "issue_type": "generation_artifact",
+    "description": "Added yellow bag looks like an artificial yellow rectangle/block on the sand rather than a natural bag; unconvincing object shape"
+  },
+  {
+    "image_id": "vstar_0040",
+    "issue_type": "generation_artifact",
+    "description": "Motorcycle color change from blue to green is incomplete; residual blue and yellow tones remain mixed with the green, making the intended color ambiguous"
+  },
+  {
+    "image_id": "vstar_0042",
+    "issue_type": "qa_issue",
+    "description": "Added stroller appears more purple/dark than blue; answer 'blue' may not match what a VQA model would perceive as the stroller's color"
+  },
+  {
+    "image_id": "vstar_0043",
+    "issue_type": "background_changed",
+    "description": "Background behind the car is notably different in the edited result (green shutters/walls altered); car model shape also appears slightly changed beyond just the color recoloring"
+  },
+  {
+    "image_id": "vstar_0046",
+    "issue_type": "object_visibility",
+    "description": "Yellow flower is barely visible or absent in the edited result crop; the area remains mostly green grass with no clearly discernible flower."
+  },
+  {
+    "image_id": "vstar_0047",
+    "issue_type": "generation_quality",
+    "description": "Added object does not resemble a kick scooter; appears as a small indistinct yellow blob near the pedestrian's feet, unrecognizable as the intended object."
+  },
+  {
+    "image_id": "vstar_0051",
+    "issue_type": "object_visibility",
+    "description": "Blue buoy failed to generate; the edited result crop shows only water with at most a faint smudge, no recognizable buoy is present."
+  },
+  {
+    "image_id": "vstar_0052",
+    "issue_type": "generation_quality",
+    "description": "Added object looks like a cushion or pillow on a sofa rather than a bag; object identity is ambiguous and could confuse the color question if interpreted as part of the furniture."
+  },
+  {
+    "image_id": "vstar_0053",
+    "issue_type": "object_visibility",
+    "description": "Black phone is not visible in the edited result; the crop shows a person with a blue plastic bag but no identifiable phone was generated."
+  },
+  {
+    "image_id": "vstar_0054",
+    "issue_type": "background_preservation",
+    "description": "Color-replace edit also significantly altered the rider's pose/position and surrounding scene elements; the person and background differ noticeably between source and edited crops."
+  },
+  {
+    "image_id": "vstar_0055",
+    "issue_type": "object_visibility",
+    "description": "Purple poster is extremely small and barely identifiable in the edited result crop; appears as a tiny dark shape in the corner, not clearly readable as a poster."
+  },
+  {
+    "image_id": "vstar_0056",
+    "issue_type": "object_visibility",
+    "description": "Black bottle is not clearly visible in the edited result; the crop shows a pedestrian area but no identifiable bottle was generated."
+  },
+  {
+    "image_id": "vstar_0058",
+    "issue_type": "generation_quality",
+    "description": "Color change from blue-and-yellow to green appears incomplete; the flag in the edited result still shows prominent yellow tones rather than being convincingly green."
+  },
+  {
+    "image_id": "vstar_0061",
+    "issue_type": "generation_quality",
+    "description": "Added bag does not appear green; the edited crop shows reddish/orange tones near the person rather than a clearly green bag. Color mismatch with the expected answer."
+  },
+  {
+    "image_id": "vstar_0062",
+    "issue_type": "object_visibility",
+    "description": "Pink bucket is not clearly visible in the edited result; the area near the vehicle shows no recognizable pink bucket object."
+  },
+  {
+    "image_id": "vstar_0063",
+    "issue_type": "object_visibility",
+    "description": "Added white bag is very small and blends with the snowy/stone ground, making it hard to identify as a bag in the full image."
+  },
+  {
+    "image_id": "vstar_0064",
+    "issue_type": "object_visibility",
+    "description": "Added white flower is extremely small and barely visible in the edited crop; it blends into the dark background area near the table and is not clearly recognizable as a flower."
+  },
+  {
+    "image_id": "vstar_0067",
+    "issue_type": "object_visibility",
+    "description": "Added white bottle is not visible in the edited result crop. The crop shows the back of the ATV/vehicle and a person in a blue jacket but no discernible bottle. The object appears to have failed to generate or is completely occluded."
+  },
+  {
+    "image_id": "vstar_0068",
+    "issue_type": "generation_quality",
+    "description": "Added object is not a kick scooter. The edited crop shows people standing near a wall but no recognizable kick scooter. The generation failed to produce the intended object."
+  },
+  {
+    "image_id": "vstar_0068",
+    "issue_type": "background_preservation",
+    "description": "Comparing source and edited full images, visible changes to the building facade area are apparent (red streaks/artifacts on the buildings near the waterfront that were not in the source)."
+  },
+  {
+    "image_id": "vstar_0071",
+    "issue_type": "object_visibility",
+    "description": "The paraglider is extremely small in both source and edited images, making it very difficult to judge its color. The target object is too tiny for reliable color assessment in the full scene."
+  },
+  {
+    "image_id": "vstar_0073",
+    "issue_type": "generation_quality",
+    "description": "Added yellow bag looks like an amorphous yellow blob on the sand rather than a recognizable bag. Poor object definition and unconvincing shape."
+  },
+  {
+    "image_id": "vstar_0074",
+    "issue_type": "object_visibility",
+    "description": "Added gray cat is not visible in the edited result crop. The crop shows a yellow flag and a blue sign but no discernible cat. The generation appears to have failed."
+  },
+  {
+    "image_id": "vstar_0077",
+    "issue_type": "generation_quality",
+    "description": "Added bucket is clearly red/orange, not brown as specified. The answer says brown but the generated bucket is visibly red, creating a color mismatch between the expected answer and what is shown."
+  },
+  {
+    "image_id": "vstar_0078",
+    "issue_type": "object_visibility",
+    "description": "The watch is extremely small and difficult to see in both the full image and the crop. At the scene scale (people standing next to an elephant), a watch on a wrist is nearly invisible."
+  },
+  {
+    "image_id": "vstar_0078",
+    "issue_type": "generation_quality",
+    "description": "No clear purple color change is visible on the watch in the edited crop. The watch area is too small and the color change is not convincingly rendered."
+  },
+  {
+    "image_id": "vstar_0079",
+    "issue_type": "object_visibility",
+    "description": "Added black stroller is very small and barely distinguishable in the edited crop. It appears as a small dark shape on the road surface and is not clearly recognizable as a stroller."
+  },
+  {
+    "image_id": "vstar_0081",
+    "issue_type": "object_visibility",
+    "description": "Added blue phone is not clearly identifiable in the edited crop. The crop shows two people walking, but no clearly visible blue phone object. The phone, if present, is too small or blends with the figures."
+  },
+  {
+    "image_id": "vstar_0082",
+    "issue_type": "generation_quality",
+    "description": "The edited crop shows the entire surrounding scene drastically changed -- a large dark wall/building appeared behind the person, completely different from the original outdoor plaza setting. The color change on the can itself is also unclear; the crop area was heavily re-generated rather than just recoloring the can."
+  },
+  {
+    "image_id": "vstar_0082",
+    "issue_type": "background_preservation",
+    "description": "The background in the edited crop is completely different from the source crop -- the statue/plaza context is replaced by a dark building wall. Major background leakage."
+  },
+  {
+    "image_id": "vstar_0084",
+    "issue_type": "object_visibility",
+    "description": "The straw is extremely small and thin in both the source and edited images. In the edited crop, the straw's color change to purple is barely distinguishable at the overview scale. Difficult to confidently answer the color question."
+  },
+  {
+    "image_id": "vstar_0085",
+    "issue_type": "generation_quality",
+    "description": "The bus in the edited result does not appear convincingly brown. The bus is very small and distant on a winding mountain road; in the edited crop the bus appears to have lost its original white color but the brown tint is ambiguous and could be mistaken for a shadow or gray tone."
+  },
+  {
+    "image_id": "vstar_0085",
+    "issue_type": "object_visibility",
+    "description": "The bus is very small and distant in the scene, making the color change hard to verify at normal viewing resolution."
+  },
+  {
+    "image_id": "vstar_0086",
+    "issue_type": "object_visibility",
+    "description": "The added blue flag is very small in the full edited image -- it appears as a tiny blue speck on the ground area in front of the building. At overview scale it is nearly invisible."
+  },
+  {
+    "image_id": "vstar_0087",
+    "issue_type": "background_preservation",
+    "description": "The edited crop shows significant changes beyond just adding a balloon. The surrounding area in the crop has been noticeably altered with additional objects/details appearing that were not in the input crop."
+  },
+  {
+    "image_id": "vstar_0087",
+    "issue_type": "generation_quality",
+    "description": "The added red balloon in the crop does not look like a typical balloon -- it appears as a thin red elongated shape that could be confused with a ribbon or flag rather than a round balloon."
+  },
+  {
+    "image_id": "vstar_0088",
+    "issue_type": "object_visibility",
+    "description": "The added pink flower is very small in the overall scene, located in the foliage/ground area. At full image scale it is hard to spot among the existing greenery."
+  },
+  {
+    "image_id": "vstar_0089",
+    "issue_type": "object_visibility",
+    "description": "The added green flag is not clearly visible in the edited crop. In the highway overpass scene, the flag is hard to distinguish from surrounding elements."
+  },
+  {
+    "image_id": "vstar_0089",
+    "issue_type": "generation_quality",
+    "description": "The added green flag blends into the infrastructure and is not obviously recognizable as a flag. It may be confused with part of the roadside signage or structures."
+  },
+  {
+    "image_id": "vstar_0090",
+    "issue_type": "background_preservation",
+    "description": "In the full edited image, a yellow vehicle/object has appeared on the highway that was not present in the source image. This is an unintended change outside the edit region."
+  },
+  {
+    "image_id": "vstar_0091",
+    "issue_type": "background_preservation",
+    "description": "The edited crop shows a drastically different scene from the input crop. The input crop shows a dirt/muddy area, while the edited crop has concrete barriers, barrels, and a completely different setting with the bicycle placed in it."
+  },
+  {
+    "image_id": "vstar_0091",
+    "issue_type": "generation_quality",
+    "description": "The bicycle in the edited result appears as a line-drawing or outline style rather than a photorealistic black bicycle. It does not blend naturally into the photographic scene."
+  },
+  {
+    "image_id": "vstar_0093",
+    "issue_type": "generation_quality",
+    "description": "The added black balloon looks like a dark sphere pressed against the building glass/railing rather than a naturally floating balloon. It lacks a string and appears artificially placed."
+  },
+  {
+    "image_id": "vstar_0095",
+    "issue_type": "object_visibility",
+    "description": "The watch strap is extremely small in the scene -- the person is a full-body shot on a street. The strap color change from purple to gray is nearly impossible to discern at the overview image scale."
+  },
+  {
+    "image_id": "vstar_0096",
+    "issue_type": "object_visibility",
+    "description": "The added pink flower is extremely small, placed on or near a white hat brim in a densely packed hat shop scene. It is barely visible and could be overlooked entirely."
+  },
+  {
+    "image_id": "vstar_0098",
+    "issue_type": "generation_quality",
+    "description": "The added green bottle is not visible in the edited result. The edited crop shows a person sitting on the boat railing area but no discernible green bottle. The generation appears to have failed to produce the target object."
+  },
+  {
+    "image_id": "vstar_0098",
+    "issue_type": "background_preservation",
+    "description": "The edited crop shows a person/figure that was not in the input crop area, indicating the generation modified existing content rather than just adding a bottle."
+  },
+  {
+    "image_id": "vstar_0099",
+    "issue_type": "object_visibility",
+    "description": "The added red box is very small in the edited crop -- it appears as a tiny red spot on the sand near the beach chair. At full image scale it would be extremely hard to notice."
+  },
+  {
+    "image_id": "vstar_0100",
+    "issue_type": "object_visibility",
+    "description": "The added blue stroller is small and placed in a visually complex area near building columns/fence. It is hard to identify clearly as a stroller at overview resolution."
+  },
+  {
+    "image_id": "vstar_0100",
+    "issue_type": "generation_quality",
+    "description": "The stroller in the edited crop does not look photorealistic -- it appears somewhat flat and artificial against the architectural background, with unconvincing perspective and scale."
+  },
+  {
+    "image_id": "vstar_0101",
+    "issue_type": "object_visibility",
+    "description": "Added green bag is not visible in the edited result crop. The edit region on the grass near the bench shows no discernible bag."
+  },
+  {
+    "image_id": "vstar_0102",
+    "issue_type": "object_visibility",
+    "description": "The added brown kick scooter is extremely small and barely visible in the edit region against the stone wall. Difficult to identify as a kick scooter at the overview scale."
+  },
+  {
+    "image_id": "vstar_0103",
+    "issue_type": "background_preservation",
+    "description": "The edited crop shows significant changes to the surrounding area beyond just the lock. The background car and red surface appear altered with visible texture distortion and color shifts in the region around the lock."
+  },
+  {
+    "image_id": "vstar_0103",
+    "issue_type": "object_visibility",
+    "description": "The lock is extremely small in the full image. The color change from silver to brown is nearly impossible to discern at the full-image scale."
+  },
+  {
+    "image_id": "vstar_0106",
+    "issue_type": "object_visibility",
+    "description": "The earring is not visible in either the input crop or the edited result crop. The person is viewed from behind/side and no earring is discernible, making the color change unverifiable."
+  },
+  {
+    "image_id": "vstar_0107",
+    "issue_type": "generation_quality",
+    "description": "The apple color was supposed to change from green to pink, but the edited result crop shows the apples appear to still be green/yellowish-green, not convincingly pink."
+  },
+  {
+    "image_id": "vstar_0108",
+    "issue_type": "object_visibility",
+    "description": "No black balloon is visible in the edited result. The edit region near the pool/foliage area shows no discernible balloon added."
+  },
+  {
+    "image_id": "vstar_0109",
+    "issue_type": "background_preservation",
+    "description": "The tablecloth color replacement also altered surrounding pixels. The edited crop shows changes to the awning/umbrella area above the tablecloth, with the white canopy appearing different from the source."
+  },
+  {
+    "image_id": "vstar_0111",
+    "issue_type": "object_visibility",
+    "description": "The added yellow bag is not clearly visible in the edited result crop. The streetside edit region does not show a clearly identifiable yellow bag."
+  },
+  {
+    "image_id": "vstar_0111",
+    "issue_type": "object_uniqueness",
+    "description": "The dominant yellow bus in the scene could cause confusion with a yellow bag, since both are yellow objects and the bus is far more prominent."
+  },
+  {
+    "image_id": "vstar_0112",
+    "issue_type": "generation_quality",
+    "description": "The bench color change from green to black appears to have also modified the bench structure. The edited crop shows the bench looks different in shape/form, not just color."
+  },
+  {
+    "image_id": "vstar_0116",
+    "issue_type": "object_visibility",
+    "description": "The added gray cat in the lower-left area of the scene is very small and hard to identify clearly as a cat at the full-image scale."
+  },
+  {
+    "image_id": "vstar_0116",
+    "issue_type": "generation_quality",
+    "description": "The car color replacement from red to green produced a very small result. The car is tiny and far away; the green color is barely distinguishable in the full edited image."
+  },
+  {
+    "image_id": "vstar_0117",
+    "issue_type": "qa_correctness",
+    "description": "The question 'Is the balloon to the left or right of the balloon?' is ambiguous and nonsensical because both the added object and the replaced object are called 'the balloon'. There is no way to distinguish which balloon is being referenced."
+  },
+  {
+    "image_id": "vstar_0117",
+    "issue_type": "object_visibility",
+    "description": "The added purple balloon in the upper-left area is extremely small (a tiny dot) and not convincingly identifiable as a balloon in the full edited image."
+  },
+  {
+    "image_id": "vstar_0118",
+    "issue_type": "object_visibility",
+    "description": "The added purple balloon in the right-side edit region is barely visible. The edited crop shows only a faint mark in a distant hillside area, not a clearly recognizable balloon."
+  },
+  {
+    "image_id": "vstar_0119",
+    "issue_type": "object_visibility",
+    "description": "The added black bottle is not clearly visible in the edited result. The edit region near the statue base/ground area does not show an identifiable bottle."
+  },
+  {
+    "image_id": "vstar_0119",
+    "issue_type": "generation_quality",
+    "description": "The cyclist shirt color change from blue to pink is very subtle and hard to verify. The cyclist is small in the scene and the color difference is not convincing in the full image."
+  },
+  {
+    "image_id": "vstar_0120",
+    "issue_type": "object_visibility",
+    "description": "The added gray buoy is not clearly visible in the edited result. The edit region on the pond/bridge area does not show a recognizable buoy."
+  },
+  {
+    "image_id": "vstar_0121",
+    "issue_type": "object_visibility",
+    "description": "Added brown bottle in the C1 slot is extremely small and hard to discern against the busy station background; may be missed by evaluators."
+  },
+  {
+    "image_id": "vstar_0123",
+    "issue_type": "generation_quality",
+    "description": "Added black balloon (D1) is barely visible against the dark rooftop in the crop; looks more like a dark smudge on the roof tiles than a balloon."
+  },
+  {
+    "image_id": "vstar_0124",
+    "issue_type": "background_preservation",
+    "description": "Edited image shows noticeable color/lighting shift across the entire scene compared to source; the overall scene appears warmer/more saturated after edits."
+  },
+  {
+    "image_id": "vstar_0124",
+    "issue_type": "object_visibility",
+    "description": "The added white cat (C1) is small and partially blends into the cluttered temple scene with many colorful decorations; hard to distinguish."
+  },
+  {
+    "image_id": "vstar_0125",
+    "issue_type": "soft_mask_blending",
+    "description": "Shark plush toy color replace (blue to red) shows slight color bleed at boundary edges where the toy meets the person's hand/lap area."
+  },
+  {
+    "image_id": "vstar_0127",
+    "issue_type": "object_visibility",
+    "description": "Added brown dog (C1) is very small and partially obscured by vegetation/fence; barely visible in the full edited image."
+  },
+  {
+    "image_id": "vstar_0128",
+    "issue_type": "object_visibility",
+    "description": "Added brown clock (C1) is very small and placed on a dark wooden surface/wall where it is difficult to see at overview scale."
+  },
+  {
+    "image_id": "vstar_0128",
+    "issue_type": "generation_quality",
+    "description": "Added gray stroller (D1) looks somewhat unnatural in scale and placement next to the person in the archway; appears pasted-in."
+  },
+  {
+    "image_id": "vstar_0130",
+    "issue_type": "soft_mask_blending",
+    "description": "Life vest color replace (orange to black) shows incomplete coverage; parts of the original orange color are still visible at the edges, and the black blends into the dog's body making the vest hard to distinguish."
+  },
+  {
+    "image_id": "vstar_0130",
+    "issue_type": "generation_quality",
+    "description": "Added red boat (D1) appears as a small red shape floating on water but looks more like a flat red patch than a convincing boat; low realism."
+  },
+  {
+    "image_id": "vstar_0131",
+    "issue_type": "soft_mask_blending",
+    "description": "Dog color replace (white to brown) is incomplete; the dog still appears largely white/light-colored with only partial brown tinting, not a convincing full color change."
+  },
+  {
+    "image_id": "vstar_0132",
+    "issue_type": "generation_quality",
+    "description": "Added brown kick scooter (C1) is nearly invisible in the edited crop; it blends into the dark parking area and is extremely hard to identify as a scooter."
+  },
+  {
+    "image_id": "vstar_0133",
+    "issue_type": "object_visibility",
+    "description": "Added brown cat (C1) is very small at the person's feet in a busy street scene; difficult to spot at full-image scale."
+  },
+  {
+    "image_id": "vstar_0134",
+    "issue_type": "object_uniqueness",
+    "description": "Multiple chairs visible in the scene (several orange and white chairs in the background near the trash bin area); the replaced orange chair may be confused with others."
+  },
+  {
+    "image_id": "vstar_0135",
+    "issue_type": "generation_quality",
+    "description": "Added brown balloon (C1) is not visible in the edited result crop; appears to have failed to generate or is completely occluded/invisible against the stone wall background."
+  },
+  {
+    "image_id": "vstar_0135",
+    "issue_type": "generation_quality",
+    "description": "Added blue kick scooter (D1) is barely visible in the crop; blends into the ground/boat area and is hard to identify as a kick scooter."
+  },
+  {
+    "image_id": "vstar_0135",
+    "issue_type": "qa_correctness",
+    "description": "Position question asks if kick scooter is left or right of balloon, but the balloon is essentially invisible in the image, making the question unanswerable."
+  },
+  {
+    "image_id": "vstar_0136",
+    "issue_type": "generation_quality",
+    "description": "Added red bucket (C1) is not clearly visible in the edited crop; it appears to have barely changed the scene or is too small/occluded to identify."
+  },
+  {
+    "image_id": "vstar_0136",
+    "issue_type": "soft_mask_blending",
+    "description": "Flag color replace (red to gray) appears only partially applied; the flag on the boat still shows reddish tones mixed with gray."
+  },
+  {
+    "image_id": "vstar_0139",
+    "issue_type": "object_visibility",
+    "description": "Added pink kick scooter (C1) is placed on a rooftop area in an aerial/elevated view; appears very small and somewhat implausible in that location."
+  },
+  {
+    "image_id": "vstar_0139",
+    "issue_type": "generation_quality",
+    "description": "Sedan color replace (white to blue) in the aerial rooftop view shows the car is very small and partially occluded; the blue color change is hard to verify at this scale."
+  },
+  {
+    "image_id": "vstar_0141",
+    "issue_type": "object_visibility",
+    "description": "Added white cat is very small and difficult to see in the bottom-left area of the scene near the flowers; blends into the stone wall texture."
+  },
+  {
+    "image_id": "vstar_0142",
+    "issue_type": "object_visibility",
+    "description": "Added gray cat in slot D1 is not visible in the edited result crop; the railing area appears unchanged, cat may have failed to generate or is indistinguishable from the metal railing."
+  },
+  {
+    "image_id": "vstar_0143",
+    "issue_type": "object_visibility",
+    "description": "Added black balloon in slot D1 is not visible in the edited overview image; the sky/palm tree area appears unchanged. The balloon either failed to generate or is too small to see."
+  },
+  {
+    "image_id": "vstar_0145",
+    "issue_type": "generation_quality",
+    "description": "The purple handcart recolor (A1) has heavy artifacts: the edited result shows a dark purple/black mass with distorted shape that does not preserve the original handcart form. Surrounding area also affected."
+  },
+  {
+    "image_id": "vstar_0148",
+    "issue_type": "background_preservation",
+    "description": "House recolor to black (B1) has bled beyond the house boundaries, darkening parts of the surrounding ground and nearby objects. The shovel recolor to blue (A1) is barely visible; the shovel appears mostly unchanged in the edited result."
+  },
+  {
+    "image_id": "vstar_0149",
+    "issue_type": "object_visibility",
+    "description": "Added white dog (C1) is not clearly visible in the edited result; the area beneath the building shows no obvious dog. Object may have failed to generate or is too small/occluded."
+  },
+  {
+    "image_id": "vstar_0150",
+    "issue_type": "object_visibility",
+    "description": "Added yellow buoy (C1) is not visible in the edited overview; the area near the kayaks appears unchanged. Bracelet recolor (B1) target is extremely small and nearly impossible to identify."
+  },
+  {
+    "image_id": "vstar_0150",
+    "issue_type": "qa_correctness",
+    "description": "Question asks about relative position of buoy and bracelet, but a bracelet on a person's wrist is far too small for a reliable visual question. The bracelet is not clearly discernible in the image."
+  },
+  {
+    "image_id": "vstar_0152",
+    "issue_type": "object_visibility",
+    "description": "Added white bicycle (C1) is barely visible in the edited crop; appears as a faint shape in the background. In the full edited image it is nearly impossible to identify."
+  },
+  {
+    "image_id": "vstar_0153",
+    "issue_type": "qa_correctness",
+    "description": "Question is 'Is the van to the left or right of the van?' -- both edited objects are called 'the van', making the question ambiguous and unanswerable. No distinguishing descriptor (color or other) is used in the question to differentiate between the two vans."
+  },
+  {
+    "image_id": "vstar_0153",
+    "issue_type": "object_visibility",
+    "description": "Both vans are very small and distant in the wide cityscape shot. The brown recolor (A1) of the white van is hard to verify; the purple recolor (B1) of the red van is more visible but still small."
+  },
+  {
+    "image_id": "vstar_0154",
+    "issue_type": "soft_mask_blending",
+    "description": "Phone booth recolor from red to gray (B1) appears incomplete in the edited result crop -- the booth still looks predominantly red with only partial gray tint applied."
+  },
+  {
+    "image_id": "vstar_0155",
+    "issue_type": "object_visibility",
+    "description": "Added white balloon (D1) is extremely small -- appears as a tiny white speck in the sky. Practically invisible in the full edited image and would not be identifiable without the crop hint."
+  },
+  {
+    "image_id": "vstar_0156",
+    "issue_type": "generation_quality",
+    "description": "Added gray box (D1) appears as a blurry gray blob on the ground, lacking any box-like shape or definition. It looks more like a smudge artifact than a recognizable object."
+  },
+  {
+    "image_id": "vstar_0156",
+    "issue_type": "object_visibility",
+    "description": "Baby stroller (A1) is small and partially obscured by vegetation in the park scene; the blue recolor is visible in the crop but hard to spot in the full edited image."
+  },
+  {
+    "image_id": "vstar_0157",
+    "issue_type": "object_visibility",
+    "description": "Both the horse under the man and the ferris wheel are very small and distant in the wide beach scene. The gray recolor of the horse and purple recolor of the ferris wheel are difficult to verify at this resolution."
+  },
+  {
+    "image_id": "vstar_0157",
+    "issue_type": "soft_mask_blending",
+    "description": "Ferris wheel purple recolor (B1) appears very faint -- the edited crop shows minimal color change from the original white, possibly due to the object being distant and semi-transparent against the hazy sky."
+  },
+  {
+    "image_id": "vstar_0159",
+    "issue_type": "generation_quality",
+    "description": "Motorcycle color edit (A1): the motorcycle in the edited result does not appear convincingly green; it looks mostly silver/gray-white with slight tints rather than a clear green recolor."
+  },
+  {
+    "image_id": "vstar_0160",
+    "issue_type": "object_visibility",
+    "description": "Added stroller (C1): the stroller is very small and partially occluded behind the metal railing/fence, making it difficult to identify as a stroller and hard to judge its color."
+  },
+  {
+    "image_id": "vstar_0161",
+    "issue_type": "object_visibility",
+    "description": "Both the baby stroller (B1) and car (A1) are quite small in the wide plaza scene. The car's purple recolor and stroller's gray recolor are hard to verify at this scale."
+  },
+  {
+    "image_id": "vstar_0162",
+    "issue_type": "qa_correctness",
+    "description": "Ambiguous question: 'Is the woman to the left or right of the woman?' Both objects refer to 'the woman' with no distinguishing descriptors, making the question nonsensical and unanswerable."
+  },
+  {
+    "image_id": "vstar_0162",
+    "issue_type": "object_visibility",
+    "description": "Both the beanie (B1) and backpack (A1) are very small in the scene. The people are distant figures at the bottom of the image, making it hard to verify the yellow beanie or red backpack color."
+  },
+  {
+    "image_id": "vstar_0163",
+    "issue_type": "object_visibility",
+    "description": "Added bucket (D1): the white bucket is not clearly visible in the edited result crop. The add region at the waterline is ambiguous and the bucket, if present, blends into the water/sand background."
+  },
+  {
+    "image_id": "vstar_0164",
+    "issue_type": "object_visibility",
+    "description": "Added kick scooter (C1): the scooter is extremely small and barely discernible in the distant street scene. Its yellow color is nearly impossible to verify at this resolution."
+  },
+  {
+    "image_id": "vstar_0164",
+    "issue_type": "generation_quality",
+    "description": "Car color edit (A1): the car does not appear convincingly pink; it retains a warm reddish-orange tone that could be read as the original yellow under different lighting rather than a clear pink."
+  },
+  {
+    "image_id": "vstar_0165",
+    "issue_type": "generation_quality",
+    "description": "Added dog (C1): the black dog appears as a dark, somewhat indistinct shape among dark furniture/stall structures. It blends into the shadows and is hard to distinguish as a dog."
+  },
+  {
+    "image_id": "vstar_0166",
+    "issue_type": "background_preservation",
+    "description": "The person on the left side of the scene has changed shirt color from blue/dark to yellow between source and edited images, indicating unintended background modification."
+  },
+  {
+    "image_id": "vstar_0167",
+    "issue_type": "object_visibility",
+    "description": "Added cat (D1): the orange cat is very small in the scene and hard to identify. It appears as a small orange blob on the ground near the building base."
+  },
+  {
+    "image_id": "vstar_0169",
+    "issue_type": "object_visibility",
+    "description": "Added bottle (D1): the black bottle is placed in a dark corner of the concert hall and is nearly invisible against the dark background. Very hard to see or identify."
+  },
+  {
+    "image_id": "vstar_0169",
+    "issue_type": "object_visibility",
+    "description": "Guitar color edit (B1): the guitar is a small object in a large auditorium scene. The orange recolor is visible in the crop but extremely small in the full image."
+  },
+  {
+    "image_id": "vstar_0170",
+    "issue_type": "object_visibility",
+    "description": "Mask (B1) is a very small object on a person's face. In the full scene it is barely visible, making the blue color change extremely hard to verify."
+  },
+  {
+    "image_id": "vstar_0171",
+    "issue_type": "object_visibility",
+    "description": "Added buoy (C1): the orange buoy is extremely small, appearing as a tiny orange speck on the water. It is nearly impossible to identify as a buoy at the overview scale."
+  },
+  {
+    "image_id": "vstar_0171",
+    "issue_type": "object_visibility",
+    "description": "Umbrella (B1): the umbrella is a small object in an aerial/distant landscape scene. The pink recolor is visible in the crop but very hard to find in the full edited image."
+  },
+  {
+    "image_id": "vstar_0172",
+    "issue_type": "generation_quality",
+    "description": "Added cat (D1): the gray cat is not clearly visible in the edited result. The add region is on a beach/shore area and the cat appears to blend into the background or is indistinct."
+  },
+  {
+    "image_id": "vstar_0174",
+    "issue_type": "generation_quality",
+    "description": "Lifebuoy color edit (B1): the edited result does not show a clearly pink lifebuoy. The lifebuoy area in the crop still appears to have mixed colors rather than a distinct pink."
+  },
+  {
+    "image_id": "vstar_0174",
+    "issue_type": "object_visibility",
+    "description": "Added buoy (C1): the purple buoy is placed in the water but is very small and hard to distinguish. It appears as a small colored spot on the water surface."
+  },
+  {
+    "image_id": "vstar_0175",
+    "issue_type": "object_uniqueness",
+    "description": "Multiple umbrellas are visible in this beach scene. The target purple umbrella (B1) is just one among many umbrellas, potentially creating ambiguity about which umbrella the question refers to."
+  },
+  {
+    "image_id": "vstar_0176",
+    "issue_type": "generation_quality",
+    "description": "Added kick scooter (C1): the yellow kick scooter is placed in front of/near a parked car but appears as an unconvincing flat shape rather than a realistic 3D scooter. It does not blend naturally into the scene."
+  },
+  {
+    "image_id": "vstar_0177",
+    "issue_type": "object_visibility",
+    "description": "Added bucket (D1): the black bucket is placed on a dark bench area and is virtually invisible due to the black-on-dark color combination. It cannot be reliably identified in the full image."
+  },
+  {
+    "image_id": "vstar_0178",
+    "issue_type": "object_visibility",
+    "description": "Both the cyclist and baby stroller are very small in the full scene (distant subjects on a large field), making the color edits (black clothes, blue stroller) hard to discern at overview resolution."
+  },
+  {
+    "image_id": "vstar_0179",
+    "issue_type": "generation_quality",
+    "description": "Added gray stroller (D1) is barely visible in the edited result crop; it appears as a small indistinct gray blob on the sidewalk that is difficult to identify as a stroller."
+  },
+  {
+    "image_id": "vstar_0181",
+    "issue_type": "qa_correctness",
+    "description": "Generated question is 'Is the balloon above or below the balloon?' -- both objects are called 'the balloon' with no distinguishing descriptor (e.g. color), making the question ambiguous and unanswerable without color references."
+  },
+  {
+    "image_id": "vstar_0181",
+    "issue_type": "generation_quality",
+    "description": "The purple balloon (A1 edit) appears significantly enlarged compared to the original red balloon and looks artificially glossy/saturated, reducing realism."
+  },
+  {
+    "image_id": "vstar_0182",
+    "issue_type": "generation_quality",
+    "description": "Added white kick scooter (C1) looks like a small white-and-red road sign or post rather than a recognizable kick scooter; the object identity is unclear."
+  },
+  {
+    "image_id": "vstar_0182",
+    "issue_type": "object_visibility",
+    "description": "The yellow car (A1 replace) is extremely small and distant in the full scene (village behind a field with cows), making the color change nearly impossible to verify at overview scale."
+  },
+  {
+    "image_id": "vstar_0183",
+    "issue_type": "object_visibility",
+    "description": "Added blue phone (C1) is very small and partially occluded by the protest signs, making it hard to identify as a phone or confirm its blue color."
+  },
+  {
+    "image_id": "vstar_0184",
+    "issue_type": "generation_quality",
+    "description": "Added black stroller (C1) appears as a small dark shape on the steps that does not clearly read as a stroller; it looks more like a person or luggage near the staircase."
+  },
+  {
+    "image_id": "vstar_0185",
+    "issue_type": "generation_quality",
+    "description": "Added orange kick scooter (C1) is placed on sand near a stone wall and looks like an orange smear/artifact rather than a clearly formed kick scooter."
+  },
+  {
+    "image_id": "vstar_0186",
+    "issue_type": "generation_quality",
+    "description": "The mask color replace (B1, black to brown) is barely distinguishable in the edited crop; the mask still looks very dark and the brown tint is not clearly visible."
+  },
+  {
+    "image_id": "vstar_0186",
+    "issue_type": "generation_quality",
+    "description": "Added gray bowl (D1) is nearly invisible in the edit crop -- the area appears unchanged and no distinct bowl shape can be identified against the cardboard background."
+  },
+  {
+    "image_id": "vstar_0187",
+    "issue_type": "generation_quality",
+    "description": "Added orange cat (D1) appears as a tiny orange shape on the road that does not convincingly read as a cat; it looks more like an orange cone or small debris."
+  },
+  {
+    "image_id": "vstar_0187",
+    "issue_type": "soft_mask_blending",
+    "description": "Street lamp color replace (A1, black to blue) shows minimal visible change -- the lamp post still appears dark/black in the edited result, suggesting the color change did not take effect convincingly."
+  },
+  {
+    "image_id": "vstar_0188",
+    "issue_type": "generation_quality",
+    "description": "Added white dog (D1) on the rocky beach area is very small and blends with the light-colored rocks, making it hard to confirm the object is actually a dog."
+  },
+  {
+    "image_id": "vstar_0189",
+    "issue_type": "generation_quality",
+    "description": "The stool color replace (B1, red to white) resulted in the stool looking like a white rectangular box/block rather than maintaining the original stool shape and structure."
+  },
+  {
+    "image_id": "vstar_0190",
+    "issue_type": "generation_quality",
+    "description": "Added blue clock (C1) is not clearly visible in the edited image; the area shows no obvious clock-shaped object, suggesting the generation failed or the object is indistinguishable from the background."
+  },
+  {
+    "image_id": "vstar_0190",
+    "issue_type": "object_visibility",
+    "description": "Added white cat (D1) appears as a small whitish shape in a dark doorway/archway; it is ambiguous whether this is a cat or just a light patch."
+  }
+]
